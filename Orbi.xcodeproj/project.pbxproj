@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239422AC187E00D6225F /* AppDelegate.swift */; };
+		3A0C239722AC187E00D6225F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239622AC187E00D6225F /* SceneDelegate.swift */; };
+		3A0C239922AC187E00D6225F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239822AC187E00D6225F /* ViewController.swift */; };
+		3A0C239C22AC187E00D6225F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239A22AC187E00D6225F /* Main.storyboard */; };
+		3A0C239E22AC188200D6225F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239D22AC188200D6225F /* Assets.xcassets */; };
+		3A0C23A122AC188200D6225F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */; };
+		3A0C23AC22AC188200D6225F /* OrbiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23AB22AC188200D6225F /* OrbiTests.swift */; };
+		3A0C23B722AC188200D6225F /* OrbiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23B622AC188200D6225F /* OrbiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A0C23A822AC188200D6225F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0C238922AC187D00D6225F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A0C239022AC187E00D6225F;
+			remoteInfo = Orbi;
+		};
+		3A0C23B322AC188200D6225F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0C238922AC187D00D6225F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A0C239022AC187E00D6225F;
+			remoteInfo = Orbi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A0C239122AC187E00D6225F /* Orbi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orbi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0C239422AC187E00D6225F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A0C239622AC187E00D6225F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3A0C239822AC187E00D6225F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A0C239B22AC187E00D6225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A0C239D22AC188200D6225F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A0C23A022AC188200D6225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A0C23A222AC188200D6225F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A0C23A722AC188200D6225F /* OrbiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrbiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0C23AB22AC188200D6225F /* OrbiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbiTests.swift; sourceTree = "<group>"; };
+		3A0C23AD22AC188200D6225F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A0C23B222AC188200D6225F /* OrbiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrbiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0C23B622AC188200D6225F /* OrbiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbiUITests.swift; sourceTree = "<group>"; };
+		3A0C23B822AC188200D6225F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A0C238E22AC187E00D6225F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0C23A422AC188200D6225F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0C23AF22AC188200D6225F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A0C238822AC187D00D6225F = {
+			isa = PBXGroup;
+			children = (
+				3A0C239322AC187E00D6225F /* Orbi */,
+				3A0C23AA22AC188200D6225F /* OrbiTests */,
+				3A0C23B522AC188200D6225F /* OrbiUITests */,
+				3A0C239222AC187E00D6225F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A0C239222AC187E00D6225F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C239122AC187E00D6225F /* Orbi.app */,
+				3A0C23A722AC188200D6225F /* OrbiTests.xctest */,
+				3A0C23B222AC188200D6225F /* OrbiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A0C239322AC187E00D6225F /* Orbi */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C239422AC187E00D6225F /* AppDelegate.swift */,
+				3A0C239622AC187E00D6225F /* SceneDelegate.swift */,
+				3A0C239822AC187E00D6225F /* ViewController.swift */,
+				3A0C239A22AC187E00D6225F /* Main.storyboard */,
+				3A0C239D22AC188200D6225F /* Assets.xcassets */,
+				3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */,
+				3A0C23A222AC188200D6225F /* Info.plist */,
+			);
+			path = Orbi;
+			sourceTree = "<group>";
+		};
+		3A0C23AA22AC188200D6225F /* OrbiTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C23AB22AC188200D6225F /* OrbiTests.swift */,
+				3A0C23AD22AC188200D6225F /* Info.plist */,
+			);
+			path = OrbiTests;
+			sourceTree = "<group>";
+		};
+		3A0C23B522AC188200D6225F /* OrbiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C23B622AC188200D6225F /* OrbiUITests.swift */,
+				3A0C23B822AC188200D6225F /* Info.plist */,
+			);
+			path = OrbiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A0C239022AC187E00D6225F /* Orbi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A0C23BB22AC188200D6225F /* Build configuration list for PBXNativeTarget "Orbi" */;
+			buildPhases = (
+				3A0C238D22AC187E00D6225F /* Sources */,
+				3A0C238E22AC187E00D6225F /* Frameworks */,
+				3A0C238F22AC187E00D6225F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Orbi;
+			productName = Orbi;
+			productReference = 3A0C239122AC187E00D6225F /* Orbi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A0C23A622AC188200D6225F /* OrbiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A0C23BE22AC188200D6225F /* Build configuration list for PBXNativeTarget "OrbiTests" */;
+			buildPhases = (
+				3A0C23A322AC188200D6225F /* Sources */,
+				3A0C23A422AC188200D6225F /* Frameworks */,
+				3A0C23A522AC188200D6225F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A0C23A922AC188200D6225F /* PBXTargetDependency */,
+			);
+			name = OrbiTests;
+			productName = OrbiTests;
+			productReference = 3A0C23A722AC188200D6225F /* OrbiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A0C23B122AC188200D6225F /* OrbiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A0C23C122AC188200D6225F /* Build configuration list for PBXNativeTarget "OrbiUITests" */;
+			buildPhases = (
+				3A0C23AE22AC188200D6225F /* Sources */,
+				3A0C23AF22AC188200D6225F /* Frameworks */,
+				3A0C23B022AC188200D6225F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A0C23B422AC188200D6225F /* PBXTargetDependency */,
+			);
+			name = OrbiUITests;
+			productName = OrbiUITests;
+			productReference = 3A0C23B222AC188200D6225F /* OrbiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A0C238922AC187D00D6225F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = Arena;
+				TargetAttributes = {
+					3A0C239022AC187E00D6225F = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					3A0C23A622AC188200D6225F = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 3A0C239022AC187E00D6225F;
+					};
+					3A0C23B122AC188200D6225F = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 3A0C239022AC187E00D6225F;
+					};
+				};
+			};
+			buildConfigurationList = 3A0C238C22AC187D00D6225F /* Build configuration list for PBXProject "Orbi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A0C238822AC187D00D6225F;
+			productRefGroup = 3A0C239222AC187E00D6225F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A0C239022AC187E00D6225F /* Orbi */,
+				3A0C23A622AC188200D6225F /* OrbiTests */,
+				3A0C23B122AC188200D6225F /* OrbiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A0C238F22AC187E00D6225F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0C23A122AC188200D6225F /* LaunchScreen.storyboard in Resources */,
+				3A0C239E22AC188200D6225F /* Assets.xcassets in Resources */,
+				3A0C239C22AC187E00D6225F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0C23A522AC188200D6225F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0C23B022AC188200D6225F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A0C238D22AC187E00D6225F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0C239922AC187E00D6225F /* ViewController.swift in Sources */,
+				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,
+				3A0C239722AC187E00D6225F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0C23A322AC188200D6225F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0C23AC22AC188200D6225F /* OrbiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0C23AE22AC188200D6225F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0C23B722AC188200D6225F /* OrbiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A0C23A922AC188200D6225F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A0C239022AC187E00D6225F /* Orbi */;
+			targetProxy = 3A0C23A822AC188200D6225F /* PBXContainerItemProxy */;
+		};
+		3A0C23B422AC188200D6225F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A0C239022AC187E00D6225F /* Orbi */;
+			targetProxy = 3A0C23B322AC188200D6225F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A0C239A22AC187E00D6225F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A0C239B22AC187E00D6225F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A0C23A022AC188200D6225F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A0C23B922AC188200D6225F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A0C23BA22AC188200D6225F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A0C23BC22AC188200D6225F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5G8SK67F3;
+				INFOPLIST_FILE = Orbi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arena.Orbi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A0C23BD22AC188200D6225F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5G8SK67F3;
+				INFOPLIST_FILE = Orbi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arena.Orbi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A0C23BF22AC188200D6225F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5G8SK67F3;
+				INFOPLIST_FILE = OrbiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arena.OrbiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orbi.app/Orbi";
+			};
+			name = Debug;
+		};
+		3A0C23C022AC188200D6225F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5G8SK67F3;
+				INFOPLIST_FILE = OrbiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arena.OrbiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orbi.app/Orbi";
+			};
+			name = Release;
+		};
+		3A0C23C222AC188200D6225F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5G8SK67F3;
+				INFOPLIST_FILE = OrbiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arena.OrbiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Orbi;
+			};
+			name = Debug;
+		};
+		3A0C23C322AC188200D6225F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5G8SK67F3;
+				INFOPLIST_FILE = OrbiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arena.OrbiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Orbi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A0C238C22AC187D00D6225F /* Build configuration list for PBXProject "Orbi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0C23B922AC188200D6225F /* Debug */,
+				3A0C23BA22AC188200D6225F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A0C23BB22AC188200D6225F /* Build configuration list for PBXNativeTarget "Orbi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0C23BC22AC188200D6225F /* Debug */,
+				3A0C23BD22AC188200D6225F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A0C23BE22AC188200D6225F /* Build configuration list for PBXNativeTarget "OrbiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0C23BF22AC188200D6225F /* Debug */,
+				3A0C23C022AC188200D6225F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A0C23C122AC188200D6225F /* Build configuration list for PBXNativeTarget "OrbiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0C23C222AC188200D6225F /* Debug */,
+				3A0C23C322AC188200D6225F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A0C238922AC187D00D6225F /* Project object */;
+}
