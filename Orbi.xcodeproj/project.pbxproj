@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F863D6CF82B868A3590456 /* Pods_OrbiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4BCF47137A9D1361D6D8A6 /* Pods_OrbiUITests.framework */; };
 		3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239422AC187E00D6225F /* AppDelegate.swift */; };
 		3A0C239722AC187E00D6225F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239622AC187E00D6225F /* SceneDelegate.swift */; };
-		3A0C239922AC187E00D6225F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239822AC187E00D6225F /* ViewController.swift */; };
 		3A0C239C22AC187E00D6225F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239A22AC187E00D6225F /* Main.storyboard */; };
 		3A0C239E22AC188200D6225F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239D22AC188200D6225F /* Assets.xcassets */; };
 		3A0C23A122AC188200D6225F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */; };
 		3A0C23AC22AC188200D6225F /* OrbiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23AB22AC188200D6225F /* OrbiTests.swift */; };
 		3A0C23B722AC188200D6225F /* OrbiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23B622AC188200D6225F /* OrbiUITests.swift */; };
+		3A0C23DE22AC1D3D00D6225F /* LNZSafariTabLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23D622AC1D3D00D6225F /* LNZSafariTabLayout.swift */; };
+		3A0C23DF22AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23D822AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift */; };
+		3A0C23E022AC1D3D00D6225F /* SafariAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23DA22AC1D3D00D6225F /* SafariAnimator.swift */; };
+		3A0C23E122AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23DB22AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift */; };
+		3A0C23E222AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23DC22AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift */; };
+		3A0C23E322AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23DD22AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift */; };
+		3A0C23E522AC1DDA00D6225F /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C23E422AC1DDA00D6225F /* MenuCollectionViewController.swift */; };
+		3A55D80C22AC5E2A005B463D /* Vazir-Thin-FD-WOL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80222AC5E2A005B463D /* Vazir-Thin-FD-WOL.ttf */; };
+		3A55D80D22AC5E2A005B463D /* Vazir-Light-FD-WOL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80322AC5E2A005B463D /* Vazir-Light-FD-WOL.ttf */; };
+		3A55D80E22AC5E2A005B463D /* Vazir-Bold-FD-WOL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80422AC5E2A005B463D /* Vazir-Bold-FD-WOL.ttf */; };
+		3A55D80F22AC5E2A005B463D /* Vazir-Medium-FD-WOL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80522AC5E2A005B463D /* Vazir-Medium-FD-WOL.ttf */; };
+		3A55D81022AC5E2A005B463D /* Vazir-FD-WOL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80622AC5E2A005B463D /* Vazir-FD-WOL.ttf */; };
+		3A55D81122AC5E2A005B463D /* Vazir-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80722AC5E2A005B463D /* Vazir-Bold.ttf */; };
+		3A55D81222AC5E2A005B463D /* Vazir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80822AC5E2A005B463D /* Vazir-Medium.ttf */; };
+		3A55D81322AC5E2A005B463D /* Vazir-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80922AC5E2A005B463D /* Vazir-Thin.ttf */; };
+		3A55D81422AC5E2A005B463D /* Vazir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80A22AC5E2A005B463D /* Vazir.ttf */; };
+		3A55D81522AC5E2A005B463D /* Vazir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80B22AC5E2A005B463D /* Vazir-Light.ttf */; };
+		3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */; };
+		3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */; };
+		8BE5691278222C7476466227 /* Pods_Orbi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */; };
+		A670161F5B7E89D8CAC82152 /* Pods_OrbiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB62830EB68A23F130BAED /* Pods_OrbiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E4BCF47137A9D1361D6D8A6 /* Pods_OrbiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrbiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F2072A6654F0C64ADBF721 /* Pods-OrbiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiUITests.debug.xcconfig"; path = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3704B572AAEEEA56EF9269A2 /* Pods-OrbiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiTests.debug.xcconfig"; path = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A0C239122AC187E00D6225F /* Orbi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orbi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0C239422AC187E00D6225F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A0C239622AC187E00D6225F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A0C239822AC187E00D6225F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A0C239B22AC187E00D6225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A0C239D22AC188200D6225F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0C23A022AC188200D6225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,32 @@
 		3A0C23B222AC188200D6225F /* OrbiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrbiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0C23B622AC188200D6225F /* OrbiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbiUITests.swift; sourceTree = "<group>"; };
 		3A0C23B822AC188200D6225F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A0C23D622AC1D3D00D6225F /* LNZSafariTabLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNZSafariTabLayout.swift; sourceTree = "<group>"; };
+		3A0C23D822AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewDelegateSafariLayout.swift; sourceTree = "<group>"; };
+		3A0C23DA22AC1D3D00D6225F /* SafariAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariAnimator.swift; sourceTree = "<group>"; };
+		3A0C23DB22AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNZCarouselCollectionViewLayout.swift; sourceTree = "<group>"; };
+		3A0C23DC22AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNZSnapToCenterCollectionViewLayout.swift; sourceTree = "<group>"; };
+		3A0C23DD22AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNZInfiniteCollectionViewLayout.swift; sourceTree = "<group>"; };
+		3A0C23E422AC1DDA00D6225F /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
+		3A55D80222AC5E2A005B463D /* Vazir-Thin-FD-WOL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Thin-FD-WOL.ttf"; sourceTree = "<group>"; };
+		3A55D80322AC5E2A005B463D /* Vazir-Light-FD-WOL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Light-FD-WOL.ttf"; sourceTree = "<group>"; };
+		3A55D80422AC5E2A005B463D /* Vazir-Bold-FD-WOL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Bold-FD-WOL.ttf"; sourceTree = "<group>"; };
+		3A55D80522AC5E2A005B463D /* Vazir-Medium-FD-WOL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Medium-FD-WOL.ttf"; sourceTree = "<group>"; };
+		3A55D80622AC5E2A005B463D /* Vazir-FD-WOL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-FD-WOL.ttf"; sourceTree = "<group>"; };
+		3A55D80722AC5E2A005B463D /* Vazir-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Bold.ttf"; sourceTree = "<group>"; };
+		3A55D80822AC5E2A005B463D /* Vazir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Medium.ttf"; sourceTree = "<group>"; };
+		3A55D80922AC5E2A005B463D /* Vazir-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Thin.ttf"; sourceTree = "<group>"; };
+		3A55D80A22AC5E2A005B463D /* Vazir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vazir.ttf; sourceTree = "<group>"; };
+		3A55D80B22AC5E2A005B463D /* Vazir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Light.ttf"; sourceTree = "<group>"; };
+		3A8F7AE822AC6112009178F2 /* Orbi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orbi.entitlements; sourceTree = "<group>"; };
+		3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
+		3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLAnalogJoystick.swift; sourceTree = "<group>"; };
+		3BBBE61025F88899719028A2 /* Pods-Orbi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.debug.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.debug.xcconfig"; sourceTree = "<group>"; };
+		6B46A3172917ACEEDFA46CAC /* Pods-Orbi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.release.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.release.xcconfig"; sourceTree = "<group>"; };
+		8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiUITests.release.xcconfig"; path = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orbi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C037B80F71E6866A95436396 /* Pods-OrbiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiTests.release.xcconfig"; path = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests.release.xcconfig"; sourceTree = "<group>"; };
+		F8AB62830EB68A23F130BAED /* Pods_OrbiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrbiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE5691278222C7476466227 /* Pods_Orbi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A670161F5B7E89D8CAC82152 /* Pods_OrbiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F863D6CF82B868A3590456 /* Pods_OrbiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +135,8 @@
 				3A0C23AA22AC188200D6225F /* OrbiTests */,
 				3A0C23B522AC188200D6225F /* OrbiUITests */,
 				3A0C239222AC187E00D6225F /* Products */,
+				69325528F67B9E3D31A27488 /* Pods */,
+				BE9AB59953EF95E6C35A530C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +153,12 @@
 		3A0C239322AC187E00D6225F /* Orbi */ = {
 			isa = PBXGroup;
 			children = (
+				3A8F7AE822AC6112009178F2 /* Orbi.entitlements */,
+				3A0C23C422AC1C9B00D6225F /* Extension */,
 				3A0C239422AC187E00D6225F /* AppDelegate.swift */,
 				3A0C239622AC187E00D6225F /* SceneDelegate.swift */,
-				3A0C239822AC187E00D6225F /* ViewController.swift */,
+				3A0C23E422AC1DDA00D6225F /* MenuCollectionViewController.swift */,
+				3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */,
 				3A0C239A22AC187E00D6225F /* Main.storyboard */,
 				3A0C239D22AC188200D6225F /* Assets.xcassets */,
 				3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */,
@@ -128,6 +185,110 @@
 			path = OrbiUITests;
 			sourceTree = "<group>";
 		};
+		3A0C23C422AC1C9B00D6225F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A55D80022AC5DD3005B463D /* Font */,
+				3A0C23C522AC1CAB00D6225F /* Libraries */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3A0C23C522AC1CAB00D6225F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F7AE922AC6EE5009178F2 /* Joystick */,
+				3A0C23D522AC1D3D00D6225F /* Menu Collection */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		3A0C23D522AC1D3D00D6225F /* Menu Collection */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C23D622AC1D3D00D6225F /* LNZSafariTabLayout.swift */,
+				3A0C23D722AC1D3D00D6225F /* CustomDelegates */,
+				3A0C23D922AC1D3D00D6225F /* Animator */,
+				3A0C23DB22AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift */,
+				3A0C23DC22AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift */,
+				3A0C23DD22AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift */,
+			);
+			path = "Menu Collection";
+			sourceTree = "<group>";
+		};
+		3A0C23D722AC1D3D00D6225F /* CustomDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C23D822AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift */,
+			);
+			path = CustomDelegates;
+			sourceTree = "<group>";
+		};
+		3A0C23D922AC1D3D00D6225F /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C23DA22AC1D3D00D6225F /* SafariAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		3A55D80022AC5DD3005B463D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3A55D80122AC5E2A005B463D /* Farsi-Digits-Without-Latin */,
+				3A55D80722AC5E2A005B463D /* Vazir-Bold.ttf */,
+				3A55D80B22AC5E2A005B463D /* Vazir-Light.ttf */,
+				3A55D80822AC5E2A005B463D /* Vazir-Medium.ttf */,
+				3A55D80922AC5E2A005B463D /* Vazir-Thin.ttf */,
+				3A55D80A22AC5E2A005B463D /* Vazir.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		3A55D80122AC5E2A005B463D /* Farsi-Digits-Without-Latin */ = {
+			isa = PBXGroup;
+			children = (
+				3A55D80222AC5E2A005B463D /* Vazir-Thin-FD-WOL.ttf */,
+				3A55D80322AC5E2A005B463D /* Vazir-Light-FD-WOL.ttf */,
+				3A55D80422AC5E2A005B463D /* Vazir-Bold-FD-WOL.ttf */,
+				3A55D80522AC5E2A005B463D /* Vazir-Medium-FD-WOL.ttf */,
+				3A55D80622AC5E2A005B463D /* Vazir-FD-WOL.ttf */,
+			);
+			path = "Farsi-Digits-Without-Latin";
+			sourceTree = "<group>";
+		};
+		3A8F7AE922AC6EE5009178F2 /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */,
+			);
+			path = Joystick;
+			sourceTree = "<group>";
+		};
+		69325528F67B9E3D31A27488 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BBBE61025F88899719028A2 /* Pods-Orbi.debug.xcconfig */,
+				6B46A3172917ACEEDFA46CAC /* Pods-Orbi.release.xcconfig */,
+				3704B572AAEEEA56EF9269A2 /* Pods-OrbiTests.debug.xcconfig */,
+				C037B80F71E6866A95436396 /* Pods-OrbiTests.release.xcconfig */,
+				36F2072A6654F0C64ADBF721 /* Pods-OrbiUITests.debug.xcconfig */,
+				8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE9AB59953EF95E6C35A530C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */,
+				F8AB62830EB68A23F130BAED /* Pods_OrbiTests.framework */,
+				1E4BCF47137A9D1361D6D8A6 /* Pods_OrbiUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A0C23BB22AC188200D6225F /* Build configuration list for PBXNativeTarget "Orbi" */;
 			buildPhases = (
+				54FC07EEDF441450480440F6 /* [CP] Check Pods Manifest.lock */,
 				3A0C238D22AC187E00D6225F /* Sources */,
 				3A0C238E22AC187E00D6225F /* Frameworks */,
 				3A0C238F22AC187E00D6225F /* Resources */,
+				6E56EB3E7272D7381D455E8F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +315,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A0C23BE22AC188200D6225F /* Build configuration list for PBXNativeTarget "OrbiTests" */;
 			buildPhases = (
+				CA50D3F6418DFA6EBD0ABA1C /* [CP] Check Pods Manifest.lock */,
 				3A0C23A322AC188200D6225F /* Sources */,
 				3A0C23A422AC188200D6225F /* Frameworks */,
 				3A0C23A522AC188200D6225F /* Resources */,
@@ -170,6 +334,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A0C23C122AC188200D6225F /* Build configuration list for PBXNativeTarget "OrbiUITests" */;
 			buildPhases = (
+				342ECA84381213D1058BBBC2 /* [CP] Check Pods Manifest.lock */,
 				3A0C23AE22AC188200D6225F /* Sources */,
 				3A0C23AF22AC188200D6225F /* Frameworks */,
 				3A0C23B022AC188200D6225F /* Resources */,
@@ -232,9 +397,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A55D80F22AC5E2A005B463D /* Vazir-Medium-FD-WOL.ttf in Resources */,
+				3A55D81122AC5E2A005B463D /* Vazir-Bold.ttf in Resources */,
+				3A55D81322AC5E2A005B463D /* Vazir-Thin.ttf in Resources */,
 				3A0C23A122AC188200D6225F /* LaunchScreen.storyboard in Resources */,
+				3A55D80E22AC5E2A005B463D /* Vazir-Bold-FD-WOL.ttf in Resources */,
+				3A55D81422AC5E2A005B463D /* Vazir.ttf in Resources */,
 				3A0C239E22AC188200D6225F /* Assets.xcassets in Resources */,
+				3A55D81522AC5E2A005B463D /* Vazir-Light.ttf in Resources */,
 				3A0C239C22AC187E00D6225F /* Main.storyboard in Resources */,
+				3A55D80D22AC5E2A005B463D /* Vazir-Light-FD-WOL.ttf in Resources */,
+				3A55D81022AC5E2A005B463D /* Vazir-FD-WOL.ttf in Resources */,
+				3A55D81222AC5E2A005B463D /* Vazir-Medium.ttf in Resources */,
+				3A55D80C22AC5E2A005B463D /* Vazir-Thin-FD-WOL.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +429,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		342ECA84381213D1058BBBC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrbiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54FC07EEDF441450480440F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Orbi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E56EB3E7272D7381D455E8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orbi/Pods-Orbi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orbi/Pods-Orbi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Orbi/Pods-Orbi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA50D3F6418DFA6EBD0ABA1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrbiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A0C238D22AC187E00D6225F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0C239922AC187E00D6225F /* ViewController.swift in Sources */,
+				3A0C23E022AC1D3D00D6225F /* SafariAnimator.swift in Sources */,
+				3A0C23E122AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift in Sources */,
+				3A0C23E222AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
+				3A0C23E322AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift in Sources */,
+				3A0C23DF22AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift in Sources */,
 				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,
+				3A0C23DE22AC1D3D00D6225F /* LNZSafariTabLayout.swift in Sources */,
+				3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */,
+				3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */,
 				3A0C239722AC187E00D6225F /* SceneDelegate.swift in Sources */,
+				3A0C23E522AC1DDA00D6225F /* MenuCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,8 +701,10 @@
 		};
 		3A0C23BC22AC188200D6225F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BBBE61025F88899719028A2 /* Pods-Orbi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Orbi/Orbi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5G8SK67F3;
 				INFOPLIST_FILE = Orbi/Info.plist;
@@ -450,8 +721,10 @@
 		};
 		3A0C23BD22AC188200D6225F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B46A3172917ACEEDFA46CAC /* Pods-Orbi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Orbi/Orbi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5G8SK67F3;
 				INFOPLIST_FILE = Orbi/Info.plist;
@@ -468,6 +741,7 @@
 		};
 		3A0C23BF22AC188200D6225F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3704B572AAEEEA56EF9269A2 /* Pods-OrbiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +763,7 @@
 		};
 		3A0C23C022AC188200D6225F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C037B80F71E6866A95436396 /* Pods-OrbiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +785,7 @@
 		};
 		3A0C23C222AC188200D6225F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F2072A6654F0C64ADBF721 /* Pods-OrbiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +806,7 @@
 		};
 		3A0C23C322AC188200D6225F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
