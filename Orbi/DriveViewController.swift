@@ -7,29 +7,46 @@
 //
 
 import UIKit
-import JoystickView
+import CDJoystick
 
 class DriveViewController: UIViewController {
     
-//    @IBOutlet weak var joystick: JoystickView!
+    @IBOutlet weak var backContainerView: UIView!
+    @IBOutlet weak var BatteryContainerView: UIView!
+    @IBOutlet weak var SettingContainerView: UIView!
+    @IBOutlet weak var CalibrateContainerView: UIView!
+    @IBOutlet weak var BrakeMainContainerView: UIView!
+    @IBOutlet weak var BrakeWhiteContainerView: UIView!
+    @IBOutlet weak var ActionsContainerView: UIView!
+    @IBOutlet weak var joystick: CDJoystick!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        joystick.delegate = self
-//        joystick.form = .around
-//        joystick.joystickBg = UIView()
-//        joystick.joystickThumb = UIView()
+        backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
+        BatteryContainerView.layer.cornerRadius = BatteryContainerView.frame.width / 2
+        SettingContainerView.layer.cornerRadius = SettingContainerView.frame.width / 2
+        CalibrateContainerView.layer.cornerRadius = CalibrateContainerView.frame.width / 2
+        
+        BrakeMainContainerView.layer.cornerRadius = 47
+        BrakeWhiteContainerView.layer.cornerRadius = 42
+        BrakeWhiteContainerView.layer.borderWidth = 5
+        BrakeWhiteContainerView.layer.borderColor = #colorLiteral(red: 0.8142766356, green: 0.8644046187, blue: 0.9404509068, alpha: 1)
+        
+        ActionsContainerView.layer.cornerRadius = 47
+        
+        
+        joystick.trackingHandler = { joystickData in
+//            self.objectView.center.x += joystickData.velocity.x
+//            self.objectView.center.y += joystickData.velocity.y
+        }
+        
     }
-    func joystickView(_ joystickView: JoystickView, didMoveto x: Float, y: Float, direction: JoystickMoveDriection) {
+ 
+    @IBAction func BackButtonAction(_ sender: Any) {
         
     }
     
-    func joystickViewDidEndMoving(_ joystickView: JoystickView) {
-        
-    }
-    
-
     /*
     // MARK: - Navigation
 
