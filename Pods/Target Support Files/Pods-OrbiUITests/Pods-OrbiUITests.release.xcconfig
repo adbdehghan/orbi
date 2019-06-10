@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CDJoystick" "${PODS_CONFIGURATION_BUILD_DIR}/JoystickView"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BatteryView" "${PODS_CONFIGURATION_BUILD_DIR}/CDJoystick" "${PODS_CONFIGURATION_BUILD_DIR}/GradientProgress" "${PODS_CONFIGURATION_BUILD_DIR}/Haptico" "${PODS_CONFIGURATION_BUILD_DIR}/JoystickView" "${PODS_CONFIGURATION_BUILD_DIR}/SummerSlider"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CDJoystick/CDJoystick.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/JoystickView/JoystickView.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "CDJoystick" -framework "JoystickView"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BatteryView/BatteryView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CDJoystick/CDJoystick.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/GradientProgress/GradientProgress.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Haptico/Haptico.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/JoystickView/JoystickView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SummerSlider/SummerSlider.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "BatteryView" -framework "CDJoystick" -framework "Foundation" -framework "GradientProgress" -framework "Haptico" -framework "JoystickView" -framework "SummerSlider"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

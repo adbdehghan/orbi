@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,7 @@
 		3A55D81322AC5E2A005B463D /* Vazir-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80922AC5E2A005B463D /* Vazir-Thin.ttf */; };
 		3A55D81422AC5E2A005B463D /* Vazir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80A22AC5E2A005B463D /* Vazir.ttf */; };
 		3A55D81522AC5E2A005B463D /* Vazir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A55D80B22AC5E2A005B463D /* Vazir-Light.ttf */; };
+		3A5C1B8322AEB00B005609BC /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C1B8222AEB00B005609BC /* CircularProgressBar.swift */; };
 		3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */; };
 		3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */; };
 		8BE5691278222C7476466227 /* Pods_Orbi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */; };
@@ -89,6 +90,7 @@
 		3A55D80922AC5E2A005B463D /* Vazir-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Thin.ttf"; sourceTree = "<group>"; };
 		3A55D80A22AC5E2A005B463D /* Vazir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vazir.ttf; sourceTree = "<group>"; };
 		3A55D80B22AC5E2A005B463D /* Vazir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Light.ttf"; sourceTree = "<group>"; };
+		3A5C1B8222AEB00B005609BC /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		3A8F7AE822AC6112009178F2 /* Orbi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orbi.entitlements; sourceTree = "<group>"; };
 		3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLAnalogJoystick.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		3A0C23C522AC1CAB00D6225F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3A5C1B8122AEAFB7005609BC /* Progress Animation */,
 				3A8F7AE922AC6EE5009178F2 /* Joystick */,
 				3A0C23D522AC1D3D00D6225F /* Menu Collection */,
 			);
@@ -257,6 +260,14 @@
 			path = "Farsi-Digits-Without-Latin";
 			sourceTree = "<group>";
 		};
+		3A5C1B8122AEAFB7005609BC /* Progress Animation */ = {
+			isa = PBXGroup;
+			children = (
+				3A5C1B8222AEB00B005609BC /* CircularProgressBar.swift */,
+			);
+			path = "Progress Animation";
+			sourceTree = "<group>";
+		};
 		3A8F7AE922AC6EE5009178F2 /* Joystick */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +286,6 @@
 				36F2072A6654F0C64ADBF721 /* Pods-OrbiUITests.debug.xcconfig */,
 				8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -531,6 +541,7 @@
 				3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */,
 				3A0C239722AC187E00D6225F /* SceneDelegate.swift in Sources */,
 				3A0C23E522AC1DDA00D6225F /* MenuCollectionViewController.swift in Sources */,
+				3A5C1B8322AEB00B005609BC /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

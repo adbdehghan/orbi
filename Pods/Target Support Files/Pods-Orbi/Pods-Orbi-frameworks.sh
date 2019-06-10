@@ -161,12 +161,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BatteryView/BatteryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CDJoystick/CDJoystick.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GradientProgress/GradientProgress.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Haptico/Haptico.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SummerSlider/SummerSlider.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BatteryView/BatteryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CDJoystick/CDJoystick.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GradientProgress/GradientProgress.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Haptico/Haptico.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SummerSlider/SummerSlider.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

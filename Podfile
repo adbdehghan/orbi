@@ -7,6 +7,11 @@ target 'Orbi' do
 
   pod "JoystickView"
   pod "CDJoystick"
+  pod 'BatteryView'
+  pod 'Haptico'
+  pod 'GradientProgress'
+  pod 'SummerSlider', '~>0.3.0'
+  
   target 'OrbiTests' do
     inherit! :search_paths
     # Pods for testing
