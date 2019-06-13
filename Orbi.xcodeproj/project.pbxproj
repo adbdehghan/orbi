@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		31F863D6CF82B868A3590456 /* Pods_OrbiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4BCF47137A9D1361D6D8A6 /* Pods_OrbiUITests.framework */; };
 		3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239422AC187E00D6225F /* AppDelegate.swift */; };
-		3A0C239722AC187E00D6225F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C239622AC187E00D6225F /* SceneDelegate.swift */; };
 		3A0C239C22AC187E00D6225F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239A22AC187E00D6225F /* Main.storyboard */; };
 		3A0C239E22AC188200D6225F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239D22AC188200D6225F /* Assets.xcassets */; };
 		3A0C23A122AC188200D6225F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */; };
@@ -35,6 +34,10 @@
 		3A5C1B8322AEB00B005609BC /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C1B8222AEB00B005609BC /* CircularProgressBar.swift */; };
 		3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */; };
 		3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */; };
+		3ACE873D22B29EED00DB4CA6 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */; };
+		3ACE873F22B29F2600DB4CA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */; };
+		3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */; };
+		3ADB539522B0600C00EDC00B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB539422B0600C00EDC00B /* SceneDelegate.swift */; };
 		8BE5691278222C7476466227 /* Pods_Orbi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */; };
 		A670161F5B7E89D8CAC82152 /* Pods_OrbiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB62830EB68A23F130BAED /* Pods_OrbiTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,7 +65,6 @@
 		3704B572AAEEEA56EF9269A2 /* Pods-OrbiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiTests.debug.xcconfig"; path = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A0C239122AC187E00D6225F /* Orbi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orbi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0C239422AC187E00D6225F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A0C239622AC187E00D6225F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3A0C239B22AC187E00D6225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A0C239D22AC188200D6225F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0C23A022AC188200D6225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,10 @@
 		3A8F7AE822AC6112009178F2 /* Orbi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orbi.entitlements; sourceTree = "<group>"; };
 		3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLAnalogJoystick.swift; sourceTree = "<group>"; };
+		3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3ADB539422B0600C00EDC00B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3BBBE61025F88899719028A2 /* Pods-Orbi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.debug.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.debug.xcconfig"; sourceTree = "<group>"; };
 		6B46A3172917ACEEDFA46CAC /* Pods-Orbi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.release.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.release.xcconfig"; sourceTree = "<group>"; };
 		8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiUITests.release.xcconfig"; path = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,9 +164,12 @@
 				3A8F7AE822AC6112009178F2 /* Orbi.entitlements */,
 				3A0C23C422AC1C9B00D6225F /* Extension */,
 				3A0C239422AC187E00D6225F /* AppDelegate.swift */,
-				3A0C239622AC187E00D6225F /* SceneDelegate.swift */,
 				3A0C23E422AC1DDA00D6225F /* MenuCollectionViewController.swift */,
+				3ADB539422B0600C00EDC00B /* SceneDelegate.swift */,
 				3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */,
+				3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */,
+				3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */,
+				3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */,
 				3A0C239A22AC187E00D6225F /* Main.storyboard */,
 				3A0C239D22AC188200D6225F /* Assets.xcassets */,
 				3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */,
@@ -533,15 +542,18 @@
 				3A0C23E022AC1D3D00D6225F /* SafariAnimator.swift in Sources */,
 				3A0C23E122AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift in Sources */,
 				3A0C23E222AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
+				3ACE873F22B29F2600DB4CA6 /* MenuViewController.swift in Sources */,
 				3A0C23E322AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				3A0C23DF22AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift in Sources */,
+				3ACE873D22B29EED00DB4CA6 /* UINavigationController+Extension.swift in Sources */,
 				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,
+				3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */,
 				3A0C23DE22AC1D3D00D6225F /* LNZSafariTabLayout.swift in Sources */,
 				3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */,
 				3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */,
-				3A0C239722AC187E00D6225F /* SceneDelegate.swift in Sources */,
 				3A0C23E522AC1DDA00D6225F /* MenuCollectionViewController.swift in Sources */,
 				3A5C1B8322AEB00B005609BC /* CircularProgressBar.swift in Sources */,
+				3ADB539522B0600C00EDC00B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +731,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5G8SK67F3;
 				INFOPLIST_FILE = Orbi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -739,6 +752,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5G8SK67F3;
 				INFOPLIST_FILE = Orbi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

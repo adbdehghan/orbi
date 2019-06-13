@@ -7,85 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07415CAA02F744CD2420672682626FC2 /* GradientProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F822D80F45C2D558CB043B5016A5F0 /* GradientProgress.swift */; };
-		1332E9A44CE4E9041640EF945B35161D /* BatteryView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A91569197A6E8C8DF8BAEC31D02521 /* BatteryView-dummy.m */; };
-		18FB202B763FEF555C915EA548212F11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		1D20B65111246A0711F70CAC0B56B93F /* Haptico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06FF25BF872BC2A83EA6DBCE9FABA1 /* Haptico.swift */; };
-		1D7F52CC47429106EE3365A2211ADF07 /* CDJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA6820F8D2754A06EEB3F50F473235E /* CDJoystick.swift */; };
-		20177FF27FCFA224D9DD5134A5AF2962 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4EA6CFB9D1B086257CB3133475876 /* UIDevice+Extensions.swift */; };
+		07415CAA02F744CD2420672682626FC2 /* GradientProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B249AF2AA2795F75621584F9FFC65FC /* GradientProgress.swift */; };
+		0AC81E1B7DC0D7840CF4F3E75BBFBE8F /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675F8E87EFF8ECC80C513BA25A424E6 /* ServiceModel.swift */; };
+		1332E9A44CE4E9041640EF945B35161D /* BatteryView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE699394CE6E2BCBDCE58DB8955C3FF /* BatteryView-dummy.m */; };
+		1BFF62331F4E167EEA30B5338130DBB9 /* ServiceModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F31EC1F151EAB0D8B8E57851B139 /* ServiceModelManager.swift */; };
+		1D20B65111246A0711F70CAC0B56B93F /* Haptico.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66D8DED06343A7B7BE15D33D23F25A /* Haptico.swift */; };
+		1D7F52CC47429106EE3365A2211ADF07 /* CDJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A927365A7360E739139A30B7274183 /* CDJoystick.swift */; };
+		20177FF27FCFA224D9DD5134A5AF2962 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E132A5C4CC3E65FED0B555DB7CD41 /* UIDevice+Extensions.swift */; };
+		23DF99277FB3BB81EB7BD110CB3C406B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		24552932545116190234696B2C2B3A9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		289DC311B47C4512DF4DDB23133EF0A3 /* Haptico-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B04770969F173E04E0B45BBC7326048D /* Haptico-dummy.m */; };
-		30916666983C1C7E3B887B9EF9BB7CB6 /* HapticFeedbackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDA2398CD584A832F0CAC8446AA70D /* HapticFeedbackEngine.swift */; };
-		310344759AAFF0E7BB2DF6F6D3FC3815 /* CDJoystick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4879B6E48C473A593F994BEB71EEE55A /* CDJoystick-dummy.m */; };
+		24D09E324D0E486E6B12FE7B70C20803 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		289DC311B47C4512DF4DDB23133EF0A3 /* Haptico-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CF40D59660AA865BF7A1C7FD0A156 /* Haptico-dummy.m */; };
+		2B80F47E36FBB4D3DF425E2AA1198134 /* DataTransformers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5A21F2A8626C19A624244FA7B9222 /* DataTransformers.swift */; };
+		30916666983C1C7E3B887B9EF9BB7CB6 /* HapticFeedbackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859C741C0EBD4AB06A5763AD6DA1053C /* HapticFeedbackEngine.swift */; };
+		310344759AAFF0E7BB2DF6F6D3FC3815 /* CDJoystick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A662A1E69555F9F6FFAC8173A077D610 /* CDJoystick-dummy.m */; };
 		379FD8D0C4276B9E2B637CFA85C05586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		402F060D90D0D43CA1CC7C6B98FDF536 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3468148F4AE5820B4BD418682A9B5E /* Constants.swift */; };
-		44E4199001A2BCE3718CB989AEF981B7 /* SliderDrawingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3A109D767C73458218ED186909760 /* SliderDrawingProtocol.swift */; };
+		3E950157182C9662598405EDD589235B /* UIViewController+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F95F8F331E8621E80F8C9FB6CF958 /* UIViewController+SideMenu.swift */; };
+		402F060D90D0D43CA1CC7C6B98FDF536 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFE64DD0ECC12EA71AEA55F4252E27 /* Constants.swift */; };
+		44E4199001A2BCE3718CB989AEF981B7 /* SliderDrawingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D18CC832B17377F29F7D2D0CC7754 /* SliderDrawingProtocol.swift */; };
 		46988E069FFE4A11F4D9A2B3B78103A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		4BDA4A0E63EF22A125BB4FD012C9B413 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAE4595D20C4AE5AA4C873892D59524 /* Slider.swift */; };
-		55326553F2FFF58587C9B12510AC8C97 /* JoystickView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E436C6C5A0CB7DF0FB2E31B3F71405D /* JoystickView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57C1FF9E809F88F54555EFC53EC18BC9 /* GradientProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0004E08978A7D7B5B0513B69DC5E07C8 /* GradientProgress-dummy.m */; };
+		4BDA4A0E63EF22A125BB4FD012C9B413 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB265DFAF83470009C414E61E4D2511 /* Slider.swift */; };
+		55326553F2FFF58587C9B12510AC8C97 /* JoystickView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA12131BEE7759981BF8378A223A54F /* JoystickView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57C1FF9E809F88F54555EFC53EC18BC9 /* GradientProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E86149E2F1D2182D25EB2F9633640614 /* GradientProgress-dummy.m */; };
+		606D27CEC0D5F092F21AECE7FBDAFC95 /* TransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B93CEFD091E96A6219710F76982F9 /* TransitionContext.swift */; };
 		60F32495A1B7CC4C6D6AF5628941A282 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		629EA89927A74F87D3096C192A7F5EDF /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACAF6778820FA9ABD86CAD01CCACB9 /* VerticalSlider.swift */; };
+		629EA89927A74F87D3096C192A7F5EDF /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C467779D7AAEA0067BF986281C0447B /* VerticalSlider.swift */; };
 		6E024A93EAD4F07AE1BD1B0118ACD7A4 /* Pods-OrbiUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8FB0CD7099E2DD82311ED29DE686C8 /* Pods-OrbiUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		716064A5CFB71F393C11C4D6AD434424 /* SummerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4551251699BF94E6CE450A426025726E /* SummerSlider.swift */; };
-		71CEFCE3050D87202EDC9B8DC2FE90C4 /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F14CC8FCBE40219BFA17385C838399 /* HorizontalSlider.swift */; };
-		72134D4A4862E407B39B41E84FDD7794 /* JoystickView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D8A1FB158CD0F76CC5CB42AA184851 /* JoystickView-dummy.m */; };
-		74CC2240D897501132669E22A656E3A3 /* UIViewController+Haptico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D3D3672AD100EC66D874458748526 /* UIViewController+Haptico.swift */; };
+		716064A5CFB71F393C11C4D6AD434424 /* SummerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772226A78E03045236231CBDD666818D /* SummerSlider.swift */; };
+		71CEFCE3050D87202EDC9B8DC2FE90C4 /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B42D02494462AC7835E8F84DA91B39C /* HorizontalSlider.swift */; };
+		72134D4A4862E407B39B41E84FDD7794 /* JoystickView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC460088C14DBDB580F8C8885205A8 /* JoystickView-dummy.m */; };
+		73C8B75F87F9210D443CFECACF871D60 /* ManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5596B7D7ADDB36A9D627D881931F6F /* ManagerDelegate.swift */; };
+		74CC2240D897501132669E22A656E3A3 /* UIViewController+Haptico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F594B554966CB11D66FCC9879372653 /* UIViewController+Haptico.swift */; };
+		75D5FEFE4004E400918D88CB3EA4E1F1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BCCE9781486EC6791DBDE4095E1A90 /* Preferences.swift */; };
 		7703643674E39F881DAE177540EC1768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		797E3DC86DBA1649FCEB2D49274B6583 /* Pods-OrbiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C32625D37F81C8BC7FA4BF85304079 /* Pods-OrbiUITests-dummy.m */; };
-		7A0B0476F62C424486504879491C075B /* UIButton+Haptico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3D1AA8B15188E81D2B4FA78E5419 /* UIButton+Haptico.swift */; };
+		7A0B0476F62C424486504879491C075B /* UIButton+Haptico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B79D56C0227B456E6B3AEDD5D7EA1 /* UIButton+Haptico.swift */; };
 		7AF00E8A6BDD9E974BF21FAC3D760B7B /* Pods-OrbiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F95E51A116DFD97EA28AE69616952F /* Pods-OrbiTests-dummy.m */; };
-		7B4B2F78B70493940C2831A59AAA3167 /* SummerSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E689A5A2D489E2C34470E378DD966B06 /* SummerSlider-dummy.m */; };
-		819042C0AAB0D894FF914D7C675EDC3B /* Pods-Orbi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8754CDF52153FC575138AA4927B5B0E3 /* Pods-Orbi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B4B2F78B70493940C2831A59AAA3167 /* SummerSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5895CDB4654B88E0F061EF4E078C1E /* SummerSlider-dummy.m */; };
+		7E0A1A96488E32ACB7E5E018FDD3E111 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D610FD34058085E90A641585E9FA334 /* Manager.swift */; };
+		86A214ABE295DEC0EC1764D3DE7F5061 /* SideMenuSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0493871E9F62DFBEE405FDBC96783B43 /* SideMenuSwift-dummy.m */; };
 		8A47B299E6E221828C1EF24A1B4101A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		940C2D1DE993E28F9EEAD16E62A96446 /* CDJoystick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 174061A6D5BCB58FF3E33929253DC99D /* CDJoystick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96BDD53CFB7D4EA1AC5E8D8DD573D1EF /* PatternEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D185B78B7BEEA1AF96346A09CD3505A /* PatternEngine.swift */; };
-		96C9DC2AFC3F4D9060426ADD8FB0A8CC /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B505FF50982EC4FD8C64C6C0EBE6C2 /* BatteryView.swift */; };
+		8D64441946B91CAFDD7E752C9D812195 /* SideMenuSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E54472C9D9FC729161B30C234AE22889 /* SideMenuSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		940C2D1DE993E28F9EEAD16E62A96446 /* CDJoystick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 221203B5EB88A7DBF0BB8E14903AC477 /* CDJoystick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		959CB3E07BF3D7AE58D02A4A31936D02 /* BasicTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202364065A9B1FB095508D2228A1A52 /* BasicTransitionAnimator.swift */; };
+		96BDD53CFB7D4EA1AC5E8D8DD573D1EF /* PatternEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0EA7B020CCA8D897516C44A1429F /* PatternEngine.swift */; };
+		96C9DC2AFC3F4D9060426ADD8FB0A8CC /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287C97143AB637B741B8E208E5D882C /* BatteryView.swift */; };
 		9A768510D5779D5B48D4125FE7DACA28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		9E029F2F32CB791FAF37201DBEDA0821 /* Pods-OrbiTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 587DFF48F55F0873B1293163B36ECDA3 /* Pods-OrbiTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2E1973D646E56179279974DEA312CF6 /* Pods-Orbi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC4BE859FC22F8CE41023DA80E89D1 /* Pods-Orbi-dummy.m */; };
-		BBC380338555E726E721418F204139AB /* JoystickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44935FCEED2D35CB77FEDEAA51F39C5 /* JoystickView.swift */; };
-		C00B06CB652E80FBEC4A3F0F93D43182 /* SummerSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 758677E3C8DE3F7A4E14F0E66F862C95 /* SummerSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1F6FB7F30B7DAFE2795118B0314ED34 /* HapticoPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511FEAD30BE20BB7CAF84CA387470A8 /* HapticoPattern.swift */; };
-		C2BF5B38A509BA2846198A6CA5D074D3 /* SliderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB16E26E56472C242FE188C07AD25C2 /* SliderFactory.swift */; };
-		C9BA6FE39079F7F04176AE9FB59434D5 /* SummerSliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9982D87BCF174A990AD3C819BECDBE4 /* SummerSliderTypes.swift */; };
-		DA2330AB678AE017CC3E35A5EC1B8827 /* BatteryView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 919783FFECEB4BB35C37126BD5BD2975 /* BatteryView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EE8CF79AD20F61B91F80F6E5C0305FBC /* Haptico-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA805C569893596E968B9919FF13F35 /* Haptico-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F35A21F6A1B4532AAF3571578EECD501 /* GradientProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADA14E09A5CAF7A90FA238CFDDBA151 /* GradientProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3CD95A8A0025B857D23CEE7F0E65CF1 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5DFB91D9BEA0BA25F95365AD09647 /* TapticEngine.swift */; };
+		A89FBA6802D9EFB01291FE47CDE7052E /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACEABF0DBAD24A0B2B5F1330E80688 /* UIView+Container.swift */; };
+		A8E063A9F6B9E13B5567CE45A76C0C59 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34EADADB87F6FF552887BF5CEA3ED99 /* Delegate.swift */; };
+		BBC380338555E726E721418F204139AB /* JoystickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE165D1BD3C9E790D2040497F22F33 /* JoystickView.swift */; };
+		BFBAF12D585B9B6A536F2DE897799640 /* SideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = DA86C0AB38B24C549FB63CE3F15F439B /* SideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C00B06CB652E80FBEC4A3F0F93D43182 /* SummerSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A12B527DC544887ACD621E678401A9 /* SummerSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1F6FB7F30B7DAFE2795118B0314ED34 /* HapticoPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB0DF87A219C27BA6B3F8773342CB9 /* HapticoPattern.swift */; };
+		C2148FE1850FE241AC44D6CA782F256D /* Bluetonium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3229DD23198C78827B1106F67A3F5D54 /* Bluetonium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2BF5B38A509BA2846198A6CA5D074D3 /* SliderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229C742B61045E8CE9D18E7C60FF568 /* SliderFactory.swift */; };
+		C53BD513381195C77D3BA41613E62D48 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF47B9ED7D96CCE7025690369B61B4D /* StatusBar.swift */; };
+		C9A5C46A1435E255E5662AFCFF7DAB4F /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453190D645B31552FBECD416673255C3 /* UIViewController+Container.swift */; };
+		C9BA6FE39079F7F04176AE9FB59434D5 /* SummerSliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A0C61D5EDC06943044F57C74D59BE /* SummerSliderTypes.swift */; };
+		D681C4FA6D95F9F0B7845170EFAE4B3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		DA2330AB678AE017CC3E35A5EC1B8827 /* BatteryView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A10FB8D6275BF15470282A6506E753E7 /* BatteryView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC31E448017ECD8C25855D5B6298F4A /* Pods-Orbi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC4BE859FC22F8CE41023DA80E89D1 /* Pods-Orbi-dummy.m */; };
+		E32949EEA56F7B73FC3B36CAAE839CA6 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371B7F251306F9635196C2E4A7994A6 /* Device.swift */; };
+		E5077DB48F1F33FDEC4EC447066AE902 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6737F13672665C6A4686AA724F0D4673 /* Segue.swift */; };
+		EE8CF79AD20F61B91F80F6E5C0305FBC /* Haptico-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32EFC85683731F63B671F5C6A1847EC8 /* Haptico-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F35A21F6A1B4532AAF3571578EECD501 /* GradientProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB5B869E814666CA278D0B05ED8C5A44 /* GradientProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3CD95A8A0025B857D23CEE7F0E65CF1 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BC5583AD506B2BA73237254193523 /* TapticEngine.swift */; };
+		F3D8E0F25407CC8672BDE6799D8E9D6B /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E790980ABB2ECA32AAD66CFDFB6FA64 /* SideMenuController.swift */; };
+		F520889CA56A7B151A4814FF4C59EB12 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9C96D085A724748A1AFFB9083C123 /* Map.swift */; };
+		F5693558EA9A2CE93056EF0751FA6592 /* Pods-Orbi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8754CDF52153FC575138AA4927B5B0E3 /* Pods-Orbi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F961BBBEEE3A85F261B56FA592BC5C13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		FD990F73E3F40631B45B71A8E7100898 /* Bluetonium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 335FAE48208F483ED6FE82F7ECDB2A95 /* Bluetonium-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0D364FB4B4254119990D0A1F09F9AC1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AFBABD10A7D8DFF1F34D7A65A86A2B54;
-			remoteInfo = JoystickView;
-		};
-		283724B18BE9FD9CBEB024B58DE317FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6EB9AEE9A59747F5A6B5763D6754E351;
-			remoteInfo = Haptico;
-		};
-		454C69A3C4FACFBCC9DC43539445D486 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B82FDF47AB0381A7E2292B73A79B1F79;
-			remoteInfo = GradientProgress;
-		};
-		6F2395DD24D876DFCC1A9EEE587E2D54 /* PBXContainerItemProxy */ = {
+		202F60D6AC9E43034087054CB167C847 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 500F9357C2C959E2A859291B64320554;
 			remoteInfo = CDJoystick;
 		};
-		7FD55372CB85AB57CCA7D478588E1431 /* PBXContainerItemProxy */ = {
+		383594F200668C5FD1EEE80BEB63E5E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B82FDF47AB0381A7E2292B73A79B1F79;
+			remoteInfo = GradientProgress;
+		};
+		7A1DEAA6018EC6324041C40EC60BD22C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71A6B16D8C1AEB46B7E7048FFC9E14BF;
+			remoteInfo = Bluetonium;
+		};
+		9066109A7A3D93049192167C7E258D04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -99,6 +116,27 @@
 			remoteGlobalIDString = A57993E68B3C183500E62094DAEE0E32;
 			remoteInfo = "Pods-Orbi";
 		};
+		BBDE1C28C8DC972E8EFA23B605F1161F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD93C549F7D858D74E0E2174F8CB347;
+			remoteInfo = BatteryView;
+		};
+		BE36E8F0AD427D3048AE5147F141DDCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 873002DBC460B8090EFD7E391AA04141;
+			remoteInfo = SideMenuSwift;
+		};
+		C8EE4F8C899058ADBACF0ECECA0474C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EB9AEE9A59747F5A6B5763D6754E351;
+			remoteInfo = Haptico;
+		};
 		E9708F783184F584E0BFA30A1508464F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -106,108 +144,140 @@
 			remoteGlobalIDString = A57993E68B3C183500E62094DAEE0E32;
 			remoteInfo = "Pods-Orbi";
 		};
-		FA8689F15623BA609CA8A9183E0F0376 /* PBXContainerItemProxy */ = {
+		EA866E218ED61B4CAFC2FAD778D93451 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DD93C549F7D858D74E0E2174F8CB347;
-			remoteInfo = BatteryView;
+			remoteGlobalIDString = AFBABD10A7D8DFF1F34D7A65A86A2B54;
+			remoteInfo = JoystickView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0004E08978A7D7B5B0513B69DC5E07C8 /* GradientProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GradientProgress-dummy.m"; sourceTree = "<group>"; };
 		01210E005CCE84F8DB215699F8F10268 /* Pods-Orbi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Orbi.modulemap"; sourceTree = "<group>"; };
+		016A0C61D5EDC06943044F57C74D59BE /* SummerSliderTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SummerSliderTypes.swift; path = SummerSlider/SummerSliderTypes.swift; sourceTree = "<group>"; };
 		0194B16A9CB8E19825F334D074FFE70F /* Pods-Orbi-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Orbi-Info.plist"; sourceTree = "<group>"; };
-		03EDA2398CD584A832F0CAC8446AA70D /* HapticFeedbackEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticFeedbackEngine.swift; path = Haptico/Classes/Engines/HapticFeedbackEngine.swift; sourceTree = "<group>"; };
+		0493871E9F62DFBEE405FDBC96783B43 /* SideMenuSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenuSwift-dummy.m"; sourceTree = "<group>"; };
 		08AA72BA8023AFA61DDBF44160A88E6A /* Pods_Orbi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Orbi.framework; path = "Pods-Orbi.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF32E775925BAD424FF55E38F9C1A18 /* Pods-OrbiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrbiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0BD6B36D533FF4046DD5803114EE1D6C /* JoystickView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JoystickView-Info.plist"; sourceTree = "<group>"; };
-		0BE8880B703A8E31F87B798838D82B04 /* SummerSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SummerSlider-Info.plist"; sourceTree = "<group>"; };
+		0B42D02494462AC7835E8F84DA91B39C /* HorizontalSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalSlider.swift; path = SummerSlider/HorizontalSlider.swift; sourceTree = "<group>"; };
 		0DCC4BE859FC22F8CE41023DA80E89D1 /* Pods-Orbi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Orbi-dummy.m"; sourceTree = "<group>"; };
+		0DEB0DF87A219C27BA6B3F8773342CB9 /* HapticoPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticoPattern.swift; path = Haptico/Classes/Engines/HapticoPattern.swift; sourceTree = "<group>"; };
 		0EADF172D63A57D013965A25B8297A14 /* Pods-OrbiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrbiUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		12A2934C722AF6EDDD20013FFDD4975E /* SummerSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SummerSlider-prefix.pch"; sourceTree = "<group>"; };
-		174061A6D5BCB58FF3E33929253DC99D /* CDJoystick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDJoystick-umbrella.h"; sourceTree = "<group>"; };
-		17F1D4D0E439959EE1A8041FBAA10405 /* Haptico-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Haptico-prefix.pch"; sourceTree = "<group>"; };
+		0F3CF40D59660AA865BF7A1C7FD0A156 /* Haptico-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Haptico-dummy.m"; sourceTree = "<group>"; };
+		118DAFCC94C5C78B6178E5EFEEB43FEC /* JoystickView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JoystickView.modulemap; sourceTree = "<group>"; };
 		1852FA46F6C641D97BDE110C8432F8B6 /* Pods-OrbiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrbiTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		186BAB931899A3042030707A0DD455CF /* CDJoystick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDJoystick.framework; path = CDJoystick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A24B50EC442125A109AEEFF4DF05AF0 /* BatteryView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BatteryView-Info.plist"; sourceTree = "<group>"; };
-		1ADA14E09A5CAF7A90FA238CFDDBA151 /* GradientProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgress-umbrella.h"; sourceTree = "<group>"; };
-		1B5C125170F1653F139C071AE32B351F /* Haptico-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Haptico-Info.plist"; sourceTree = "<group>"; };
+		1AA12131BEE7759981BF8378A223A54F /* JoystickView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoystickView-umbrella.h"; sourceTree = "<group>"; };
+		1BCFCD86597AF0FB961C3821132FD2F3 /* Bluetonium-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bluetonium-prefix.pch"; sourceTree = "<group>"; };
 		1DFD52714DEF6DB0B866898AB0ABFDE5 /* SummerSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SummerSlider.framework; path = SummerSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E436C6C5A0CB7DF0FB2E31B3F71405D /* JoystickView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoystickView-umbrella.h"; sourceTree = "<group>"; };
-		22DE75F6D0BA937D101C3221DD4322CD /* CDJoystick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CDJoystick.modulemap; sourceTree = "<group>"; };
-		24E4EA6CFB9D1B086257CB3133475876 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "Haptico/Classes/Extensions/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
-		27FA5521A51D1DE5372402856D65B935 /* GradientProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GradientProgress.modulemap; sourceTree = "<group>"; };
+		221203B5EB88A7DBF0BB8E14903AC477 /* CDJoystick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDJoystick-umbrella.h"; sourceTree = "<group>"; };
+		250D09A1FFC89C3450A2855A779850C1 /* SideMenuSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenuSwift-Info.plist"; sourceTree = "<group>"; };
+		2CBC460088C14DBDB580F8C8885205A8 /* JoystickView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JoystickView-dummy.m"; sourceTree = "<group>"; };
+		2CDBF0BC227713F51AAE2C51336AD153 /* CDJoystick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDJoystick-prefix.pch"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		34F14CC8FCBE40219BFA17385C838399 /* HorizontalSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalSlider.swift; path = SummerSlider/HorizontalSlider.swift; sourceTree = "<group>"; };
-		3AACAF6778820FA9ABD86CAD01CCACB9 /* VerticalSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerticalSlider.swift; path = SummerSlider/VerticalSlider.swift; sourceTree = "<group>"; };
-		3D06FF25BF872BC2A83EA6DBCE9FABA1 /* Haptico.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptico.swift; path = Haptico/Classes/Haptico.swift; sourceTree = "<group>"; };
-		3D190B9E652CD792AFE8FC369387DECB /* GradientProgress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GradientProgress-Info.plist"; sourceTree = "<group>"; };
+		3229DD23198C78827B1106F67A3F5D54 /* Bluetonium-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bluetonium-umbrella.h"; sourceTree = "<group>"; };
+		32EFC85683731F63B671F5C6A1847EC8 /* Haptico-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Haptico-umbrella.h"; sourceTree = "<group>"; };
+		335FAE48208F483ED6FE82F7ECDB2A95 /* Bluetonium-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bluetonium-dummy.m"; sourceTree = "<group>"; };
+		3605CD458EB481082F0C74C6296091E1 /* JoystickView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JoystickView-Info.plist"; sourceTree = "<group>"; };
+		384E91385BDE2BF0A68BA5EC447964C4 /* GradientProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GradientProgress.xcconfig; sourceTree = "<group>"; };
+		39B5707764174F171F5C38BC80696EE5 /* SummerSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SummerSlider.modulemap; sourceTree = "<group>"; };
+		3A17D249FF572C439DB0EAFC2BC64460 /* JoystickView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JoystickView.xcconfig; sourceTree = "<group>"; };
+		3AA3DDED27E53A38CF2982AAD474B1BB /* CDJoystick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDJoystick.xcconfig; sourceTree = "<group>"; };
+		3E8F95F8F331E8621E80F8C9FB6CF958 /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
 		3FAE4C09CEBCA789A585ED0F5158F1D1 /* Pods-OrbiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrbiTests.modulemap"; sourceTree = "<group>"; };
-		3FC3A109D767C73458218ED186909760 /* SliderDrawingProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderDrawingProtocol.swift; path = SummerSlider/SliderDrawingProtocol.swift; sourceTree = "<group>"; };
-		4551251699BF94E6CE450A426025726E /* SummerSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SummerSlider.swift; path = SummerSlider/SummerSlider.swift; sourceTree = "<group>"; };
+		453190D645B31552FBECD416673255C3 /* UIViewController+Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Container.swift"; path = "SideMenu/UIViewController+Container.swift"; sourceTree = "<group>"; };
 		4604801ED00AF2BA0F17ED1C5CA9EC67 /* Pods_OrbiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OrbiUITests.framework; path = "Pods-OrbiUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4879B6E48C473A593F994BEB71EEE55A /* CDJoystick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDJoystick-dummy.m"; sourceTree = "<group>"; };
-		495C3D1AA8B15188E81D2B4FA78E5419 /* UIButton+Haptico.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haptico.swift"; path = "Haptico/Classes/Extensions/UIButton+Haptico.swift"; sourceTree = "<group>"; };
-		4BF57F154F8E779A813C5A120E6DF059 /* JoystickView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JoystickView.xcconfig; sourceTree = "<group>"; };
-		4DA6820F8D2754A06EEB3F50F473235E /* CDJoystick.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CDJoystick.swift; sourceTree = "<group>"; };
+		47E5A21F2A8626C19A624244FA7B9222 /* DataTransformers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransformers.swift; path = Source/DataTransformers.swift; sourceTree = "<group>"; };
+		4EACEABF0DBAD24A0B2B5F1330E80688 /* UIView+Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Container.swift"; path = "SideMenu/UIView+Container.swift"; sourceTree = "<group>"; };
+		515D18CC832B17377F29F7D2D0CC7754 /* SliderDrawingProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderDrawingProtocol.swift; path = SummerSlider/SliderDrawingProtocol.swift; sourceTree = "<group>"; };
+		5202364065A9B1FB095508D2228A1A52 /* BasicTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasicTransitionAnimator.swift; path = SideMenu/BasicTransitionAnimator.swift; sourceTree = "<group>"; };
+		529BC5583AD506B2BA73237254193523 /* TapticEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapticEngine.swift; path = Haptico/Classes/Engines/TapticEngine.swift; sourceTree = "<group>"; };
+		53A12B527DC544887ACD621E678401A9 /* SummerSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SummerSlider-umbrella.h"; sourceTree = "<group>"; };
 		54F95E51A116DFD97EA28AE69616952F /* Pods-OrbiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrbiTests-dummy.m"; sourceTree = "<group>"; };
 		587099F1B486E462F7D2C5E1E0AB5ED8 /* Pods-OrbiTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrbiTests-Info.plist"; sourceTree = "<group>"; };
 		587DFF48F55F0873B1293163B36ECDA3 /* Pods-OrbiTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrbiTests-umbrella.h"; sourceTree = "<group>"; };
-		5D185B78B7BEEA1AF96346A09CD3505A /* PatternEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PatternEngine.swift; path = Haptico/Classes/Engines/PatternEngine.swift; sourceTree = "<group>"; };
-		5D3468148F4AE5820B4BD418682A9B5E /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SummerSlider/Constants.swift; sourceTree = "<group>"; };
-		5EB16E26E56472C242FE188C07AD25C2 /* SliderFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderFactory.swift; path = SummerSlider/SliderFactory.swift; sourceTree = "<group>"; };
+		5B5B79D56C0227B456E6B3AEDD5D7EA1 /* UIButton+Haptico.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haptico.swift"; path = "Haptico/Classes/Extensions/UIButton+Haptico.swift"; sourceTree = "<group>"; };
 		5F329965E626914385D13E2CBADE6866 /* Pods-OrbiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrbiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		619462D4D239137F47BFD084125A0EE5 /* BatteryView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BatteryView.framework; path = BatteryView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		619C26FD5378030D8C95AE9097BAC526 /* GradientProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GradientProgress.framework; path = GradientProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6480B7182BC579AF96C4D53C2496B15A /* CDJoystick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDJoystick-prefix.pch"; sourceTree = "<group>"; };
+		6229C742B61045E8CE9D18E7C60FF568 /* SliderFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderFactory.swift; path = SummerSlider/SliderFactory.swift; sourceTree = "<group>"; };
+		6642040CCC4CD7F37093C2AA4F7FB304 /* SideMenuSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenuSwift.framework; path = SideMenuSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C0B11EFCC13B70493A15AF6A3752CE /* SideMenuSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenuSwift.xcconfig; sourceTree = "<group>"; };
+		6737F13672665C6A4686AA724F0D4673 /* Segue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Segue.swift; path = SideMenu/Segue.swift; sourceTree = "<group>"; };
+		6B249AF2AA2795F75621584F9FFC65FC /* GradientProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientProgress.swift; path = Sources/GradientProgress.swift; sourceTree = "<group>"; };
 		6B4548C16329B29EF3A828291AB4023A /* Pods-Orbi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Orbi.release.xcconfig"; sourceTree = "<group>"; };
-		6FC0AA122BA9EC9462EB4E74F7A16DB7 /* BatteryView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BatteryView.xcconfig; sourceTree = "<group>"; };
-		70A91569197A6E8C8DF8BAEC31D02521 /* BatteryView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BatteryView-dummy.m"; sourceTree = "<group>"; };
+		6E790980ABB2ECA32AAD66CFDFB6FA64 /* SideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuController.swift; path = SideMenu/SideMenuController.swift; sourceTree = "<group>"; };
+		6F1D7F5FDAA59D4BEA94AF934E70EF03 /* Haptico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Haptico.xcconfig; sourceTree = "<group>"; };
+		6F5895CDB4654B88E0F061EF4E078C1E /* SummerSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SummerSlider-dummy.m"; sourceTree = "<group>"; };
+		6F594B554966CB11D66FCC9879372653 /* UIViewController+Haptico.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Haptico.swift"; path = "Haptico/Classes/Extensions/UIViewController+Haptico.swift"; sourceTree = "<group>"; };
 		71164E6ACFA2812EB17CD971369A0F71 /* Pods-OrbiUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrbiUITests-Info.plist"; sourceTree = "<group>"; };
-		7354E31524581303FE16A37B06406C51 /* BatteryView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BatteryView-prefix.pch"; sourceTree = "<group>"; };
-		758677E3C8DE3F7A4E14F0E66F862C95 /* SummerSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SummerSlider-umbrella.h"; sourceTree = "<group>"; };
-		7813703C544934A62F28A2D4F53024EF /* SummerSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SummerSlider.xcconfig; sourceTree = "<group>"; };
-		79F822D80F45C2D558CB043B5016A5F0 /* GradientProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientProgress.swift; path = Sources/GradientProgress.swift; sourceTree = "<group>"; };
+		73BCCE9781486EC6791DBDE4095E1A90 /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = SideMenu/Preferences.swift; sourceTree = "<group>"; };
+		7675F8E87EFF8ECC80C513BA25A424E6 /* ServiceModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceModel.swift; path = Source/Models/ServiceModel.swift; sourceTree = "<group>"; };
+		772226A78E03045236231CBDD666818D /* SummerSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SummerSlider.swift; path = SummerSlider/SummerSlider.swift; sourceTree = "<group>"; };
+		7A69F31EC1F151EAB0D8B8E57851B139 /* ServiceModelManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceModelManager.swift; path = Source/Managers/ServiceModelManager.swift; sourceTree = "<group>"; };
+		7C467779D7AAEA0067BF986281C0447B /* VerticalSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerticalSlider.swift; path = SummerSlider/VerticalSlider.swift; sourceTree = "<group>"; };
+		7CB265DFAF83470009C414E61E4D2511 /* Slider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Slider.swift; path = SummerSlider/Slider.swift; sourceTree = "<group>"; };
+		7D6277F1014CEFC9592A7C1D72279E6E /* BatteryView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BatteryView-prefix.pch"; sourceTree = "<group>"; };
 		7F1F7D385BB1C60F4B99B6704CC9870A /* Pods-Orbi-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Orbi-frameworks.sh"; sourceTree = "<group>"; };
-		7FAE4595D20C4AE5AA4C873892D59524 /* Slider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Slider.swift; path = SummerSlider/Slider.swift; sourceTree = "<group>"; };
+		7F30F69AE57AFD883C8B8C31A15360B6 /* Haptico-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Haptico-Info.plist"; sourceTree = "<group>"; };
 		81967FC37DC6824F8E104C44C34D45BF /* JoystickView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JoystickView.framework; path = JoystickView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81C74F9449C23D35B2C795AAB201818A /* SummerSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SummerSlider.modulemap; sourceTree = "<group>"; };
 		84212873086F9E9997A49F871A587F99 /* Pods-Orbi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Orbi.debug.xcconfig"; sourceTree = "<group>"; };
+		859C741C0EBD4AB06A5763AD6DA1053C /* HapticFeedbackEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticFeedbackEngine.swift; path = Haptico/Classes/Engines/HapticFeedbackEngine.swift; sourceTree = "<group>"; };
+		86A927365A7360E739139A30B7274183 /* CDJoystick.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CDJoystick.swift; sourceTree = "<group>"; };
 		8754CDF52153FC575138AA4927B5B0E3 /* Pods-Orbi-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Orbi-umbrella.h"; sourceTree = "<group>"; };
 		8A69B2FFB722AD319F41DFF152B4C0B9 /* Pods-OrbiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrbiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8B00E97E2D82806F293ADFA5708C58BC /* Pods-OrbiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrbiTests.release.xcconfig"; sourceTree = "<group>"; };
-		919783FFECEB4BB35C37126BD5BD2975 /* BatteryView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BatteryView-umbrella.h"; sourceTree = "<group>"; };
+		8B265F01A2D71E3179CDD17C02CFF178 /* GradientProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GradientProgress.modulemap; sourceTree = "<group>"; };
+		90BFE64DD0ECC12EA71AEA55F4252E27 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SummerSlider/Constants.swift; sourceTree = "<group>"; };
+		91CD7105E2900F8817438036890D059C /* SummerSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SummerSlider-Info.plist"; sourceTree = "<group>"; };
+		92ED0EA7B020CCA8D897516C44A1429F /* PatternEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PatternEngine.swift; path = Haptico/Classes/Engines/PatternEngine.swift; sourceTree = "<group>"; };
 		93F656D79EB7E98E07E02A8C3EF23795 /* Haptico.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Haptico.framework; path = Haptico.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9511FEAD30BE20BB7CAF84CA387470A8 /* HapticoPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticoPattern.swift; path = Haptico/Classes/Engines/HapticoPattern.swift; sourceTree = "<group>"; };
+		949D6B7616B1250F886082947FE6181D /* GradientProgress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GradientProgress-Info.plist"; sourceTree = "<group>"; };
 		9AF2F73A8C674E25E42DB6C284C095DA /* Pods-Orbi-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Orbi-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D610FD34058085E90A641585E9FA334 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Managers/Manager.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F0D3D3672AD100EC66D874458748526 /* UIViewController+Haptico.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Haptico.swift"; path = "Haptico/Classes/Extensions/UIViewController+Haptico.swift"; sourceTree = "<group>"; };
-		A047ECC65BE0F2EF7D5714E2B539ED10 /* CDJoystick-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CDJoystick-Info.plist"; sourceTree = "<group>"; };
-		A20A153E32B0F49B6CE60E11F4238B90 /* Haptico.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Haptico.modulemap; sourceTree = "<group>"; };
-		A2FC3424DFFA44F038581F160330AF6A /* JoystickView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoystickView-prefix.pch"; sourceTree = "<group>"; };
+		A10FB8D6275BF15470282A6506E753E7 /* BatteryView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BatteryView-umbrella.h"; sourceTree = "<group>"; };
+		A2DE165D1BD3C9E790D2040497F22F33 /* JoystickView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JoystickView.swift; path = JoystickView/Classes/JoystickView.swift; sourceTree = "<group>"; };
+		A371B7F251306F9635196C2E4A7994A6 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/Models/Device.swift; sourceTree = "<group>"; };
+		A662A1E69555F9F6FFAC8173A077D610 /* CDJoystick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDJoystick-dummy.m"; sourceTree = "<group>"; };
 		A939FF6323A257ED39AA0F40C5787A9C /* Pods-OrbiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrbiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AAF47B9ED7D96CCE7025690369B61B4D /* StatusBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusBar.swift; path = SideMenu/StatusBar.swift; sourceTree = "<group>"; };
 		AC58A74C720EEBE43BB1F1EBE496A9D6 /* Pods-Orbi-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Orbi-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AEA805C569893596E968B9919FF13F35 /* Haptico-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Haptico-umbrella.h"; sourceTree = "<group>"; };
-		B04770969F173E04E0B45BBC7326048D /* Haptico-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Haptico-dummy.m"; sourceTree = "<group>"; };
-		B0B505FF50982EC4FD8C64C6C0EBE6C2 /* BatteryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatteryView.swift; path = Sources/BatteryView.swift; sourceTree = "<group>"; };
+		ACE3E1F1AC0C106460B876A98868D727 /* BatteryView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BatteryView.xcconfig; sourceTree = "<group>"; };
+		AD5596B7D7ADDB36A9D627D881931F6F /* ManagerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManagerDelegate.swift; path = Source/Managers/ManagerDelegate.swift; sourceTree = "<group>"; };
+		AD7BBF81E8C71FD80B92533F03F56C06 /* Haptico-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Haptico-prefix.pch"; sourceTree = "<group>"; };
+		AFDA4C38FF636F1633236C7A7157A24B /* SummerSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SummerSlider-prefix.pch"; sourceTree = "<group>"; };
 		B239778E115D0A3AC2E5EDF6990F6C51 /* Pods-OrbiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrbiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BA2C9BFDE8E142E8BC99DD62F159F732 /* Haptico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Haptico.xcconfig; sourceTree = "<group>"; };
-		BECFCC730598A3A8735E95C283DC505D /* JoystickView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JoystickView.modulemap; sourceTree = "<group>"; };
-		C44935FCEED2D35CB77FEDEAA51F39C5 /* JoystickView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JoystickView.swift; path = JoystickView/Classes/JoystickView.swift; sourceTree = "<group>"; };
+		B34EADADB87F6FF552887BF5CEA3ED99 /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = SideMenu/Delegate.swift; sourceTree = "<group>"; };
+		B3B9C96D085A724748A1AFFB9083C123 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Source/Map.swift; sourceTree = "<group>"; };
+		B444F4910C4271F4B69101083EF54C19 /* BatteryView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BatteryView-Info.plist"; sourceTree = "<group>"; };
+		B47B93CEFD091E96A6219710F76982F9 /* TransitionContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionContext.swift; path = SideMenu/TransitionContext.swift; sourceTree = "<group>"; };
+		BDE699394CE6E2BCBDCE58DB8955C3FF /* BatteryView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BatteryView-dummy.m"; sourceTree = "<group>"; };
+		C24CA050C7E9B9A3A6F405147B4B1647 /* SideMenuSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenuSwift.modulemap; sourceTree = "<group>"; };
 		C5C32625D37F81C8BC7FA4BF85304079 /* Pods-OrbiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrbiUITests-dummy.m"; sourceTree = "<group>"; };
-		C9982D87BCF174A990AD3C819BECDBE4 /* SummerSliderTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SummerSliderTypes.swift; path = SummerSlider/SummerSliderTypes.swift; sourceTree = "<group>"; };
-		CD35B3FC7349E8AF728B984B49D2D2BD /* GradientProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GradientProgress.xcconfig; sourceTree = "<group>"; };
-		CDDBB35185595B8AE9608D6C0C9E067A /* GradientProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgress-prefix.pch"; sourceTree = "<group>"; };
-		CF9FF1DCEF5E7A205F015E8A52050FDD /* CDJoystick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDJoystick.xcconfig; sourceTree = "<group>"; };
+		C8EBA2FB7B638D5228AAB045D3ABF7ED /* GradientProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgress-prefix.pch"; sourceTree = "<group>"; };
+		CB5B869E814666CA278D0B05ED8C5A44 /* GradientProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgress-umbrella.h"; sourceTree = "<group>"; };
+		CE4FB48AFE27FC01AEA0125EBE1098F3 /* Bluetonium-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Bluetonium-Info.plist"; sourceTree = "<group>"; };
+		D01AF04DC0D5961F306FBF6E1CAC19A3 /* SummerSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SummerSlider.xcconfig; sourceTree = "<group>"; };
 		D0F64B69519BA1831FE1CE5B991811AC /* Pods_OrbiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OrbiTests.framework; path = "Pods-OrbiTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E689A5A2D489E2C34470E378DD966B06 /* SummerSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SummerSlider-dummy.m"; sourceTree = "<group>"; };
+		D2FB2204175C57F070D9603DC750FDAD /* Bluetonium.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Bluetonium.xcconfig; sourceTree = "<group>"; };
+		D5A869DCA9ECA1EB6216ACA2B516C44E /* Bluetonium.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Bluetonium.modulemap; sourceTree = "<group>"; };
+		D6197B4B13E797C6665D74CBC9FAAFCA /* Bluetonium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bluetonium.framework; path = Bluetonium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA86C0AB38B24C549FB63CE3F15F439B /* SideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SideMenu.h; path = SideMenu/SideMenu.h; sourceTree = "<group>"; };
+		DC4E0A0CA0771CF66EF29060F2583658 /* Haptico.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Haptico.modulemap; sourceTree = "<group>"; };
+		E180D16906AE69D2F62C22DACE350BB5 /* JoystickView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoystickView-prefix.pch"; sourceTree = "<group>"; };
+		E26CAFA339A8170ADBFB1A87CD508B42 /* CDJoystick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CDJoystick.modulemap; sourceTree = "<group>"; };
+		E353A333D19C7E5B39E8F0FDC338C7CE /* BatteryView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BatteryView.modulemap; sourceTree = "<group>"; };
+		E54472C9D9FC729161B30C234AE22889 /* SideMenuSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuSwift-umbrella.h"; sourceTree = "<group>"; };
+		E6E323625A06D84FBEA0F06104BDABA7 /* SideMenuSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuSwift-prefix.pch"; sourceTree = "<group>"; };
+		E83E132A5C4CC3E65FED0B555DB7CD41 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "Haptico/Classes/Extensions/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		E86149E2F1D2182D25EB2F9633640614 /* GradientProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GradientProgress-dummy.m"; sourceTree = "<group>"; };
 		EC8FB0CD7099E2DD82311ED29DE686C8 /* Pods-OrbiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrbiUITests-umbrella.h"; sourceTree = "<group>"; };
-		F47D5EC8D7AC9B07CF92333FA4D5E2B6 /* BatteryView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BatteryView.modulemap; sourceTree = "<group>"; };
+		F287C97143AB637B741B8E208E5D882C /* BatteryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatteryView.swift; path = Sources/BatteryView.swift; sourceTree = "<group>"; };
 		F5FF02A6FEFFDDF503E6013FDE9BDB69 /* Pods-OrbiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OrbiUITests.modulemap"; sourceTree = "<group>"; };
-		F9D8A1FB158CD0F76CC5CB42AA184851 /* JoystickView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JoystickView-dummy.m"; sourceTree = "<group>"; };
-		FAA5DFB91D9BEA0BA25F95365AD09647 /* TapticEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapticEngine.swift; path = Haptico/Classes/Engines/TapticEngine.swift; sourceTree = "<group>"; };
+		FB66D8DED06343A7B7BE15D33D23F25A /* Haptico.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptico.swift; path = Haptico/Classes/Haptico.swift; sourceTree = "<group>"; };
+		FB8B0154D38C1B26A8FBAAAC79E87934 /* CDJoystick-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CDJoystick-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,14 +313,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51802921D894E1D5883B8F73832B785B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18FB202B763FEF555C915EA548212F11 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		55CC5B33CD1A76353CCABF4CE673ABDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +326,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A768510D5779D5B48D4125FE7DACA28 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F2A335BA0ABD673D09CD6220378E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D681C4FA6D95F9F0B7845170EFAE4B3B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9153184B93B291F1F2746CD9E259E8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DF99277FB3BB81EB7BD110CB3C406B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,38 +361,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E08E97EFDB4229FB6266F7C639F2051D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D09E324D0E486E6B12FE7B70C20803 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0348F410466352B3258544542843AE13 /* Haptico */ = {
+		1303E91B49E10068A8C6C3C45AA1876E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				03EDA2398CD584A832F0CAC8446AA70D /* HapticFeedbackEngine.swift */,
-				3D06FF25BF872BC2A83EA6DBCE9FABA1 /* Haptico.swift */,
-				9511FEAD30BE20BB7CAF84CA387470A8 /* HapticoPattern.swift */,
-				5D185B78B7BEEA1AF96346A09CD3505A /* PatternEngine.swift */,
-				FAA5DFB91D9BEA0BA25F95365AD09647 /* TapticEngine.swift */,
-				495C3D1AA8B15188E81D2B4FA78E5419 /* UIButton+Haptico.swift */,
-				24E4EA6CFB9D1B086257CB3133475876 /* UIDevice+Extensions.swift */,
-				9F0D3D3672AD100EC66D874458748526 /* UIViewController+Haptico.swift */,
-				08EE15354F1B09DE2DF923C099A60AFF /* Support Files */,
-			);
-			name = Haptico;
-			path = Haptico;
-			sourceTree = "<group>";
-		};
-		08EE15354F1B09DE2DF923C099A60AFF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A20A153E32B0F49B6CE60E11F4238B90 /* Haptico.modulemap */,
-				BA2C9BFDE8E142E8BC99DD62F159F732 /* Haptico.xcconfig */,
-				B04770969F173E04E0B45BBC7326048D /* Haptico-dummy.m */,
-				1B5C125170F1653F139C071AE32B351F /* Haptico-Info.plist */,
-				17F1D4D0E439959EE1A8041FBAA10405 /* Haptico-prefix.pch */,
-				AEA805C569893596E968B9919FF13F35 /* Haptico-umbrella.h */,
+				C24CA050C7E9B9A3A6F405147B4B1647 /* SideMenuSwift.modulemap */,
+				66C0B11EFCC13B70493A15AF6A3752CE /* SideMenuSwift.xcconfig */,
+				0493871E9F62DFBEE405FDBC96783B43 /* SideMenuSwift-dummy.m */,
+				250D09A1FFC89C3450A2855A779850C1 /* SideMenuSwift-Info.plist */,
+				E6E323625A06D84FBEA0F06104BDABA7 /* SideMenuSwift-prefix.pch */,
+				E54472C9D9FC729161B30C234AE22889 /* SideMenuSwift-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Haptico";
+			path = "../Target Support Files/SideMenuSwift";
+			sourceTree = "<group>";
+		};
+		16392E57C58EF142503F3C241EF0B1A6 /* CDJoystick */ = {
+			isa = PBXGroup;
+			children = (
+				86A927365A7360E739139A30B7274183 /* CDJoystick.swift */,
+				397FC43502573C8118A653B5262FEFB5 /* Support Files */,
+			);
+			name = CDJoystick;
+			path = CDJoystick;
+			sourceTree = "<group>";
+		};
+		1955D7648578C80F5BBD2820D55C6B1E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B265F01A2D71E3179CDD17C02CFF178 /* GradientProgress.modulemap */,
+				384E91385BDE2BF0A68BA5EC447964C4 /* GradientProgress.xcconfig */,
+				E86149E2F1D2182D25EB2F9633640614 /* GradientProgress-dummy.m */,
+				949D6B7616B1250F886082947FE6181D /* GradientProgress-Info.plist */,
+				C8EBA2FB7B638D5228AAB045D3ABF7ED /* GradientProgress-prefix.pch */,
+				CB5B869E814666CA278D0B05ED8C5A44 /* GradientProgress-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GradientProgress";
 			sourceTree = "<group>";
 		};
 		1976DFACFEF24E3580C4BB4F31BEADAA /* Pods-Orbi */ = {
@@ -334,21 +427,46 @@
 			path = "Target Support Files/Pods-Orbi";
 			sourceTree = "<group>";
 		};
-		1D93DB5FA79D81528C7B68732E64D74C /* SummerSlider */ = {
+		1B0EA614D1CC625EB871755366A4F6AE /* JoystickView */ = {
 			isa = PBXGroup;
 			children = (
-				5D3468148F4AE5820B4BD418682A9B5E /* Constants.swift */,
-				34F14CC8FCBE40219BFA17385C838399 /* HorizontalSlider.swift */,
-				7FAE4595D20C4AE5AA4C873892D59524 /* Slider.swift */,
-				3FC3A109D767C73458218ED186909760 /* SliderDrawingProtocol.swift */,
-				5EB16E26E56472C242FE188C07AD25C2 /* SliderFactory.swift */,
-				4551251699BF94E6CE450A426025726E /* SummerSlider.swift */,
-				C9982D87BCF174A990AD3C819BECDBE4 /* SummerSliderTypes.swift */,
-				3AACAF6778820FA9ABD86CAD01CCACB9 /* VerticalSlider.swift */,
-				6BD3FD836BFF1BB9A3B1A0EE58053F93 /* Support Files */,
+				A2DE165D1BD3C9E790D2040497F22F33 /* JoystickView.swift */,
+				B21C14509521F26D288194D928DDB34D /* Support Files */,
 			);
-			name = SummerSlider;
-			path = SummerSlider;
+			name = JoystickView;
+			path = JoystickView;
+			sourceTree = "<group>";
+		};
+		1D3632EFFC51C919020B9B41A93D888B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				619462D4D239137F47BFD084125A0EE5 /* BatteryView.framework */,
+				D6197B4B13E797C6665D74CBC9FAAFCA /* Bluetonium.framework */,
+				186BAB931899A3042030707A0DD455CF /* CDJoystick.framework */,
+				619C26FD5378030D8C95AE9097BAC526 /* GradientProgress.framework */,
+				93F656D79EB7E98E07E02A8C3EF23795 /* Haptico.framework */,
+				81967FC37DC6824F8E104C44C34D45BF /* JoystickView.framework */,
+				08AA72BA8023AFA61DDBF44160A88E6A /* Pods_Orbi.framework */,
+				D0F64B69519BA1831FE1CE5B991811AC /* Pods_OrbiTests.framework */,
+				4604801ED00AF2BA0F17ED1C5CA9EC67 /* Pods_OrbiUITests.framework */,
+				6642040CCC4CD7F37093C2AA4F7FB304 /* SideMenuSwift.framework */,
+				1DFD52714DEF6DB0B866898AB0ABFDE5 /* SummerSlider.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B8F3AF07B2826736F873A286627FE3C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39B5707764174F171F5C38BC80696EE5 /* SummerSlider.modulemap */,
+				D01AF04DC0D5961F306FBF6E1CAC19A3 /* SummerSlider.xcconfig */,
+				6F5895CDB4654B88E0F061EF4E078C1E /* SummerSlider-dummy.m */,
+				91CD7105E2900F8817438036890D059C /* SummerSlider-Info.plist */,
+				AFDA4C38FF636F1633236C7A7157A24B /* SummerSlider-prefix.pch */,
+				53A12B527DC544887ACD621E678401A9 /* SummerSlider-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SummerSlider";
 			sourceTree = "<group>";
 		};
 		2FC85D205263CA6EA248DD1A353C7E40 /* Pods-OrbiTests */ = {
@@ -367,28 +485,18 @@
 			path = "Target Support Files/Pods-OrbiTests";
 			sourceTree = "<group>";
 		};
-		3C9DB5D9829958ABA301F101E18A7DFF /* GradientProgress */ = {
+		397FC43502573C8118A653B5262FEFB5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				79F822D80F45C2D558CB043B5016A5F0 /* GradientProgress.swift */,
-				AC38B1A3C4AD87A5C558B4E67FFA5443 /* Support Files */,
-			);
-			name = GradientProgress;
-			path = GradientProgress;
-			sourceTree = "<group>";
-		};
-		440F6B696BABBACBE2A6644B164A3500 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BECFCC730598A3A8735E95C283DC505D /* JoystickView.modulemap */,
-				4BF57F154F8E779A813C5A120E6DF059 /* JoystickView.xcconfig */,
-				F9D8A1FB158CD0F76CC5CB42AA184851 /* JoystickView-dummy.m */,
-				0BD6B36D533FF4046DD5803114EE1D6C /* JoystickView-Info.plist */,
-				A2FC3424DFFA44F038581F160330AF6A /* JoystickView-prefix.pch */,
-				1E436C6C5A0CB7DF0FB2E31B3F71405D /* JoystickView-umbrella.h */,
+				E26CAFA339A8170ADBFB1A87CD508B42 /* CDJoystick.modulemap */,
+				3AA3DDED27E53A38CF2982AAD474B1BB /* CDJoystick.xcconfig */,
+				A662A1E69555F9F6FFAC8173A077D610 /* CDJoystick-dummy.m */,
+				FB8B0154D38C1B26A8FBAAAC79E87934 /* CDJoystick-Info.plist */,
+				2CDBF0BC227713F51AAE2C51336AD153 /* CDJoystick-prefix.pch */,
+				221203B5EB88A7DBF0BB8E14903AC477 /* CDJoystick-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/JoystickView";
+			path = "../Target Support Files/CDJoystick";
 			sourceTree = "<group>";
 		};
 		5013C9AC7D58972F31A1DE1EB5C4C223 /* Targets Support Files */ = {
@@ -399,20 +507,6 @@
 				6D6340246CB4B1DF2A939C24E2AEA5C5 /* Pods-OrbiUITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6BD3FD836BFF1BB9A3B1A0EE58053F93 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				81C74F9449C23D35B2C795AAB201818A /* SummerSlider.modulemap */,
-				7813703C544934A62F28A2D4F53024EF /* SummerSlider.xcconfig */,
-				E689A5A2D489E2C34470E378DD966B06 /* SummerSlider-dummy.m */,
-				0BE8880B703A8E31F87B798838D82B04 /* SummerSlider-Info.plist */,
-				12A2934C722AF6EDDD20013FFDD4975E /* SummerSlider-prefix.pch */,
-				758677E3C8DE3F7A4E14F0E66F862C95 /* SummerSlider-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SummerSlider";
 			sourceTree = "<group>";
 		};
 		6D6340246CB4B1DF2A939C24E2AEA5C5 /* Pods-OrbiUITests */ = {
@@ -431,82 +525,141 @@
 			path = "Target Support Files/Pods-OrbiUITests";
 			sourceTree = "<group>";
 		};
-		71F285D5139DF8AB584F1752051E7B58 /* CDJoystick */ = {
+		759320176F3B6D6B5604265B28BC39ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4DA6820F8D2754A06EEB3F50F473235E /* CDJoystick.swift */,
-				7656485D484FF62FC032ABEACCA9E87F /* Support Files */,
+				A328D7A8893E00759E2AF976970BDD2E /* BatteryView */,
+				94972443E087F6E33D37B5DC577E5120 /* Bluetonium */,
+				16392E57C58EF142503F3C241EF0B1A6 /* CDJoystick */,
+				D10B98EB3F49444354D821E1B23FF8AE /* GradientProgress */,
+				93D9EBF634DF76AB632B8781D7D22D72 /* Haptico */,
+				1B0EA614D1CC625EB871755366A4F6AE /* JoystickView */,
+				8B7DAB2407BB58AA006B976C5084BA77 /* SideMenuSwift */,
+				9ED7E7D9F85263759B6A14A0910C40FF /* SummerSlider */,
 			);
-			name = CDJoystick;
-			path = CDJoystick;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		7656485D484FF62FC032ABEACCA9E87F /* Support Files */ = {
+		814504043050FBA73BDAE621F1D852DA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				22DE75F6D0BA937D101C3221DD4322CD /* CDJoystick.modulemap */,
-				CF9FF1DCEF5E7A205F015E8A52050FDD /* CDJoystick.xcconfig */,
-				4879B6E48C473A593F994BEB71EEE55A /* CDJoystick-dummy.m */,
-				A047ECC65BE0F2EF7D5714E2B539ED10 /* CDJoystick-Info.plist */,
-				6480B7182BC579AF96C4D53C2496B15A /* CDJoystick-prefix.pch */,
-				174061A6D5BCB58FF3E33929253DC99D /* CDJoystick-umbrella.h */,
+				DC4E0A0CA0771CF66EF29060F2583658 /* Haptico.modulemap */,
+				6F1D7F5FDAA59D4BEA94AF934E70EF03 /* Haptico.xcconfig */,
+				0F3CF40D59660AA865BF7A1C7FD0A156 /* Haptico-dummy.m */,
+				7F30F69AE57AFD883C8B8C31A15360B6 /* Haptico-Info.plist */,
+				AD7BBF81E8C71FD80B92533F03F56C06 /* Haptico-prefix.pch */,
+				32EFC85683731F63B671F5C6A1847EC8 /* Haptico-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/CDJoystick";
+			path = "../Target Support Files/Haptico";
 			sourceTree = "<group>";
 		};
-		8B4549A18222C5509380513F06E7BD9C /* JoystickView */ = {
+		82C0306CBC043DF2D12CD793EA72B8F4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C44935FCEED2D35CB77FEDEAA51F39C5 /* JoystickView.swift */,
-				440F6B696BABBACBE2A6644B164A3500 /* Support Files */,
-			);
-			name = JoystickView;
-			path = JoystickView;
-			sourceTree = "<group>";
-		};
-		AC38B1A3C4AD87A5C558B4E67FFA5443 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				27FA5521A51D1DE5372402856D65B935 /* GradientProgress.modulemap */,
-				CD35B3FC7349E8AF728B984B49D2D2BD /* GradientProgress.xcconfig */,
-				0004E08978A7D7B5B0513B69DC5E07C8 /* GradientProgress-dummy.m */,
-				3D190B9E652CD792AFE8FC369387DECB /* GradientProgress-Info.plist */,
-				CDDBB35185595B8AE9608D6C0C9E067A /* GradientProgress-prefix.pch */,
-				1ADA14E09A5CAF7A90FA238CFDDBA151 /* GradientProgress-umbrella.h */,
+				D5A869DCA9ECA1EB6216ACA2B516C44E /* Bluetonium.modulemap */,
+				D2FB2204175C57F070D9603DC750FDAD /* Bluetonium.xcconfig */,
+				335FAE48208F483ED6FE82F7ECDB2A95 /* Bluetonium-dummy.m */,
+				CE4FB48AFE27FC01AEA0125EBE1098F3 /* Bluetonium-Info.plist */,
+				1BCFCD86597AF0FB961C3821132FD2F3 /* Bluetonium-prefix.pch */,
+				3229DD23198C78827B1106F67A3F5D54 /* Bluetonium-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GradientProgress";
+			path = "../Target Support Files/Bluetonium";
 			sourceTree = "<group>";
 		};
-		B3B6835D4602D36D6F927B5080EB4F40 /* Products */ = {
+		8B7DAB2407BB58AA006B976C5084BA77 /* SideMenuSwift */ = {
 			isa = PBXGroup;
 			children = (
-				619462D4D239137F47BFD084125A0EE5 /* BatteryView.framework */,
-				186BAB931899A3042030707A0DD455CF /* CDJoystick.framework */,
-				619C26FD5378030D8C95AE9097BAC526 /* GradientProgress.framework */,
-				93F656D79EB7E98E07E02A8C3EF23795 /* Haptico.framework */,
-				81967FC37DC6824F8E104C44C34D45BF /* JoystickView.framework */,
-				08AA72BA8023AFA61DDBF44160A88E6A /* Pods_Orbi.framework */,
-				D0F64B69519BA1831FE1CE5B991811AC /* Pods_OrbiTests.framework */,
-				4604801ED00AF2BA0F17ED1C5CA9EC67 /* Pods_OrbiUITests.framework */,
-				1DFD52714DEF6DB0B866898AB0ABFDE5 /* SummerSlider.framework */,
+				5202364065A9B1FB095508D2228A1A52 /* BasicTransitionAnimator.swift */,
+				B34EADADB87F6FF552887BF5CEA3ED99 /* Delegate.swift */,
+				73BCCE9781486EC6791DBDE4095E1A90 /* Preferences.swift */,
+				6737F13672665C6A4686AA724F0D4673 /* Segue.swift */,
+				DA86C0AB38B24C549FB63CE3F15F439B /* SideMenu.h */,
+				6E790980ABB2ECA32AAD66CFDFB6FA64 /* SideMenuController.swift */,
+				AAF47B9ED7D96CCE7025690369B61B4D /* StatusBar.swift */,
+				B47B93CEFD091E96A6219710F76982F9 /* TransitionContext.swift */,
+				4EACEABF0DBAD24A0B2B5F1330E80688 /* UIView+Container.swift */,
+				453190D645B31552FBECD416673255C3 /* UIViewController+Container.swift */,
+				3E8F95F8F331E8621E80F8C9FB6CF958 /* UIViewController+SideMenu.swift */,
+				1303E91B49E10068A8C6C3C45AA1876E /* Support Files */,
 			);
-			name = Products;
+			name = SideMenuSwift;
+			path = SideMenuSwift;
 			sourceTree = "<group>";
 		};
-		B75B8D7D68718F7851136A02653BD94C /* Support Files */ = {
+		93D9EBF634DF76AB632B8781D7D22D72 /* Haptico */ = {
 			isa = PBXGroup;
 			children = (
-				F47D5EC8D7AC9B07CF92333FA4D5E2B6 /* BatteryView.modulemap */,
-				6FC0AA122BA9EC9462EB4E74F7A16DB7 /* BatteryView.xcconfig */,
-				70A91569197A6E8C8DF8BAEC31D02521 /* BatteryView-dummy.m */,
-				1A24B50EC442125A109AEEFF4DF05AF0 /* BatteryView-Info.plist */,
-				7354E31524581303FE16A37B06406C51 /* BatteryView-prefix.pch */,
-				919783FFECEB4BB35C37126BD5BD2975 /* BatteryView-umbrella.h */,
+				859C741C0EBD4AB06A5763AD6DA1053C /* HapticFeedbackEngine.swift */,
+				FB66D8DED06343A7B7BE15D33D23F25A /* Haptico.swift */,
+				0DEB0DF87A219C27BA6B3F8773342CB9 /* HapticoPattern.swift */,
+				92ED0EA7B020CCA8D897516C44A1429F /* PatternEngine.swift */,
+				529BC5583AD506B2BA73237254193523 /* TapticEngine.swift */,
+				5B5B79D56C0227B456E6B3AEDD5D7EA1 /* UIButton+Haptico.swift */,
+				E83E132A5C4CC3E65FED0B555DB7CD41 /* UIDevice+Extensions.swift */,
+				6F594B554966CB11D66FCC9879372653 /* UIViewController+Haptico.swift */,
+				814504043050FBA73BDAE621F1D852DA /* Support Files */,
+			);
+			name = Haptico;
+			path = Haptico;
+			sourceTree = "<group>";
+		};
+		94972443E087F6E33D37B5DC577E5120 /* Bluetonium */ = {
+			isa = PBXGroup;
+			children = (
+				47E5A21F2A8626C19A624244FA7B9222 /* DataTransformers.swift */,
+				A371B7F251306F9635196C2E4A7994A6 /* Device.swift */,
+				9D610FD34058085E90A641585E9FA334 /* Manager.swift */,
+				AD5596B7D7ADDB36A9D627D881931F6F /* ManagerDelegate.swift */,
+				B3B9C96D085A724748A1AFFB9083C123 /* Map.swift */,
+				7675F8E87EFF8ECC80C513BA25A424E6 /* ServiceModel.swift */,
+				7A69F31EC1F151EAB0D8B8E57851B139 /* ServiceModelManager.swift */,
+				82C0306CBC043DF2D12CD793EA72B8F4 /* Support Files */,
+			);
+			name = Bluetonium;
+			path = Bluetonium;
+			sourceTree = "<group>";
+		};
+		9ED7E7D9F85263759B6A14A0910C40FF /* SummerSlider */ = {
+			isa = PBXGroup;
+			children = (
+				90BFE64DD0ECC12EA71AEA55F4252E27 /* Constants.swift */,
+				0B42D02494462AC7835E8F84DA91B39C /* HorizontalSlider.swift */,
+				7CB265DFAF83470009C414E61E4D2511 /* Slider.swift */,
+				515D18CC832B17377F29F7D2D0CC7754 /* SliderDrawingProtocol.swift */,
+				6229C742B61045E8CE9D18E7C60FF568 /* SliderFactory.swift */,
+				772226A78E03045236231CBDD666818D /* SummerSlider.swift */,
+				016A0C61D5EDC06943044F57C74D59BE /* SummerSliderTypes.swift */,
+				7C467779D7AAEA0067BF986281C0447B /* VerticalSlider.swift */,
+				2B8F3AF07B2826736F873A286627FE3C /* Support Files */,
+			);
+			name = SummerSlider;
+			path = SummerSlider;
+			sourceTree = "<group>";
+		};
+		A328D7A8893E00759E2AF976970BDD2E /* BatteryView */ = {
+			isa = PBXGroup;
+			children = (
+				F287C97143AB637B741B8E208E5D882C /* BatteryView.swift */,
+				C7BA032ACEFF683FC7757B8A85A9EC48 /* Support Files */,
+			);
+			name = BatteryView;
+			path = BatteryView;
+			sourceTree = "<group>";
+		};
+		B21C14509521F26D288194D928DDB34D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				118DAFCC94C5C78B6178E5EFEEB43FEC /* JoystickView.modulemap */,
+				3A17D249FF572C439DB0EAFC2BC64460 /* JoystickView.xcconfig */,
+				2CBC460088C14DBDB580F8C8885205A8 /* JoystickView-dummy.m */,
+				3605CD458EB481082F0C74C6296091E1 /* JoystickView-Info.plist */,
+				E180D16906AE69D2F62C22DACE350BB5 /* JoystickView-prefix.pch */,
+				1AA12131BEE7759981BF8378A223A54F /* JoystickView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/BatteryView";
+			path = "../Target Support Files/JoystickView";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -517,15 +670,39 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		C7BA032ACEFF683FC7757B8A85A9EC48 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E353A333D19C7E5B39E8F0FDC338C7CE /* BatteryView.modulemap */,
+				ACE3E1F1AC0C106460B876A98868D727 /* BatteryView.xcconfig */,
+				BDE699394CE6E2BCBDCE58DB8955C3FF /* BatteryView-dummy.m */,
+				B444F4910C4271F4B69101083EF54C19 /* BatteryView-Info.plist */,
+				7D6277F1014CEFC9592A7C1D72279E6E /* BatteryView-prefix.pch */,
+				A10FB8D6275BF15470282A6506E753E7 /* BatteryView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BatteryView";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				DD544EC3EFED4F186FFB89363CC13373 /* Pods */,
-				B3B6835D4602D36D6F927B5080EB4F40 /* Products */,
+				759320176F3B6D6B5604265B28BC39ED /* Pods */,
+				1D3632EFFC51C919020B9B41A93D888B /* Products */,
 				5013C9AC7D58972F31A1DE1EB5C4C223 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D10B98EB3F49444354D821E1B23FF8AE /* GradientProgress */ = {
+			isa = PBXGroup;
+			children = (
+				6B249AF2AA2795F75621584F9FFC65FC /* GradientProgress.swift */,
+				1955D7648578C80F5BBD2820D55C6B1E /* Support Files */,
+			);
+			name = GradientProgress;
+			path = GradientProgress;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -536,32 +713,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD544EC3EFED4F186FFB89363CC13373 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E4B131B2CD70F1D64C5A64C5ECB85BF2 /* BatteryView */,
-				71F285D5139DF8AB584F1752051E7B58 /* CDJoystick */,
-				3C9DB5D9829958ABA301F101E18A7DFF /* GradientProgress */,
-				0348F410466352B3258544542843AE13 /* Haptico */,
-				8B4549A18222C5509380513F06E7BD9C /* JoystickView */,
-				1D93DB5FA79D81528C7B68732E64D74C /* SummerSlider */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E4B131B2CD70F1D64C5A64C5ECB85BF2 /* BatteryView */ = {
-			isa = PBXGroup;
-			children = (
-				B0B505FF50982EC4FD8C64C6C0EBE6C2 /* BatteryView.swift */,
-				B75B8D7D68718F7851136A02653BD94C /* Support Files */,
-			);
-			name = BatteryView;
-			path = BatteryView;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0FCBCF136C52E5DC5259DA0F0F5E5F90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBAF12D585B9B6A536F2DE897799640 /* SideMenu.h in Headers */,
+				8D64441946B91CAFDD7E752C9D812195 /* SideMenuSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1730129561246BBE4BC281D7325DBB03 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,6 +749,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		333FC429386971BED171AF6F9328711E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2148FE1850FE241AC44D6CA782F256D /* Bluetonium-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3E7BD405CB0B4BD2F06F595037221B11 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -599,6 +770,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F35A21F6A1B4532AAF3571578EECD501 /* GradientProgress-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A613F1C9ED08B118C56A6C761D79150A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5693558EA9A2CE93056EF0751FA6592 /* Pods-Orbi-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,14 +802,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2330AB678AE017CC3E35A5EC1B8827 /* BatteryView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3703B83C92337E9997C49E91A7A68C6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				819042C0AAB0D894FF914D7C675EDC3B /* Pods-Orbi-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +862,42 @@
 			productReference = 93F656D79EB7E98E07E02A8C3EF23795 /* Haptico.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		71A6B16D8C1AEB46B7E7048FFC9E14BF /* Bluetonium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 130A33AB404458C7C9F12E801818E106 /* Build configuration list for PBXNativeTarget "Bluetonium" */;
+			buildPhases = (
+				333FC429386971BED171AF6F9328711E /* Headers */,
+				63F4F56297D8182396406905D9242D7D /* Sources */,
+				A6F2A335BA0ABD673D09CD6220378E89 /* Frameworks */,
+				150CDE2EE1D2F8A9D6F2FDA497496355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bluetonium;
+			productName = Bluetonium;
+			productReference = D6197B4B13E797C6665D74CBC9FAAFCA /* Bluetonium.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		873002DBC460B8090EFD7E391AA04141 /* SideMenuSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01834B2AE3FEC3E642F8F05B7A74A04 /* Build configuration list for PBXNativeTarget "SideMenuSwift" */;
+			buildPhases = (
+				0FCBCF136C52E5DC5259DA0F0F5E5F90 /* Headers */,
+				BD58D501104900A4B1F5015E4D922377 /* Sources */,
+				E08E97EFDB4229FB6266F7C639F2051D /* Frameworks */,
+				5723ED2D11924959C93AAD6799E7607E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SideMenuSwift;
+			productName = SideMenuSwift;
+			productReference = 6642040CCC4CD7F37093C2AA4F7FB304 /* SideMenuSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		8DD93C549F7D858D74E0E2174F8CB347 /* BatteryView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61B29B0E286AA401356F8749A6539529 /* Build configuration list for PBXNativeTarget "BatteryView" */;
@@ -730,22 +937,24 @@
 		};
 		A57993E68B3C183500E62094DAEE0E32 /* Pods-Orbi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4EF5A11879924B8F0E6F90ED48A1F1F /* Build configuration list for PBXNativeTarget "Pods-Orbi" */;
+			buildConfigurationList = 63B215DC9DC9197E504FA1C43D2FCBBA /* Build configuration list for PBXNativeTarget "Pods-Orbi" */;
 			buildPhases = (
-				E3703B83C92337E9997C49E91A7A68C6 /* Headers */,
-				AED6F82D0A64E9131B054DC9862256BE /* Sources */,
-				51802921D894E1D5883B8F73832B785B /* Frameworks */,
-				8C6B3A84ACB2BF783B1D78A98863DB5E /* Resources */,
+				A613F1C9ED08B118C56A6C761D79150A /* Headers */,
+				C1925190BB097010D399010B3DD3C9DA /* Sources */,
+				B9153184B93B291F1F2746CD9E259E8C /* Frameworks */,
+				02E386C82DA513109EED6570CCADE65B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D781CB5A79A74C2DD64E0AEBED4AA6A /* PBXTargetDependency */,
-				2192708F6D206AE59DF1623F3B940205 /* PBXTargetDependency */,
-				836530B98BE99485766D526F01897A83 /* PBXTargetDependency */,
-				D2A79EC9B6177C3981F9D63D1E78BC5E /* PBXTargetDependency */,
-				828C378673EFB991B4960C388CCC6FB0 /* PBXTargetDependency */,
-				CC9452E96EDC7D88C806127EC3B6998F /* PBXTargetDependency */,
+				8FFA2732621ECAC8FDD9EF88C1B35DCC /* PBXTargetDependency */,
+				A61A34116CD53198F389A44B15C84EFA /* PBXTargetDependency */,
+				B2F29198A6135437141200036077C9C9 /* PBXTargetDependency */,
+				A0BEC0034F3B24391AEE299C0BA45061 /* PBXTargetDependency */,
+				A333404C05939A2E19E77D6A31733FB9 /* PBXTargetDependency */,
+				533B5DC2A33B0309044B6112ECDEE667 /* PBXTargetDependency */,
+				3ABC912AE85DA351E5333EDA4D0D0D6A /* PBXTargetDependency */,
+				90E3C48ABA1E0D4A89DF4CF65206576A /* PBXTargetDependency */,
 			);
 			name = "Pods-Orbi";
 			productName = "Pods-Orbi";
@@ -824,11 +1033,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = B3B6835D4602D36D6F927B5080EB4F40 /* Products */;
+			productRefGroup = 1D3632EFFC51C919020B9B41A93D888B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8DD93C549F7D858D74E0E2174F8CB347 /* BatteryView */,
+				71A6B16D8C1AEB46B7E7048FFC9E14BF /* Bluetonium */,
 				500F9357C2C959E2A859291B64320554 /* CDJoystick */,
 				B82FDF47AB0381A7E2292B73A79B1F79 /* GradientProgress */,
 				6EB9AEE9A59747F5A6B5763D6754E351 /* Haptico */,
@@ -836,13 +1046,28 @@
 				A57993E68B3C183500E62094DAEE0E32 /* Pods-Orbi */,
 				9EEC32D874AE5CFEAD5E75361A7B1071 /* Pods-OrbiTests */,
 				EEB5E323074CA04CDD804F4381761D59 /* Pods-OrbiUITests */,
+				873002DBC460B8090EFD7E391AA04141 /* SideMenuSwift */,
 				46A0764198998972FD60ADDF59FE482B /* SummerSlider */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		02E386C82DA513109EED6570CCADE65B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A7BA5928ECF3F8CE9CEAD366DC1B494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		150CDE2EE1D2F8A9D6F2FDA497496355 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -857,6 +1082,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4F884B26850F30C39C50B578E5600BE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5723ED2D11924959C93AAD6799E7607E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -878,13 +1110,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7A4F39348969FE6496831119B4543D40 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C6B3A84ACB2BF783B1D78A98863DB5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -935,6 +1160,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63F4F56297D8182396406905D9242D7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD990F73E3F40631B45B71A8E7100898 /* Bluetonium-dummy.m in Sources */,
+				2B80F47E36FBB4D3DF425E2AA1198134 /* DataTransformers.swift in Sources */,
+				E32949EEA56F7B73FC3B36CAAE839CA6 /* Device.swift in Sources */,
+				7E0A1A96488E32ACB7E5E018FDD3E111 /* Manager.swift in Sources */,
+				73C8B75F87F9210D443CFECACF871D60 /* ManagerDelegate.swift in Sources */,
+				F520889CA56A7B151A4814FF4C59EB12 /* Map.swift in Sources */,
+				0AC81E1B7DC0D7840CF4F3E75BBFBE8F /* ServiceModel.swift in Sources */,
+				1BFF62331F4E167EEA30B5338130DBB9 /* ServiceModelManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65EC6661D935BE84F565BAE0A03A4955 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -968,11 +1208,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AED6F82D0A64E9131B054DC9862256BE /* Sources */ = {
+		BD58D501104900A4B1F5015E4D922377 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2E1973D646E56179279974DEA312CF6 /* Pods-Orbi-dummy.m in Sources */,
+				959CB3E07BF3D7AE58D02A4A31936D02 /* BasicTransitionAnimator.swift in Sources */,
+				A8E063A9F6B9E13B5567CE45A76C0C59 /* Delegate.swift in Sources */,
+				75D5FEFE4004E400918D88CB3EA4E1F1 /* Preferences.swift in Sources */,
+				E5077DB48F1F33FDEC4EC447066AE902 /* Segue.swift in Sources */,
+				F3D8E0F25407CC8672BDE6799D8E9D6B /* SideMenuController.swift in Sources */,
+				86A214ABE295DEC0EC1764D3DE7F5061 /* SideMenuSwift-dummy.m in Sources */,
+				C53BD513381195C77D3BA41613E62D48 /* StatusBar.swift in Sources */,
+				606D27CEC0D5F092F21AECE7FBDAFC95 /* TransitionContext.swift in Sources */,
+				A89FBA6802D9EFB01291FE47CDE7052E /* UIView+Container.swift in Sources */,
+				C9A5C46A1435E255E5662AFCFF7DAB4F /* UIViewController+Container.swift in Sources */,
+				3E950157182C9662598405EDD589235B /* UIViewController+SideMenu.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1925190BB097010D399010B3DD3C9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC31E448017ECD8C25855D5B6298F4A /* Pods-Orbi-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,29 +1267,47 @@
 			target = A57993E68B3C183500E62094DAEE0E32 /* Pods-Orbi */;
 			targetProxy = 9F62627D19A2D54A84A8C9772DBE9A25 /* PBXContainerItemProxy */;
 		};
-		2192708F6D206AE59DF1623F3B940205 /* PBXTargetDependency */ = {
+		3ABC912AE85DA351E5333EDA4D0D0D6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = CDJoystick;
-			target = 500F9357C2C959E2A859291B64320554 /* CDJoystick */;
-			targetProxy = 6F2395DD24D876DFCC1A9EEE587E2D54 /* PBXContainerItemProxy */;
+			name = SideMenuSwift;
+			target = 873002DBC460B8090EFD7E391AA04141 /* SideMenuSwift */;
+			targetProxy = BE36E8F0AD427D3048AE5147F141DDCF /* PBXContainerItemProxy */;
 		};
-		7D781CB5A79A74C2DD64E0AEBED4AA6A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BatteryView;
-			target = 8DD93C549F7D858D74E0E2174F8CB347 /* BatteryView */;
-			targetProxy = FA8689F15623BA609CA8A9183E0F0376 /* PBXContainerItemProxy */;
-		};
-		828C378673EFB991B4960C388CCC6FB0 /* PBXTargetDependency */ = {
+		533B5DC2A33B0309044B6112ECDEE667 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JoystickView;
 			target = AFBABD10A7D8DFF1F34D7A65A86A2B54 /* JoystickView */;
-			targetProxy = 0D364FB4B4254119990D0A1F09F9AC1C /* PBXContainerItemProxy */;
+			targetProxy = EA866E218ED61B4CAFC2FAD778D93451 /* PBXContainerItemProxy */;
 		};
-		836530B98BE99485766D526F01897A83 /* PBXTargetDependency */ = {
+		8FFA2732621ECAC8FDD9EF88C1B35DCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BatteryView;
+			target = 8DD93C549F7D858D74E0E2174F8CB347 /* BatteryView */;
+			targetProxy = BBDE1C28C8DC972E8EFA23B605F1161F /* PBXContainerItemProxy */;
+		};
+		90E3C48ABA1E0D4A89DF4CF65206576A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SummerSlider;
+			target = 46A0764198998972FD60ADDF59FE482B /* SummerSlider */;
+			targetProxy = 9066109A7A3D93049192167C7E258D04 /* PBXContainerItemProxy */;
+		};
+		A0BEC0034F3B24391AEE299C0BA45061 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GradientProgress;
 			target = B82FDF47AB0381A7E2292B73A79B1F79 /* GradientProgress */;
-			targetProxy = 454C69A3C4FACFBCC9DC43539445D486 /* PBXContainerItemProxy */;
+			targetProxy = 383594F200668C5FD1EEE80BEB63E5E8 /* PBXContainerItemProxy */;
+		};
+		A333404C05939A2E19E77D6A31733FB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Haptico;
+			target = 6EB9AEE9A59747F5A6B5763D6754E351 /* Haptico */;
+			targetProxy = C8EE4F8C899058ADBACF0ECECA0474C7 /* PBXContainerItemProxy */;
+		};
+		A61A34116CD53198F389A44B15C84EFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bluetonium;
+			target = 71A6B16D8C1AEB46B7E7048FFC9E14BF /* Bluetonium */;
+			targetProxy = 7A1DEAA6018EC6324041C40EC60BD22C /* PBXContainerItemProxy */;
 		};
 		AA5EF844976C9D6BE4D9521EE82E46FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1039,24 +1315,18 @@
 			target = A57993E68B3C183500E62094DAEE0E32 /* Pods-Orbi */;
 			targetProxy = E9708F783184F584E0BFA30A1508464F /* PBXContainerItemProxy */;
 		};
-		CC9452E96EDC7D88C806127EC3B6998F /* PBXTargetDependency */ = {
+		B2F29198A6135437141200036077C9C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SummerSlider;
-			target = 46A0764198998972FD60ADDF59FE482B /* SummerSlider */;
-			targetProxy = 7FD55372CB85AB57CCA7D478588E1431 /* PBXContainerItemProxy */;
-		};
-		D2A79EC9B6177C3981F9D63D1E78BC5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Haptico;
-			target = 6EB9AEE9A59747F5A6B5763D6754E351 /* Haptico */;
-			targetProxy = 283724B18BE9FD9CBEB024B58DE317FD /* PBXContainerItemProxy */;
+			name = CDJoystick;
+			target = 500F9357C2C959E2A859291B64320554 /* CDJoystick */;
+			targetProxy = 202F60D6AC9E43034087054CB167C847 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0AC1A0F98D295C7E04FD088F8604291E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD35B3FC7349E8AF728B984B49D2D2BD /* GradientProgress.xcconfig */;
+			baseConfigurationReference = 384E91385BDE2BF0A68BA5EC447964C4 /* GradientProgress.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1089,7 +1359,7 @@
 			};
 			name = Debug;
 		};
-		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+		14DEE7AF6741DC76DDF7C4ADD62A623C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1137,7 +1407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1149,9 +1419,45 @@
 			};
 			name = Release;
 		};
-		218E4A983F68BD449EF3988E2A2A3788 /* Debug */ = {
+		2C30E90091971E8FF8C771CDF39632D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B239778E115D0A3AC2E5EDF6990F6C51 /* Pods-OrbiTests.debug.xcconfig */;
+			baseConfigurationReference = D2FB2204175C57F070D9603DC750FDAD /* Bluetonium.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Bluetonium/Bluetonium-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Bluetonium/Bluetonium-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Bluetonium/Bluetonium.modulemap";
+				PRODUCT_MODULE_NAME = Bluetonium;
+				PRODUCT_NAME = Bluetonium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		312629C35E700B5BCCC208BC8CB50195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EADF172D63A57D013965A25B8297A14 /* Pods-OrbiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1164,16 +1470,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1187,48 +1493,9 @@
 			};
 			name = Debug;
 		};
-		25E2FBEAED543EF1ACB8B47E564B1A38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B00E97E2D82806F293ADFA5708C58BC /* Pods-OrbiTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		37BF070A480F63166727A00DFE0897ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FC0AA122BA9EC9462EB4E74F7A16DB7 /* BatteryView.xcconfig */;
+			baseConfigurationReference = ACE3E1F1AC0C106460B876A98868D727 /* BatteryView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1261,9 +1528,9 @@
 			};
 			name = Debug;
 		};
-		528BEFB18E8D974D4C61110C3318E425 /* Debug */ = {
+		3EB473B907EC230AE53E50CE428A73D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EADF172D63A57D013965A25B8297A14 /* Pods-OrbiUITests.debug.xcconfig */;
+			baseConfigurationReference = 8B00E97E2D82806F293ADFA5708C58BC /* Pods-OrbiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1276,16 +1543,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1294,14 +1561,15 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		563612926E669D06568448D69F8D110A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BF57F154F8E779A813C5A120E6DF059 /* JoystickView.xcconfig */;
+			baseConfigurationReference = 3A17D249FF572C439DB0EAFC2BC64460 /* JoystickView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1337,7 +1605,7 @@
 		};
 		59181E5DEF64DC0CA30CFC78E388C644 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7813703C544934A62F28A2D4F53024EF /* SummerSlider.xcconfig */;
+			baseConfigurationReference = D01AF04DC0D5961F306FBF6E1CAC19A3 /* SummerSlider.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1370,9 +1638,47 @@
 			};
 			name = Debug;
 		};
+		59BADDA7B55A9EDB4E078F991C694B1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B239778E115D0A3AC2E5EDF6990F6C51 /* Pods-OrbiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OrbiTests/Pods-OrbiTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		63F34B58330D62161F88B3BCF48D582B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BF57F154F8E779A813C5A120E6DF059 /* JoystickView.xcconfig */;
+			baseConfigurationReference = 3A17D249FF572C439DB0EAFC2BC64460 /* JoystickView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1407,7 +1713,7 @@
 		};
 		822992FF56BB806B82BB2E201DA05B7E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7813703C544934A62F28A2D4F53024EF /* SummerSlider.xcconfig */;
+			baseConfigurationReference = D01AF04DC0D5961F306FBF6E1CAC19A3 /* SummerSlider.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1441,42 +1747,7 @@
 			};
 			name = Release;
 		};
-		9AEE7DB791ED476931FA43A5D994A606 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA2C9BFDE8E142E8BC99DD62F159F732 /* Haptico.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Haptico/Haptico-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Haptico/Haptico-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Haptico/Haptico.modulemap";
-				PRODUCT_MODULE_NAME = Haptico;
-				PRODUCT_NAME = Haptico;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9D70F8E13CF8446FE1DCB93B5B001860 /* Release */ = {
+		98A4B9BBFCEA8C8562186D8738879D63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A939FF6323A257ED39AA0F40C5787A9C /* Pods-OrbiUITests.release.xcconfig */;
 			buildSettings = {
@@ -1493,7 +1764,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1515,229 +1786,9 @@
 			};
 			name = Release;
 		};
-		A90A3820462DA3D06A9486857089C045 /* Release */ = {
+		9AEE7DB791ED476931FA43A5D994A606 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF9FF1DCEF5E7A205F015E8A52050FDD /* CDJoystick.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CDJoystick/CDJoystick-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CDJoystick/CDJoystick-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CDJoystick/CDJoystick.modulemap";
-				PRODUCT_MODULE_NAME = CDJoystick;
-				PRODUCT_NAME = CDJoystick;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CBD478AB17C678A7D833A74CD8F8FD0E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FC0AA122BA9EC9462EB4E74F7A16DB7 /* BatteryView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BatteryView/BatteryView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BatteryView/BatteryView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/BatteryView/BatteryView.modulemap";
-				PRODUCT_MODULE_NAME = BatteryView;
-				PRODUCT_NAME = BatteryView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CE1012FE6CCAAAD4B2B37AA45559D050 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF9FF1DCEF5E7A205F015E8A52050FDD /* CDJoystick.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CDJoystick/CDJoystick-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CDJoystick/CDJoystick-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CDJoystick/CDJoystick.modulemap";
-				PRODUCT_MODULE_NAME = CDJoystick;
-				PRODUCT_NAME = CDJoystick;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DC80949380619339A6BB92132117EFF0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B4548C16329B29EF3A828291AB4023A /* Pods-Orbi.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DCA6C6F3510B1102B1BF280B09F4936F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD35B3FC7349E8AF728B984B49D2D2BD /* GradientProgress.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GradientProgress/GradientProgress-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GradientProgress/GradientProgress-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/GradientProgress/GradientProgress.modulemap";
-				PRODUCT_MODULE_NAME = GradientProgress;
-				PRODUCT_NAME = GradientProgress;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DF0CA2A8C7CFD6FCF14C4CBAAFD90C20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84212873086F9E9997A49F871A587F99 /* Pods-Orbi.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DF68C24E00E87F957D6271485E7FBDE8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA2C9BFDE8E142E8BC99DD62F159F732 /* Haptico.xcconfig */;
+			baseConfigurationReference = 6F1D7F5FDAA59D4BEA94AF934E70EF03 /* Haptico.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1765,13 +1816,87 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A90A3820462DA3D06A9486857089C045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA3DDED27E53A38CF2982AAD474B1BB /* CDJoystick.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDJoystick/CDJoystick-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDJoystick/CDJoystick-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CDJoystick/CDJoystick.modulemap";
+				PRODUCT_MODULE_NAME = CDJoystick;
+				PRODUCT_NAME = CDJoystick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+		AFAA3685723971FAA59E01CCAC9B957C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B4548C16329B29EF3A828291AB4023A /* Pods-Orbi.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B963CC86710B44699D7402ACC2CFB8D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1822,7 +1947,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1832,6 +1957,293 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CBD478AB17C678A7D833A74CD8F8FD0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE3E1F1AC0C106460B876A98868D727 /* BatteryView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BatteryView/BatteryView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BatteryView/BatteryView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BatteryView/BatteryView.modulemap";
+				PRODUCT_MODULE_NAME = BatteryView;
+				PRODUCT_NAME = BatteryView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE1012FE6CCAAAD4B2B37AA45559D050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA3DDED27E53A38CF2982AAD474B1BB /* CDJoystick.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDJoystick/CDJoystick-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDJoystick/CDJoystick-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CDJoystick/CDJoystick.modulemap";
+				PRODUCT_MODULE_NAME = CDJoystick;
+				PRODUCT_NAME = CDJoystick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D29F4850E6F824006C91C4A9CEB6BDC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C0B11EFCC13B70493A15AF6A3752CE /* SideMenuSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenuSwift/SideMenuSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenuSwift/SideMenuSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SideMenuSwift/SideMenuSwift.modulemap";
+				PRODUCT_MODULE_NAME = SideMenuSwift;
+				PRODUCT_NAME = SideMenuSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D33195FA152D974E4747EE3AD61F9411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FB2204175C57F070D9603DC750FDAD /* Bluetonium.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Bluetonium/Bluetonium-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Bluetonium/Bluetonium-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Bluetonium/Bluetonium.modulemap";
+				PRODUCT_MODULE_NAME = Bluetonium;
+				PRODUCT_NAME = Bluetonium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DCA6C6F3510B1102B1BF280B09F4936F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 384E91385BDE2BF0A68BA5EC447964C4 /* GradientProgress.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GradientProgress/GradientProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GradientProgress/GradientProgress-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GradientProgress/GradientProgress.modulemap";
+				PRODUCT_MODULE_NAME = GradientProgress;
+				PRODUCT_NAME = GradientProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DF68C24E00E87F957D6271485E7FBDE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F1D7F5FDAA59D4BEA94AF934E70EF03 /* Haptico.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Haptico/Haptico-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Haptico/Haptico-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Haptico/Haptico.modulemap";
+				PRODUCT_MODULE_NAME = Haptico;
+				PRODUCT_NAME = Haptico;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EADEABE95D59211F1799A2ACE92B5586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84212873086F9E9997A49F871A587F99 /* Pods-Orbi.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Orbi/Pods-Orbi.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F6FB075A6557FE3AD8BAE8E5D6FDC475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C0B11EFCC13B70493A15AF6A3752CE /* SideMenuSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenuSwift/SideMenuSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenuSwift/SideMenuSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SideMenuSwift/SideMenuSwift.modulemap";
+				PRODUCT_MODULE_NAME = SideMenuSwift;
+				PRODUCT_NAME = SideMenuSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1847,11 +2259,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		130A33AB404458C7C9F12E801818E106 /* Build configuration list for PBXNativeTarget "Bluetonium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33195FA152D974E4747EE3AD61F9411 /* Debug */,
+				2C30E90091971E8FF8C771CDF39632D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		443A074600F307F19E1CB5AA6F253BE2 /* Build configuration list for PBXNativeTarget "Pods-OrbiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				528BEFB18E8D974D4C61110C3318E425 /* Debug */,
-				9D70F8E13CF8446FE1DCB93B5B001860 /* Release */,
+				312629C35E700B5BCCC208BC8CB50195 /* Debug */,
+				98A4B9BBFCEA8C8562186D8738879D63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1859,8 +2280,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
-				1422B121EAEAEA11307496903FA623C6 /* Release */,
+				B963CC86710B44699D7402ACC2CFB8D3 /* Debug */,
+				14DEE7AF6741DC76DDF7C4ADD62A623C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1868,8 +2289,8 @@
 		540B376378639ECC45CD011BFE416E52 /* Build configuration list for PBXNativeTarget "Pods-OrbiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				218E4A983F68BD449EF3988E2A2A3788 /* Debug */,
-				25E2FBEAED543EF1ACB8B47E564B1A38 /* Release */,
+				59BADDA7B55A9EDB4E078F991C694B1F /* Debug */,
+				3EB473B907EC230AE53E50CE428A73D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1892,6 +2313,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		63B215DC9DC9197E504FA1C43D2FCBBA /* Build configuration list for PBXNativeTarget "Pods-Orbi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EADEABE95D59211F1799A2ACE92B5586 /* Debug */,
+				AFAA3685723971FAA59E01CCAC9B957C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01834B2AE3FEC3E642F8F05B7A74A04 /* Build configuration list for PBXNativeTarget "SideMenuSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6FB075A6557FE3AD8BAE8E5D6FDC475 /* Debug */,
+				D29F4850E6F824006C91C4A9CEB6BDC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C8E1799D86EF7ACA8E2D36AF96BC0916 /* Build configuration list for PBXNativeTarget "Haptico" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1906,15 +2345,6 @@
 			buildConfigurations = (
 				CE1012FE6CCAAAD4B2B37AA45559D050 /* Debug */,
 				A90A3820462DA3D06A9486857089C045 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4EF5A11879924B8F0E6F90ED48A1F1F /* Build configuration list for PBXNativeTarget "Pods-Orbi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DF0CA2A8C7CFD6FCF14C4CBAAFD90C20 /* Debug */,
-				DC80949380619339A6BB92132117EFF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -46,7 +46,7 @@ public class GradientProgressBar : UIProgressView {
             }
         }
     }
-    
+     
     lazy private var gradientLayer: CAGradientLayer = self.initGradientLayer()
 
     // MARK: - init methods
@@ -80,6 +80,7 @@ public class GradientProgressBar : UIProgressView {
         self.layer.addSublayer(gradientLayer)
         progressTintColor = UIColor.clear
         gradientLayer.colors = gradientColors
+        
     }
     
     private func initGradientLayer() -> CAGradientLayer {
@@ -97,6 +98,7 @@ public class GradientProgressBar : UIProgressView {
     private func updateGradientLayer() {
         gradientLayer.frame = sizeByPercentage(originalRect: bounds, width: CGFloat(progress))
         gradientLayer.cornerRadius = cornerRadius
+     
     }
     
     private func sizeByPercentage(originalRect: CGRect, width: CGFloat) -> CGRect {

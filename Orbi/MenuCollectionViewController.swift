@@ -53,7 +53,17 @@ class MenuCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "drive", sender: self)
+        switch indexPath.row {
+        case 0:
+            self.performSegue(withIdentifier: "drive", sender: self)
+        case 1:
+            self.performSegue(withIdentifier: "help", sender: self)
+        case 2:
+            self.performSegue(withIdentifier: "setting", sender: self)
+        default:
+            self.performSegue(withIdentifier: "drive", sender: self)
+        }
+        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

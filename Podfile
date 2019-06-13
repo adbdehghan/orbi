@@ -11,6 +11,8 @@ target 'Orbi' do
   pod 'Haptico'
   pod 'GradientProgress'
   pod 'SummerSlider', '~>0.3.0'
+  pod 'Bluetonium'
+  pod 'SideMenuSwift'
   
   target 'OrbiTests' do
     inherit! :search_paths
