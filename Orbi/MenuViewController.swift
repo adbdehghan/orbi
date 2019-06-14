@@ -16,6 +16,7 @@ class Preferences {
 
 class MenuViewController: UIViewController {
     var isDarkModeEnabled = false
+    @IBOutlet weak var backContainerView: UIView!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -45,7 +46,7 @@ class MenuViewController: UIViewController {
     }
 
     private func configureView() {
-
+        backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
         view.backgroundColor = #colorLiteral(red: 0.2901960784, green: 0.2980392157, blue: 0.5490196078, alpha: 1)
     }
 
@@ -122,7 +123,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row       
+        let row = indexPath.row
         sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
 
         
@@ -130,7 +131,11 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             print("[Example] View Controller Cache Identifier: \(identifier)")
         }
     }
-
+    
+    @IBAction func BackButtonAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
