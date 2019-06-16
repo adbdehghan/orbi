@@ -63,12 +63,13 @@ extension SideMenuController {
             public var initialSpringVelocity: CGFloat = 1
 
             // Whether a shadow effect should be added on content view when revealing the menu. The default is true.
+            // If the position is `.under`, the shadow effect will not be added even if this value is set to `true`.
             public var shouldAddShadowWhenRevealing = true
 
             // The shadow's alpha when showing on the content view. Default is 0.2.
             public var shadowAlpha: CGFloat = 0.2
-            
-            // The shadow's color when showing on the content view. Default is black.
+
+            // The shadow's color when showing on the content view. Default is black.
             public var shadowColor: UIColor = .black
         }
 
@@ -106,9 +107,8 @@ extension SideMenuController {
             public var defaultCacheKey: String?
 
             /// The supported orientations of side menu controller. Default is `.portrait`.
-            public var supportedOrientations: UIInterfaceOrientationMask = .portrait
+            public var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
         }
-
 
         /// The basic configuration of side menu
         public var basic = Configuration()

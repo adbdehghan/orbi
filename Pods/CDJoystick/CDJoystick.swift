@@ -14,7 +14,9 @@ public struct CDJoystickData: CustomStringConvertible {
     public var velocity: CGPoint = .zero
 
     /// 0 at top middle to 6.28 radians going around clockwise
-    public var angle: CGFloat = 0.0
+    public var angle: Int = 0
+    
+    public var strength: Int = 0
 
     public var description: String {
         return "velocity: \(velocity), angle: \(angle)"
@@ -145,7 +147,15 @@ public class CDJoystick: UIView {
         let x = clamp(distance.x, lower: -bounds.size.width / 2, upper: bounds.size.width / 2) / (bounds.size.width / 2)
         let y = clamp(distance.y, lower: -bounds.size.height / 2, upper: bounds.size.height / 2) / (bounds.size.height / 2)
 
-        data = CDJoystickData(velocity: CGPoint(x: x, y: y), angle: -atan2(x, y) + CGFloat(Double.pi))
+        var angle = Int(rad2deg(Double(atan2(x, y))))
+        angle = angle - 90
+        angle = angle < 0 ? angle + 360 : angle
+        
+        let radius = sqrt(pow(x, 2) + pow(y, 2))
+        var strength = Int((radius / 1) * 100)
+        strength = strength > 100 ? 100 : strength
+        
+        data = CDJoystickData(velocity: CGPoint(x: x, y: y), angle: angle,strength: strength)
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -168,5 +178,9 @@ public class CDJoystick: UIView {
 
     private func clamp<T: Comparable>(_ value: T, lower: T, upper: T) -> T {
         return min(max(value, lower), upper)
+    }
+    
+    func rad2deg(_ number: Double) -> Double {
+        return number * 180 / .pi
     }
 }

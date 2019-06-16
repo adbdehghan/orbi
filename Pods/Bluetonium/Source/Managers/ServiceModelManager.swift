@@ -39,7 +39,7 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
     
     /**
      Register a `BTServiceModel` subclass.
-        
+     
      - parameter serviceModel: The BTServiceModel to register.
      */
     func register(serviceModel: ServiceModel) {
@@ -51,7 +51,7 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
     
     /**
      Check if a specific `CBCharacteristic` is available.
-        
+     
      - parameter characteristicUUID: The UUID of the characteristic.
      - parameter serviceUUID: The UUID of the service.
      
@@ -63,7 +63,7 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
     
     /**
      Perform a readValue call on the peripheral.
-        
+     
      - parameter characteristicUUID: The UUID of the characteristic.
      - parameter serviceUUID: The UUID of the service.
      */
@@ -75,7 +75,7 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
     
     /**
      Perform a writeValue call on the peripheral.
-    
+     
      - parameter value: The data to write.
      - parameter characteristicUUID: The UUID of the characteristic.
      - parameter serviceUUID: The UUID of the service.
@@ -88,16 +88,16 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
     
     /**
      Reset all the registered BTServiceModel's.
-    */
+     */
     func resetServices() {
         for serviceModel in registeredServiceModels {
             serviceModel.resetService()
         }
     }
-
+    
     /**
      Enables or disables notify messages for a specific characteristic / servicemodel
-
+     
      - parameter serviceModel: The `ServiceModel`
      - parameter enabled: `Bool`
      - parameter characteristicUUID: The characteristic uuid
@@ -113,9 +113,9 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
     
     /**
      Get the `BTServiceModel` subclass in the the registered serviceModels.
-        
+     
      - parameter UUID: The UUID of the `BTServiceModel` to return.
-        
+     
      - returns: Returns a registered `BTServiceModel` subclass if found.
      */
     fileprivate func serviceModel(withUUID uuid: String) -> ServiceModel? {
@@ -144,7 +144,7 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
     
     /**
      Get the `CBService` with a specific UUID string.
-        
+     
      - parameter serviceUUID: The UUID of the `CBService` to lookup.
      
      - returns: A `CBService` if found, nil if nothing found.
@@ -162,7 +162,7 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
         guard let services = peripheral.services else {
             return
         }
-
+        
         for service in services {
             guard let serviceModel = serviceModel(withUUID: service.uuid.uuidString) else {
                 continue
@@ -173,12 +173,12 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
             peripheral.discoverCharacteristics(characteristics, for: service)
         }
     }
-
+    
     @objc func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         guard let serviceModel = serviceModel(withUUID: service.uuid.uuidString), let characteristics = service.characteristics else {
             return
         }
-
+        
         for characteristic in characteristics {
             // Check with correct ServiceModel if it should register for value changes.
             if serviceModel.registerNotifyForCharacteristic(withUUID: characteristic.uuid.uuidString) {
@@ -191,9 +191,9 @@ class ServiceModelManager: NSObject, CBPeripheralDelegate {
             serviceModel.characteristicAvailable(withUUID: characteristic.uuid.uuidString)
         }
     }
-
+    
     @objc func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) { }
-
+    
     @objc func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         guard let serviceModel = serviceModel(withUUID: characteristic.service.uuid.uuidString) else {
             return

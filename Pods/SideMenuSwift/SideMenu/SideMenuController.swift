@@ -102,7 +102,7 @@ open class SideMenuController: UIViewController {
     open var isMenuRevealed = false
 
     private var shouldShowShadowOnContent: Bool {
-        return preferences.animation.shouldAddShadowWhenRevealing
+        return preferences.animation.shouldAddShadowWhenRevealing && preferences.basic.position != .under
     }
 
     /// States used in panning gesture
@@ -271,7 +271,6 @@ open class SideMenuController: UIViewController {
                 if reveal {
                     self.delegate?.sideMenuControllerDidRevealMenu(self)
                 } else {
-                    self.delegate?.sideMenuControllerDidHideMneu(self)
                     self.delegate?.sideMenuControllerDidHideMenu(self)
                 }
             }
@@ -346,16 +345,15 @@ open class SideMenuController: UIViewController {
             return
         }
 
-        let overlay = UIView()
-        overlay.bounds = contentContainerView.bounds
-        overlay.center = contentContainerView.center
+        let overlay = UIView(frame: contentContainerView.bounds)
+        overlay.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+
         if !shouldShowShadowOnContent {
             overlay.backgroundColor = .clear
         } else {
             overlay.backgroundColor = SideMenuController.preferences.animation.shadowColor
             overlay.alpha = 0
         }
-        overlay.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 
         // UIKit can coordinate overlay's tap gesture and controller view's pan gesture correctly
         let tapToHideGesture = UITapGestureRecognizer()
@@ -368,7 +366,7 @@ open class SideMenuController: UIViewController {
     }
 
     @objc private func handleTapGesture(_ tap: UITapGestureRecognizer) {
-//        hideMenu()
+        hideMenu()
     }
 
     @objc private func handlePanGesture(_ pan: UIPanGestureRecognizer) {
@@ -445,7 +443,13 @@ open class SideMenuController: UIViewController {
             }
 
             if shouldShowShadowOnContent {
-                let shadowPercent = min(menuContainerView.frame.maxX / menuWidth, 1)
+                let movingDistance: CGFloat
+                if isLeft {
+                    movingDistance = menuContainerView.frame.maxX
+                } else {
+                    movingDistance = menuWidth - menuContainerView.frame.minX
+                }
+                let shadowPercent = min(movingDistance / menuWidth, 1)
                 contentContainerOverlay?.alpha = self.preferences.animation.shadowAlpha * shadowPercent
             }
         case .ended, .cancelled, .failed:
@@ -640,7 +644,7 @@ open class SideMenuController: UIViewController {
     ///
     /// - Returns: if not exist, returns nil.
     open func currentCacheIdentifier() -> String? {
-        guard let index = lazyCachedViewControllers.values.index(of: contentViewController) else {
+        guard let index = lazyCachedViewControllers.values.firstIndex(of: contentViewController) else {
             return nil
         }
         return lazyCachedViewControllers.keys[index]
@@ -656,11 +660,11 @@ open class SideMenuController: UIViewController {
 
     // MARK: - Helper Methods
 
-    private func sideMenuFrame(visibility: Bool) -> CGRect {
+    private func sideMenuFrame(visibility: Bool, targetSize: CGSize? = nil) -> CGRect {
         let position = preferences.basic.position
         switch position {
         case .above, .sideBySide:
-            var baseFrame = view.frame
+            var baseFrame = CGRect(origin: view.frame.origin, size: targetSize ?? view.frame.size)
             if visibility {
                 baseFrame.origin.x = preferences.basic.menuWidth - baseFrame.width
             } else {
@@ -668,26 +672,26 @@ open class SideMenuController: UIViewController {
             }
             let factor: CGFloat = adjustedDirection == .left ? 1 : -1
             baseFrame.origin.x *= factor
-            return baseFrame
+            return CGRect(origin: baseFrame.origin, size: targetSize ?? baseFrame.size)
         case .under:
-            return view.frame
+            return CGRect(origin: view.frame.origin, size: targetSize ?? view.frame.size)
         }
     }
 
-    private func contentFrame(visibility: Bool) -> CGRect {
+    private func contentFrame(visibility: Bool, targetSize: CGSize? = nil) -> CGRect {
         let position = preferences.basic.position
         switch position {
         case .above:
-            return view.frame
+            return CGRect(origin: view.frame.origin, size: targetSize ?? view.frame.size)
         case .under, .sideBySide:
-            var baseFrame = view.frame
+            var baseFrame = CGRect(origin: view.frame.origin, size: targetSize ?? view.frame.size)
             if visibility {
                 let factor: CGFloat = adjustedDirection == .left ? 1 : -1
                 baseFrame.origin.x = preferences.basic.menuWidth * factor
             } else {
                 baseFrame.origin.x = 0
             }
-            return baseFrame
+            return CGRect(origin: baseFrame.origin, size: targetSize ?? baseFrame.size)
         }
     }
 
@@ -701,11 +705,11 @@ open class SideMenuController: UIViewController {
         hideMenu(animated: false, completion: { _ in
             // Temporally hide the menu container view for smooth animation
             self.menuContainerView.isHidden = true
-            coordinator.animate(alongsideTransition: { (_) in
-                self.contentContainerView.frame = self.contentFrame(visibility: self.isMenuRevealed)
+            coordinator.animate(alongsideTransition: { _ in
+                self.contentContainerView.frame = self.contentFrame(visibility: self.isMenuRevealed, targetSize: size)
             }, completion: { (_) in
                 self.menuContainerView.isHidden = false
-                self.menuContainerView.frame = self.sideMenuFrame(visibility: self.isMenuRevealed)
+                self.menuContainerView.frame = self.sideMenuFrame(visibility: self.isMenuRevealed, targetSize: size)
             })
         })
 
@@ -752,7 +756,7 @@ extension SideMenuController: UIGestureRecognizerDelegate {
                 return false
         }
 
-        if let index = navigationController.viewControllers.index(of: viewController) {
+        if let index = navigationController.viewControllers.firstIndex(of: viewController) {
             return index > 0
         }
         return false

@@ -9,7 +9,7 @@
 import Foundation
 import CoreBluetooth
 
-open class Manager: NSObject, CBCentralManagerDelegate,CBPeripheralDelegate {
+open class Manager: NSObject, CBCentralManagerDelegate {
     
     open var bluetoothEnabled: Bool {
         return centralManager?.state == .poweredOn
@@ -33,7 +33,7 @@ open class Manager: NSObject, CBCentralManagerDelegate,CBPeripheralDelegate {
         foundDevices = []
         centralManager = CBCentralManager(delegate: self, queue: dispatchQueue, options: options)
     }
-
+    
     convenience init(centralManager: CBCentralManager) {
         self.init(background: false)
         centralManager.delegate = self
@@ -56,9 +56,7 @@ open class Manager: NSObject, CBCentralManagerDelegate,CBPeripheralDelegate {
         scanning = true
         
         foundDevices.removeAll()
-        centralManager?.scanForPeripherals(withServices: services?.cbUuids, options: [
-            CBCentralManagerScanOptionAllowDuplicatesKey : NSNumber(value: true as Bool)
-            ])
+        centralManager?.scanForPeripherals(withServices: services?.cbUuids, options: nil)
     }
     
     /**
@@ -177,7 +175,7 @@ open class Manager: NSObject, CBCentralManagerDelegate,CBPeripheralDelegate {
             
             DispatchQueue.main.async {
                 self.connectedDevice?.serviceModelManager.resetServices()
-                self.delegate?.manager(self, IsBLEOn:false)
+                
                 if let connectedDevice = self.connectedDevice {
                     self.delegate?.manager(self, disconnectedFromDevice: connectedDevice, willRetry: true)
                 }
@@ -191,8 +189,8 @@ open class Manager: NSObject, CBCentralManagerDelegate,CBPeripheralDelegate {
         if foundDevices.has(peripheral: peripheral) {
             return
         }
-
-        let device = Device(peripheral: peripheral,rssi: RSSI)
+        
+        let device = Device(peripheral: peripheral)
         foundDevices.append(device)
         
         // Only after adding it to the list to prevent issues reregistering the delegate.
@@ -211,81 +209,14 @@ open class Manager: NSObject, CBCentralManagerDelegate,CBPeripheralDelegate {
         DispatchQueue.main.async {
             // Send callback to delegate.
             self.delegate?.manager(self, connectedToDevice: connectedDevice)
-            peripheral.delegate = self
-            peripheral.readRSSI()
+            
             // Start discovering services process after connecting to peripheral.
             connectedDevice.serviceModelManager.discoverRegisteredServices()
         }
     }
     
-    @objc public func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
-        if (error != nil) {
-            print(error!)
-        } else {
-            let device = Device(peripheral: peripheral,rssi:RSSI)
-            self.delegate?.manager(self, RSSIUpdated: device)
-            
-            //            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            peripheral.readRSSI()
-            //            }
-            
-        }
-    }
-    
     @objc public func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         print("didFailToConnect \(peripheral)")
-    }
-    
-    @objc public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-//        let BLEServiceUUID = CBUUID(string: "00001523-1212-EFDE-1523-785FEABCD123")
-//        for service in peripheral.services!
-//        {
-//            if service.uuid == BLEServiceUUID
-//            {
-//                peripheral.discoverCharacteristics(nil, for: service)
-//            }
-//        }
-    }
-    
-    @objc public func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        peripheral.readRSSI()
-//        for characteristic in service.characteristics! {
-//
-//            if characteristic.uuid == CBUUID(string: "2A19")
-//            {
-//                peripheral.setNotifyValue(true, for: characteristic)
-//            }
-//
-//            if characteristic.uuid == CBUUID(string: "00001525-1212-EFDE-1523-785FEABCD123")
-//            {
-//                if mangeKeyboard
-//                {
-//                    mangeKeyboard = false
-//                    let bytes : [UInt8] = [ 0x30,toUint(signed: 2),toUint(signed: 10),toUint(signed: 10) ]
-//                    let data = Data(bytes: bytes)
-//
-//                    peripheral.writeValue(data as Data, for: characteristic, type: CBCharacteristicWriteType.withResponse)
-//                }
-//                else
-//                {
-//                    let bytes : [UInt8] = [ 0x10,toUint(signed: 1),toUint(signed: 1),toUint(signed: 10) ]
-//                    let data = Data(bytes: bytes)
-//
-//                    peripheral.writeValue(data as Data, for: characteristic, type: CBCharacteristicWriteType.withResponse)
-//
-//                }
-//
-//            }
-//        }
-    }
-    
-    @objc public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        
-        peripheral.readRSSI()
-    }
-    
-    @objc public func peripheral(_ peripheral: CBPeripheral, didWriteValueFor descriptor: CBDescriptor, error: Error?) {
-        
     }
     
     @objc public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
@@ -310,15 +241,6 @@ open class Manager: NSObject, CBCentralManagerDelegate,CBPeripheralDelegate {
             self.delegate?.manager(self, disconnectedFromDevice: device, willRetry: self.connectedDevice != nil)
         }
     }
-    
-    func toUint(signed: Int) -> UInt8 {
-        
-        let unsigned = signed >= 0 ?
-            UInt8(signed) :
-            UInt8(signed  - Int.min) + UInt8(Int.max) + 1
-        
-        return unsigned
-    }
 }
 
 
@@ -337,9 +259,9 @@ extension Collection where Iterator.Element == String {
 
 extension Array where Element:Device {
     fileprivate func create(from peripheral: CBPeripheral) -> Device {
-        return self.filter { $0.peripheral.identifier == peripheral.identifier }.first ?? Device(peripheral: peripheral,rssi: 0)
+        return self.filter { $0.peripheral.identifier == peripheral.identifier }.first ?? Device(peripheral: peripheral)
     }
-
+    
     fileprivate func has(peripheral: CBPeripheral) -> Bool {
         return (self.filter { $0.peripheral.identifier == peripheral.identifier }).count > 0
     }

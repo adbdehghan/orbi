@@ -38,6 +38,8 @@
 		3ACE873F22B29F2600DB4CA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */; };
 		3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */; };
 		3ADB539522B0600C00EDC00B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB539422B0600C00EDC00B /* SceneDelegate.swift */; };
+		3AE94FDB22B6D32C008FB085 /* BatteryServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */; };
+		3AE94FDD22B6E5A7008FB085 /* ControllerServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */; };
 		8BE5691278222C7476466227 /* Pods_Orbi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */; };
 		A670161F5B7E89D8CAC82152 /* Pods_OrbiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB62830EB68A23F130BAED /* Pods_OrbiTests.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +102,8 @@
 		3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3ADB539422B0600C00EDC00B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryServiceModel.swift; sourceTree = "<group>"; };
+		3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerServiceModel.swift; sourceTree = "<group>"; };
 		3BBBE61025F88899719028A2 /* Pods-Orbi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.debug.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.debug.xcconfig"; sourceTree = "<group>"; };
 		6B46A3172917ACEEDFA46CAC /* Pods-Orbi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.release.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.release.xcconfig"; sourceTree = "<group>"; };
 		8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiUITests.release.xcconfig"; path = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		3A0C23C422AC1C9B00D6225F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3AE94FD922B6D32C008FB085 /* ModelServices */,
 				3A55D80022AC5DD3005B463D /* Font */,
 				3A0C23C522AC1CAB00D6225F /* Libraries */,
 			);
@@ -283,6 +288,15 @@
 				3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */,
 			);
 			path = Joystick;
+			sourceTree = "<group>";
+		};
+		3AE94FD922B6D32C008FB085 /* ModelServices */ = {
+			isa = PBXGroup;
+			children = (
+				3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */,
+				3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */,
+			);
+			path = ModelServices;
 			sourceTree = "<group>";
 		};
 		69325528F67B9E3D31A27488 /* Pods */ = {
@@ -549,6 +563,8 @@
 				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,
 				3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */,
 				3A0C23DE22AC1D3D00D6225F /* LNZSafariTabLayout.swift in Sources */,
+				3AE94FDD22B6E5A7008FB085 /* ControllerServiceModel.swift in Sources */,
+				3AE94FDB22B6D32C008FB085 /* BatteryServiceModel.swift in Sources */,
 				3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */,
 				3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */,
 				3A0C23E522AC1DDA00D6225F /* MenuCollectionViewController.swift in Sources */,

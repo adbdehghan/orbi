@@ -12,8 +12,10 @@ import BatteryView
 import Haptico
 import GradientProgress
 import Bluetonium
+import Gormsson
+import CoreBluetooth
 
-class DriveViewController: UIViewController,ManagerDelegate  {
+class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelDelegate  {
     
     @IBOutlet weak var backContainerView: UIView!
     @IBOutlet weak var BatteryContainerView: UIView!
@@ -31,18 +33,43 @@ class DriveViewController: UIViewController,ManagerDelegate  {
     @IBOutlet weak var BatteryIndicator: BatteryView!
     @IBOutlet weak var SpeedProgressView: GradientProgressBar!
     
+    
+    let BLE_PACKET_CONFIG_INDEX = 0
+    var BLE_PACKET_ANGLE_LOW_INDEX =  1
+    let BLE_PACKET_ANGLE_HIGH_INDEX = 2
+    let BLE_PACKET_VELOCITY_INDEX = 3
+    let BLE_PACKET_CHECKSUM_INDEX = 4
+    
+    let BLE_PACKET_CONFIG_BRAKE_POS:UInt8 = 0
+    let BLE_PACKET_CONFIG_CALIB_POS:UInt8 = 1
+    let BLE_PACKET_CONFIG_NITRO_POS:UInt8 = 2
+    let BLE_PACKET_CONFIG_DRIFT_POS:UInt8 = 3
+    var data:[UInt8] = [UInt8](repeating: 0, count:5)
+    
+    
     var nitroCount: CGFloat = 100
     var driftCount: CGFloat = 100
     var progresBarNitro: CircularProgressBar!
     var progresBarDrift: CircularProgressBar!
+    var mainProccess: Timer!
     var timerNitro: Timer!
     var timerDrift: Timer!
-    
     let bleManager = Manager()
+    let batteryServiceModel = BatteryServiceModel()
+    let controllerServiceModel = ControllerServiceModel()
+    
+    var Speed = 0
+    var Angle:Int=0,Brake:UInt8=0,Calibrate:UInt8=0,Nitro:UInt8=0,Drift:UInt8=0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+ 
+        
+        bleManager.delegate = self
+
+        bleManager.startScanForDevices(advertisingWithServices: nil)
+    
         backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
         BatteryContainerView.layer.cornerRadius = BatteryContainerView.frame.width / 2
         SettingContainerView.layer.cornerRadius = SettingContainerView.frame.width / 2
@@ -60,7 +87,7 @@ class DriveViewController: UIViewController,ManagerDelegate  {
         drawLine(onLayer: SpeedProgressView.layer, SpeedProgressView.bounds, #colorLiteral(red: 0.3605898917, green: 0.3404306173, blue: 0.6947399378, alpha: 1), [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9], 6)
         
         SpeedProgressView.gradientColors = [#colorLiteral(red: 1, green: 1, blue: 0, alpha: 1),#colorLiteral(red: 1, green: 0.4039215686, blue: 0, alpha: 1)]
-        BatteryIndicator.level = 50
+        BatteryIndicator.level = 0
         
         let xPosition = self.NitroButton.center.x
         let yPosition = self.NitroButton.center.y
@@ -81,43 +108,104 @@ class DriveViewController: UIViewController,ManagerDelegate  {
         NitroContainerView.layer.cornerRadius = NitroContainerView.frame.width/2
         DriftContainerView.layer.cornerRadius = DriftContainerView.frame.width/2
         
+ 
+        
         joystick.trackingHandler = { joystickData in
             
-            let x = abs(joystickData.velocity.x)
-            self.SpeedProgressView.setProgress(Float(x),animated: false)
+            let speed = joystickData.strength
+            let angle = joystickData.angle
             
-        }
-        
-        bleManager.delegate = self
-        bleManager.startScanForDevices(advertisingWithServices: nil)        
+            self.Speed = speed
+            self.Angle = angle
+            
+            print("Speed: \(speed)  Angle: \(angle)")
+            
+            let strength = Float(joystickData.strength)/100
+            self.SpeedProgressView.setProgress(strength,animated: false)
+        }        
     }
     
+    
+
     func manager(_ manager: Manager, didFindDevice device: Device) {
-        
+        if device.peripheral.name?.lowercased() != nil
+        {
+            if device.peripheral.name?.lowercased() == "orbi"
+            {
+                manager.connect(with: device)
+            }
+        }
     }
     
     func manager(_ manager: Manager, willConnectToDevice device: Device) {
-        
+        device.register(serviceModel: batteryServiceModel)
+        device.register(serviceModel: controllerServiceModel)
     }
     
     func manager(_ manager: Manager, connectedToDevice device: Device) {
+        guard let connectedDevice = bleManager.connectedDevice else {
+            return
+        }
+        for model in connectedDevice.registedServiceModels {
+            if let batteryServiceModel = model as? BatteryServiceModel {
+                batteryServiceModel.delegate = self
+            }  
+        }
         
+        mainProccess = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
+        mainProccess.fire()
     }
     
     func manager(_ manager: Manager, disconnectedFromDevice device: Device, willRetry retry: Bool) {
         
     }
     
-    func manager(_ manager: Manager, RSSIUpdated device: Device) {                
+    func manager(_ manager: Manager, RSSIUpdated device: Device) {
         
     }
     
-    func manager(_ manager: Manager,IsBLEOn status:Bool) {
+    func manager(_ manager: Manager, IsBLEOn status: Bool) {
         
+    }
+    
+    func batteryLevelChanged(_ batteryLevel: UInt8) {
+            BatteryIndicator.level = Int(batteryLevel)
+    }
+    
+    
+    @objc func SendControlParams(){
+        
+        data = [UInt8](repeating: 0, count:5)
+        let brake = ((Brake & 0xFF) << BLE_PACKET_CONFIG_BRAKE_POS)
+        let calibrate = ((Calibrate & 0xFF) << BLE_PACKET_CONFIG_CALIB_POS)
+        let nitro = ((Nitro & 0xFF) << BLE_PACKET_CONFIG_NITRO_POS)
+        let drift = ((Drift & 0xFF) << BLE_PACKET_CONFIG_DRIFT_POS)
+        
+        data[BLE_PACKET_CONFIG_INDEX] = brake | calibrate  | nitro | drift
+        
+        data[BLE_PACKET_ANGLE_LOW_INDEX] = toUint(signed:(Angle & 0xFF))
+        data[BLE_PACKET_ANGLE_HIGH_INDEX] = toUint(signed:((Angle >> 8) & 0xFF))
+        data[BLE_PACKET_VELOCITY_INDEX] = toUint(signed: Speed)
+        let sum = checkSum(data:data)
+        
+        data[BLE_PACKET_CHECKSUM_INDEX] = (toUint(signed:sum > 255 ? 255 : sum) & 0xFF)
+        
+        controllerServiceModel.controlPoint = Data(data)
+        controllerServiceModel.writeValue(withUUID: "00001525-1212-EFDE-1523-785FEF13D123")
+        
+    }
+    
+    func toUint(signed: Int) -> UInt8 {
+        
+        let unsigned = signed >= 0 ?
+            UInt8(signed) :
+            UInt8(signed  - Int.min) + UInt8(Int.max) + 1
+        
+        return unsigned
     }
     
     @objc func nitroProccess() {
-        nitroCount -= 2
+        nitroCount -= 10
         progresBarNitro.progress = nitroCount
         if nitroCount <= 0 {
             timerNitro.invalidate()
@@ -181,6 +269,18 @@ class DriveViewController: UIViewController,ManagerDelegate  {
         }
     }
     
+    
+    
+    
+    func checkSum(data:[UInt8]) -> Int{
+        
+        var sum:Int = 0
+        for i in 0..<data.count - 1
+        {
+            sum += Int(data[i])
+        }
+        return sum
+    }
     /*
     // MARK: - Navigation
 

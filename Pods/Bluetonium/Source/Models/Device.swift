@@ -12,7 +12,7 @@ import CoreBluetooth
 /**
  A `Device` will represent a CBPeripheral.
  When registering ServiceModels on this device it will automaticly map the characteristics to the correct value.
-*/
+ */
 public class Device: Equatable {
     
     // An array of all registered `ServiceModel` subclasses
@@ -22,7 +22,6 @@ public class Device: Equatable {
     
     // The peripheral it represents.
     private(set) public var peripheral: CBPeripheral
-    private(set) public var rssi: NSNumber
     
     // The ServiceModelManager that will manage all registered `ServiceModels`
     private(set) var serviceModelManager: ServiceModelManager
@@ -31,13 +30,11 @@ public class Device: Equatable {
     
     /**
      Initalize the `Device` with a Peripheral.
-    
+     
      - parameter peripheral: The peripheral it will represent
      */
-    
-    public init(peripheral: CBPeripheral,rssi:NSNumber) {
+    public init(peripheral: CBPeripheral) {
         self.peripheral = peripheral
-        self.rssi = rssi
         self.serviceModelManager = ServiceModelManager(peripheral: peripheral)
     }
     
@@ -46,7 +43,7 @@ public class Device: Equatable {
     /**
      Register a `ServiceModel` subclass.
      Register before connecting to the device.
-    
+     
      - parameter serviceModel: The ServiceModel subclass to register.
      */
     public func register(serviceModel: ServiceModel) {
@@ -59,7 +56,7 @@ public class Device: Equatable {
      Register serviceManager as delegate of the peripheral.
      This should be done just before connecting/
      If done at initalizing it will override the existing peripheral delegate.
-    */
+     */
     func registerServiceManager() {
         peripheral.delegate = serviceModelManager
     }
