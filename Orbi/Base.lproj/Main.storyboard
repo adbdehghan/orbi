@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGl-8B-JjU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGl-8B-JjU">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Menu Collection View Controller-->
         <scene sceneID="6hS-4J-O1z">
             <objects>
-                <collectionViewController id="zrn-Fz-qB9" customClass="MenuCollectionViewController" customModule="Orbi" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="menuCollectionView" id="zrn-Fz-qB9" customClass="MenuCollectionViewController" customModule="Orbi" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZnN-Q5-wuP">
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,10 +37,10 @@
                         </collectionViewLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="GXU-52-I4g">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GUF-eN-b3d">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="320"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view tag="22" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-oq-0Lb">
@@ -97,8 +97,9 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="6yC-7M-8R2"/>
                     <connections>
-                        <segue destination="NID-ux-lKe" kind="show" identifier="drive" id="2mC-S3-1ip"/>
                         <segue destination="l9Z-lS-uFn" kind="show" identifier="setting" id="zex-J1-tbu"/>
+                        <segue destination="NID-ux-lKe" kind="show" identifier="drive" id="FuO-O7-Yyp"/>
+                        <segue destination="eDn-UL-hfr" kind="presentation" identifier="connection" modalTransitionStyle="crossDissolve" id="20w-TP-wtV"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSC-Rn-Scl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,7 +125,7 @@
         <!--Drive View Controller-->
         <scene sceneID="1RZ-mt-BGg">
             <objects>
-                <viewController id="NID-ux-lKe" customClass="DriveViewController" customModule="Orbi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="driveViewController" id="NID-ux-lKe" customClass="DriveViewController" customModule="Orbi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AfL-Zr-6Ep">
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,12 +190,13 @@
                                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdj-oV-hKq">
                                                                 <rect key="frame" x="-1" y="0.0" width="232" height="84"/>
                                                                 <color key="tintColor" red="0.3411764706" green="0.34509803919999998" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <inset key="imageEdgeInsets" minX="68" minY="5" maxX="73" maxY="1"/>
+                                                                <inset key="imageEdgeInsets" minX="63" minY="5" maxX="77" maxY="1"/>
                                                                 <state key="normal" image="brake_icon">
                                                                     <color key="titleColor" red="0.23247595200000001" green="0.21384317459999999" blue="0.46805288789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="BrakeButtonAction:" destination="NID-ux-lKe" eventType="touchDown" id="QB8-Ab-7oh"/>
+                                                                    <action selector="BrakeButtonActionCanceled:" destination="NID-ux-lKe" eventType="touchUpInside" id="bKd-Ja-TbJ"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -312,7 +314,7 @@
                                             <constraint firstAttribute="width" constant="30" id="OP7-tg-sZX"/>
                                             <constraint firstAttribute="height" constant="30" id="usi-f1-FuW"/>
                                         </constraints>
-                                        <state key="normal" image="back"/>
+                                        <state key="normal" image="close"/>
                                         <connections>
                                             <action selector="BackButtonAction:" destination="NID-ux-lKe" eventType="touchUpInside" id="S1b-JQ-JTX"/>
                                         </connections>
@@ -484,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl7-4G-kk2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68.7192118226601" y="-63.200000000000003"/>
+            <point key="canvasLocation" x="508" y="745"/>
         </scene>
         <!--Side Menu Controller-->
         <scene sceneID="B80-zv-FKa">
@@ -530,7 +532,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="246" height="43.333332061767578"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اوربی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9O-HI-OPE">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orbi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9O-HI-OPE">
                                                             <rect key="frame" x="15" y="10.999999999999998" width="137" height="21.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -611,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zf-gh-m99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183.7438423645322" y="-135.19999999999999"/>
+            <point key="canvasLocation" x="1184" y="-63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYs-ZG-MeC">
@@ -745,13 +747,119 @@
             </objects>
             <point key="canvasLocation" x="1861" y="614"/>
         </scene>
+        <!--Connect View Controller-->
+        <scene sceneID="4ka-iU-jdq">
+            <objects>
+                <viewController storyboardIdentifier="connectViewController" id="cv2-6j-UsA" customClass="ConnectViewController" customModule="Orbi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQ8-mR-n8y">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orbi" translatesAutoresizingMaskIntoConstraints="NO" id="Nze-E6-fcf">
+                                <rect key="frame" x="285" y="92" width="242" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="HDc-fB-Bjm"/>
+                                    <constraint firstAttribute="height" constant="192" id="xj1-Qx-3xP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand_phone" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-Ou-ZtR">
+                                <rect key="frame" x="226" y="110" width="360" height="268"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WY3-UW-xXW">
+                                <rect key="frame" x="242" y="52" width="328" height="40"/>
+                                <color key="backgroundColor" red="0.23247595200000001" green="0.21384317459999999" blue="0.46805288789999999" alpha="0.35530013489208634" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="GhH-nw-no0"/>
+                                    <constraint firstAttribute="height" constant="40" id="zb3-17-coN"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bring your phone near Orbi to be connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viO-di-Hfr">
+                                <rect key="frame" x="251.66666666666663" y="58" width="309" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Hos-tp-Iho"/>
+                                    <constraint firstAttribute="width" constant="309" id="WMD-AB-8K8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dX-st-GBH">
+                                <rect key="frame" x="745" y="52" width="40" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLx-Or-bpc">
+                                        <rect key="frame" x="6" y="5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="1Fz-DZ-AOv"/>
+                                            <constraint firstAttribute="width" constant="30" id="I4l-vN-XyM"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="BackAction:" destination="cv2-6j-UsA" eventType="touchUpInside" id="yA6-eW-heh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34301667879999997" green="0.3441015087" blue="0.59684023669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Qa-G8-ioJ"/>
+                                    <constraint firstItem="GLx-Or-bpc" firstAttribute="centerX" secondItem="4dX-st-GBH" secondAttribute="centerX" constant="1" id="TcY-kZ-yPw"/>
+                                    <constraint firstAttribute="width" constant="40" id="cHQ-Bj-ktA"/>
+                                    <constraint firstItem="GLx-Or-bpc" firstAttribute="centerY" secondItem="4dX-st-GBH" secondAttribute="centerY" id="cdV-VM-0Pu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34509803919999998" green="0.3294117647" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mhw-Ou-ZtR" firstAttribute="centerX" secondItem="BQ8-mR-n8y" secondAttribute="centerX" id="AUC-J9-Hz0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="mhw-Ou-ZtR" secondAttribute="bottom" constant="-24" id="Dhf-IY-HQi"/>
+                            <constraint firstItem="WY3-UW-xXW" firstAttribute="centerX" secondItem="Nze-E6-fcf" secondAttribute="centerX" id="Dwy-j8-iJJ"/>
+                            <constraint firstItem="mhw-Ou-ZtR" firstAttribute="top" secondItem="0sg-4Q-wkI" secondAttribute="top" constant="78" id="GL2-JU-96H"/>
+                            <constraint firstItem="4dX-st-GBH" firstAttribute="top" secondItem="0sg-4Q-wkI" secondAttribute="top" constant="20" id="OOm-fL-GmY"/>
+                            <constraint firstAttribute="trailing" secondItem="4dX-st-GBH" secondAttribute="trailing" constant="27" id="QBj-JG-DgQ"/>
+                            <constraint firstItem="Nze-E6-fcf" firstAttribute="centerX" secondItem="mhw-Ou-ZtR" secondAttribute="centerX" id="apZ-RW-3LX"/>
+                            <constraint firstItem="0sg-4Q-wkI" firstAttribute="bottom" secondItem="Nze-E6-fcf" secondAttribute="bottom" constant="70" id="eDd-lQ-R2q"/>
+                            <constraint firstItem="viO-di-Hfr" firstAttribute="centerX" secondItem="BQ8-mR-n8y" secondAttribute="centerX" id="hB0-Tv-pQD"/>
+                            <constraint firstItem="viO-di-Hfr" firstAttribute="top" secondItem="0sg-4Q-wkI" secondAttribute="top" constant="26" id="rYb-cf-eHq"/>
+                            <constraint firstItem="WY3-UW-xXW" firstAttribute="top" secondItem="0sg-4Q-wkI" secondAttribute="top" constant="20" id="s0S-BE-phU"/>
+                            <constraint firstItem="mhw-Ou-ZtR" firstAttribute="leading" secondItem="0sg-4Q-wkI" secondAttribute="leading" constant="182" id="wUi-Vy-1TV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0sg-4Q-wkI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qSP-FE-B6g"/>
+                    <connections>
+                        <outlet property="backContainerView" destination="4dX-st-GBH" id="Fv7-qE-uHz"/>
+                        <outlet property="labelContainerView" destination="WY3-UW-xXW" id="MKi-C6-SsU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp4-NJ-PIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="746"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kM8-m8-UwB">
+            <objects>
+                <navigationController id="eDn-UL-hfr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Evp-JC-zgI">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cv2-6j-UsA" kind="relationship" relationship="rootViewController" id="CTh-gs-saG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sda-gi-TiH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="-63"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="72" height="72"/>
         <image name="brake_icon" width="228" height="192"/>
         <image name="calibrate" width="72" height="72"/>
+        <image name="close" width="72" height="72"/>
         <image name="drift" width="236" height="226"/>
+        <image name="hand_phone" width="1080" height="1080"/>
         <image name="nitro" width="240" height="240"/>
+        <image name="orbi" width="696" height="606"/>
         <image name="orbi_setting" width="72" height="72"/>
         <image name="setting-icon" width="20" height="21"/>
     </resources>

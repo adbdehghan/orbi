@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 class MenuCollectionViewController: UICollectionViewController {
     
     var menuImages = ["asset_drive","help","setting"]
-    var menuNames = ["شروع رانندگی","راهنما","تنظیمات"]
+    var menuNames = ["Drive","Help","Settings"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +55,21 @@ class MenuCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            self.performSegue(withIdentifier: "drive", sender: self)
+            if BleSingleton.shared.bleManager.connectedDevice != nil
+            {
+                self.performSegue(withIdentifier: "drive", sender: self)
+            }
+            else{
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let connectController = storyBoard.instantiateViewController(withIdentifier: "connectViewController") as! ConnectViewController
+                self.present(connectController, animated: true, completion: nil)
+            }
         case 1:
             self.performSegue(withIdentifier: "help", sender: self)
         case 2:
             self.performSegue(withIdentifier: "setting", sender: self)
         default:
-            self.performSegue(withIdentifier: "drive", sender: self)
+            self.performSegue(withIdentifier: "connection", sender: self)
         }
         
     }

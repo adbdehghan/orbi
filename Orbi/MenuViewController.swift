@@ -104,14 +104,14 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         let row = indexPath.row
         if row == 0 {
-            cell.titleLabel?.text = "اوربی"
+            cell.titleLabel?.text = "Orbi"
             cell.iconUIImageView.image = UIImage(named: "orbi_setting")
         
         } else if row == 1 {
-            cell.titleLabel?.text = "پشتیبانی"
+            cell.titleLabel?.text = "Support"
             cell.iconUIImageView.image = UIImage(named: "orbi_support")
         } else if row == 2 {
-            cell.titleLabel?.text = "درباره ما"
+            cell.titleLabel?.text = "About Us"
             cell.iconUIImageView.image = UIImage(named: "orbi_contact")
         }
         

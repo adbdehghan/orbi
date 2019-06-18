@@ -12,7 +12,6 @@ import BatteryView
 import Haptico
 import GradientProgress
 import Bluetonium
-import Gormsson
 import CoreBluetooth
 
 class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelDelegate  {
@@ -40,10 +39,10 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     let BLE_PACKET_VELOCITY_INDEX = 3
     let BLE_PACKET_CHECKSUM_INDEX = 4
     
-    let BLE_PACKET_CONFIG_BRAKE_POS:UInt8 = 0
-    let BLE_PACKET_CONFIG_CALIB_POS:UInt8 = 1
-    let BLE_PACKET_CONFIG_NITRO_POS:UInt8 = 2
-    let BLE_PACKET_CONFIG_DRIFT_POS:UInt8 = 3
+    let BLE_PACKET_CONFIG_BRAKE_POS = 0
+    let BLE_PACKET_CONFIG_CALIB_POS = 1
+    let BLE_PACKET_CONFIG_NITRO_POS = 2
+    let BLE_PACKET_CONFIG_DRIFT_POS = 3
     var data:[UInt8] = [UInt8](repeating: 0, count:5)
     
     
@@ -54,9 +53,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     var mainProccess: Timer!
     var timerNitro: Timer!
     var timerDrift: Timer!
-    let bleManager = Manager()
-    let batteryServiceModel = BatteryServiceModel()
-    let controllerServiceModel = ControllerServiceModel()
+
     
     var Speed = 0
     var Angle:Int=0,Brake:UInt8=0,Calibrate:UInt8=0,Nitro:UInt8=0,Drift:UInt8=0
@@ -64,11 +61,19 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
         
-        bleManager.delegate = self
-
-        bleManager.startScanForDevices(advertisingWithServices: nil)
+       BleSingleton.shared.bleManager.delegate = self
+        
+        if BleSingleton.shared.bleManager.connectedDevice != nil {
+            for model in BleSingleton.shared.bleManager.connectedDevice!.registedServiceModels {
+                if let batteryServiceModel = model as? BatteryServiceModel {
+                    batteryServiceModel.delegate = self
+                }
+            }
+        }
+      
+        mainProccess = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
+        mainProccess.fire()
     
         backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
         BatteryContainerView.layer.cornerRadius = BatteryContainerView.frame.width / 2
@@ -118,42 +123,29 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
             self.Speed = speed
             self.Angle = angle
             
+            
             print("Speed: \(speed)  Angle: \(angle)")
+            
+//            self.SendControlParams()
             
             let strength = Float(joystickData.strength)/100
             self.SpeedProgressView.setProgress(strength,animated: false)
-        }        
+        }
+
     }
     
-    
+
 
     func manager(_ manager: Manager, didFindDevice device: Device) {
-        if device.peripheral.name?.lowercased() != nil
-        {
-            if device.peripheral.name?.lowercased() == "orbi"
-            {
-                manager.connect(with: device)
-            }
-        }
+      
     }
     
     func manager(_ manager: Manager, willConnectToDevice device: Device) {
-        device.register(serviceModel: batteryServiceModel)
-        device.register(serviceModel: controllerServiceModel)
+
     }
-    
+
     func manager(_ manager: Manager, connectedToDevice device: Device) {
-        guard let connectedDevice = bleManager.connectedDevice else {
-            return
-        }
-        for model in connectedDevice.registedServiceModels {
-            if let batteryServiceModel = model as? BatteryServiceModel {
-                batteryServiceModel.delegate = self
-            }  
-        }
-        
-        mainProccess = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
-        mainProccess.fire()
+ 
     }
     
     func manager(_ manager: Manager, disconnectedFromDevice device: Device, willRetry retry: Bool) {
@@ -188,10 +180,10 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         data[BLE_PACKET_VELOCITY_INDEX] = toUint(signed: Speed)
         let sum = checkSum(data:data)
         
-        data[BLE_PACKET_CHECKSUM_INDEX] = (toUint(signed:sum > 255 ? 255 : sum) & 0xFF)
+        data[BLE_PACKET_CHECKSUM_INDEX] = (toUint(signed:sum > 255 ? sum%256 : sum) & 0xFF)
         
-        controllerServiceModel.controlPoint = Data(data)
-        controllerServiceModel.writeValue(withUUID: "00001525-1212-EFDE-1523-785FEF13D123")
+        BleSingleton.shared.controllerServiceModel.controlPoint = Data(data)
+        BleSingleton.shared.controllerServiceModel.writeValue(withUUID: "00001525-1212-EFDE-1523-785FEF13D123")
         
     }
     
@@ -205,10 +197,12 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     @objc func nitroProccess() {
-        nitroCount -= 10
+        nitroCount -= 20
+        Nitro = 1
         progresBarNitro.progress = nitroCount
         if nitroCount <= 0 {
             timerNitro.invalidate()
+            Nitro = 0
             nitroCount = 100
             progresBarNitro.progress = nitroCount
             NitroButton.isUserInteractionEnabled = true
@@ -216,10 +210,12 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     @objc func driftProccess() {
-        driftCount -= 5
+        driftCount -= 10
+        Drift = 1
         progresBarDrift.progress = driftCount
         if driftCount <= 0 {
             timerDrift.invalidate()
+            Drift = 0
             driftCount = 100
             progresBarDrift.progress = driftCount
             DriftButton.isUserInteractionEnabled = true
@@ -228,7 +224,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     
     @IBAction func NitroButtonAction(_ sender: Any) {
         NitroButton.isUserInteractionEnabled = false
-        timerNitro = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(nitroProccess), userInfo: nil, repeats: true)
+        timerNitro = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(nitroProccess), userInfo: nil, repeats: true)
         timerNitro.fire()
     }
     
@@ -242,13 +238,26 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         super.viewDidAppear(true)
         
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        mainProccess.invalidate()
+        BleSingleton.shared.bleManager.delegate = nil
+    }
     
     @IBAction func BackButtonAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let connectController = storyBoard.instantiateViewController(withIdentifier: "menuCollectionView") as! MenuCollectionViewController
+        self.present(connectController, animated: true, completion: nil)
     }
     
     @IBAction func BrakeButtonAction(_ sender: Any) {
         Haptico.shared().generateFeedbackFromPattern("OOO", delay: 0.1)
+        Brake = 1
+    }
+    
+    @IBAction func BrakeButtonActionCanceled(_ sender: Any) {
+        Brake = 0
     }
     
     func drawLine(onLayer layer: CALayer, _ innerRect: CGRect, _ markColor: CGColor, _ marks: Array<Float>!,_ markWidth: Float) {
@@ -268,8 +277,6 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
             layer.addSublayer(line)
         }
     }
-    
-    
     
     
     func checkSum(data:[UInt8]) -> Int{

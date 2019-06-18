@@ -148,12 +148,12 @@ public class CDJoystick: UIView {
         let y = clamp(distance.y, lower: -bounds.size.height / 2, upper: bounds.size.height / 2) / (bounds.size.height / 2)
 
         var angle = Int(rad2deg(Double(atan2(x, y))))
-        angle = angle - 90
+        angle = angle - 180
         angle = angle < 0 ? angle + 360 : angle
         
         let radius = sqrt(pow(x, 2) + pow(y, 2))
-        var strength = Int((radius / 1) * 100)
-        strength = strength > 100 ? 100 : strength
+        var strength = Int((radius / 1) * 255)
+        strength = strength > 255 ? 255 : strength
         
         data = CDJoystickData(velocity: CGPoint(x: x, y: y), angle: angle,strength: strength)
     }
