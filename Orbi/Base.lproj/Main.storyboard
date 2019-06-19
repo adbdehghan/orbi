@@ -105,7 +105,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSC-Rn-Scl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-980"/>
+            <point key="canvasLocation" x="514" y="-980"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aRL-Z2-tWH">
@@ -487,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl7-4G-kk2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="745"/>
+            <point key="canvasLocation" x="514" y="745"/>
         </scene>
         <!--Side Menu Controller-->
         <scene sceneID="B80-zv-FKa">
@@ -527,20 +527,20 @@
                                         <color key="backgroundColor" red="0.29019607843137252" green="0.29803921568627451" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="EJ8-gb-e2w" customClass="SelectionCell" customModule="Orbi" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="246" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="28" width="246" height="42.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EJ8-gb-e2w" id="Puv-TB-Wzg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="246" height="43.666667938232422"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="246" height="42.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orbi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9O-HI-OPE">
-                                                            <rect key="frame" x="15" y="11.000000000000002" width="137" height="21.666666666666671"/>
+                                                            <rect key="frame" x="15" y="11.000000000000002" width="137" height="20.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orbi_setting" translatesAutoresizingMaskIntoConstraints="NO" id="IHj-cR-iCG">
-                                                            <rect key="frame" x="177" y="10" width="24" height="24"/>
+                                                            <rect key="frame" x="177" y="9.3333333333333357" width="24" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="24" id="6pn-hR-R7d"/>
                                                                 <constraint firstAttribute="height" constant="24" id="AqU-eT-2ZE"/>
@@ -614,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zf-gh-m99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="-63"/>
+            <point key="canvasLocation" x="1184" y="-111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYs-ZG-MeC">
@@ -668,7 +668,7 @@
                                                 <rect key="frame" x="28" y="98" width="436" height="40"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2d-88-OsT" customClass="SummerSlider" customModule="SummerSlider">
-                                                        <rect key="frame" x="8" y="5" width="420" height="30"/>
+                                                        <rect key="frame" x="10" y="5" width="416" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="29" id="lgs-Vm-8XX"/>
                                                         </constraints>
@@ -752,7 +752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3U1-mF-i4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2536" y="-135"/>
+            <point key="canvasLocation" x="2536" y="-111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mi5-bQ-g9o">
@@ -770,7 +770,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCK-yU-EFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="-135"/>
+            <point key="canvasLocation" x="1861" y="-111"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="r68-aN-YTJ">
