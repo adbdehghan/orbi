@@ -11,7 +11,7 @@ import UIKit
 struct Constants {
   struct INNER_RECT {
     static let X : CGFloat = 1.0
-    static let Y : CGFloat = 10.0
+    static let Y : CGFloat = 1.0
   }
   
   struct SLIDER {

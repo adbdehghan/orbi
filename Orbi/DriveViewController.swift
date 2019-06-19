@@ -54,15 +54,42 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     var timerNitro: Timer!
     var timerDrift: Timer!
 
-    
     var Speed = 0
     var Angle:Int=0,Brake:UInt8=0,Calibrate:UInt8=0,Nitro:UInt8=0,Drift:UInt8=0
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-       BleSingleton.shared.bleManager.delegate = self
+        BLESetup()
+        MainProcessSetup()
+        UiConfigurations()
+        JoystickSetup()
+    }
+    
+    fileprivate func MainProcessSetup() {
+        mainProccess = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
+        mainProccess.fire()
+    }
+    
+    fileprivate func JoystickSetup() {
+        joystick.trackingHandler = { joystickData in
+            
+            let speed = joystickData.strength
+            let angle = joystickData.angle
+            
+            self.Speed = speed
+            self.Angle = angle
+            
+            // print("Speed: \(speed)  Angle: \(angle)")
+            // self.SendControlParams()
+            
+            let strength = Float(joystickData.strength)/100
+            self.SpeedProgressView.setProgress(strength,animated: false)
+        }
+    }
+    
+    fileprivate func BLESetup() {
+        BleSingleton.shared.bleManager.delegate = self
         
         if BleSingleton.shared.bleManager.connectedDevice != nil {
             for model in BleSingleton.shared.bleManager.connectedDevice!.registedServiceModels {
@@ -71,10 +98,10 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
                 }
             }
         }
-      
-        mainProccess = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
-        mainProccess.fire()
+    }
     
+    fileprivate func UiConfigurations()
+    {
         backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
         BatteryContainerView.layer.cornerRadius = BatteryContainerView.frame.width / 2
         SettingContainerView.layer.cornerRadius = SettingContainerView.frame.width / 2
@@ -109,33 +136,11 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         progresBarDrift.progress = 100
         //Add to progressBar to views sublayer
         DriftButton.layer.addSublayer(progresBarDrift)
-   
+        
         NitroContainerView.layer.cornerRadius = NitroContainerView.frame.width/2
         DriftContainerView.layer.cornerRadius = DriftContainerView.frame.width/2
-        
- 
-        
-        joystick.trackingHandler = { joystickData in
-            
-            let speed = joystickData.strength
-            let angle = joystickData.angle
-            
-            self.Speed = speed
-            self.Angle = angle
-            
-            
-            print("Speed: \(speed)  Angle: \(angle)")
-            
-//            self.SendControlParams()
-            
-            let strength = Float(joystickData.strength)/100
-            self.SpeedProgressView.setProgress(strength,animated: false)
-        }
-
     }
     
-
-
     func manager(_ manager: Manager, didFindDevice device: Device) {
       
     }
@@ -163,7 +168,6 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     func batteryLevelChanged(_ batteryLevel: UInt8) {
             BatteryIndicator.level = Int(batteryLevel)
     }
-    
     
     @objc func SendControlParams(){
         
@@ -238,6 +242,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         super.viewDidAppear(true)
         
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         mainProccess.invalidate()
@@ -277,10 +282,9 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
             layer.addSublayer(line)
         }
     }
-    
-    
-    func checkSum(data:[UInt8]) -> Int{
-        
+
+    func checkSum(data:[UInt8]) -> Int
+    {
         var sum:Int = 0
         for i in 0..<data.count - 1
         {
@@ -288,6 +292,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         }
         return sum
     }
+    
     /*
     // MARK: - Navigation
 

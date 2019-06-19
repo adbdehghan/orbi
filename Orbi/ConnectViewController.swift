@@ -16,13 +16,20 @@ class ConnectViewController: UIViewController,ManagerDelegate {
     @IBOutlet weak var backContainerView: UIView!
     
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        BLESetup()
+        
+        UiSetup()
+    }
+    
+    fileprivate func BLESetup() {
         BleSingleton.shared.bleManager.delegate = self
         BleSingleton.shared.bleManager.startScanForDevices(advertisingWithServices: nil)
-        
+    }
+    
+    fileprivate func UiSetup() {
         backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
         labelContainerView.layer.cornerRadius = 20
         
@@ -57,8 +64,7 @@ class ConnectViewController: UIViewController,ManagerDelegate {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let connectController = storyBoard.instantiateViewController(withIdentifier: "driveViewController") as! DriveViewController
             self.present(connectController, animated: true, completion: nil)
-        })
-        
+        })        
     }
     
     func manager(_ manager: Manager, disconnectedFromDevice device: Device, willRetry retry: Bool) {
@@ -79,7 +85,6 @@ class ConnectViewController: UIViewController,ManagerDelegate {
         let connectController = storyBoard.instantiateViewController(withIdentifier: "menuCollectionView") as! MenuCollectionViewController
         self.present(connectController, animated: true, completion: nil)
     }
-    
 
     // MARK: - Navigation
 
