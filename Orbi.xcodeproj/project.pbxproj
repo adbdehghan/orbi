@@ -43,6 +43,17 @@
 		3ADB539522B0600C00EDC00B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB539422B0600C00EDC00B /* SceneDelegate.swift */; };
 		3AE94FDB22B6D32C008FB085 /* BatteryServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */; };
 		3AE94FDD22B6E5A7008FB085 /* ControllerServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */; };
+		3AFE910122BEE71600355B50 /* ColorPicker+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90F922BEE71600355B50 /* ColorPicker+Math.swift */; };
+		3AFE910222BEE71600355B50 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90FA22BEE71600355B50 /* ColorPickerView.swift */; };
+		3AFE910322BEE71600355B50 /* AngleGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90FB22BEE71600355B50 /* AngleGradientLayer.swift */; };
+		3AFE910422BEE71600355B50 /* ColorApplyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90FC22BEE71600355B50 /* ColorApplyButton.swift */; };
+		3AFE910522BEE71600355B50 /* ThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90FD22BEE71600355B50 /* ThumbView.swift */; };
+		3AFE910622BEE71600355B50 /* CGRect+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90FE22BEE71600355B50 /* CGRect+Core.swift */; };
+		3AFE910722BEE71600355B50 /* ColorLightingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90FF22BEE71600355B50 /* ColorLightingPicker.swift */; };
+		3AFE910822BEE71600355B50 /* HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910022BEE71600355B50 /* HSB.swift */; };
+		3AFE910A22BEE76400355B50 /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910922BEE76400355B50 /* ColorPickerController.swift */; };
+		3AFE910D22BEE7A700355B50 /* UIView+CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910B22BEE7A700355B50 /* UIView+CSS.swift */; };
+		3AFE910E22BEE7A700355B50 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910C22BEE7A700355B50 /* UIView+Snapshot.swift */; };
 		8BE5691278222C7476466227 /* Pods_Orbi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */; };
 		A670161F5B7E89D8CAC82152 /* Pods_OrbiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB62830EB68A23F130BAED /* Pods_OrbiTests.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +121,17 @@
 		3ADB539422B0600C00EDC00B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryServiceModel.swift; sourceTree = "<group>"; };
 		3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerServiceModel.swift; sourceTree = "<group>"; };
+		3AFE90F922BEE71600355B50 /* ColorPicker+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorPicker+Math.swift"; sourceTree = "<group>"; };
+		3AFE90FA22BEE71600355B50 /* ColorPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		3AFE90FB22BEE71600355B50 /* AngleGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleGradientLayer.swift; sourceTree = "<group>"; };
+		3AFE90FC22BEE71600355B50 /* ColorApplyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorApplyButton.swift; sourceTree = "<group>"; };
+		3AFE90FD22BEE71600355B50 /* ThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbView.swift; sourceTree = "<group>"; };
+		3AFE90FE22BEE71600355B50 /* CGRect+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Core.swift"; sourceTree = "<group>"; };
+		3AFE90FF22BEE71600355B50 /* ColorLightingPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLightingPicker.swift; sourceTree = "<group>"; };
+		3AFE910022BEE71600355B50 /* HSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSB.swift; sourceTree = "<group>"; };
+		3AFE910922BEE76400355B50 /* ColorPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerController.swift; sourceTree = "<group>"; };
+		3AFE910B22BEE7A700355B50 /* UIView+CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CSS.swift"; sourceTree = "<group>"; };
+		3AFE910C22BEE7A700355B50 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		3BBBE61025F88899719028A2 /* Pods-Orbi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.debug.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.debug.xcconfig"; sourceTree = "<group>"; };
 		6B46A3172917ACEEDFA46CAC /* Pods-Orbi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.release.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.release.xcconfig"; sourceTree = "<group>"; };
 		8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiUITests.release.xcconfig"; path = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +203,7 @@
 				3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */,
 				3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */,
 				3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */,
+				3AFE910922BEE76400355B50 /* ColorPickerController.swift */,
 				3A0C239A22AC187E00D6225F /* Main.storyboard */,
 				3A0C239D22AC188200D6225F /* Assets.xcassets */,
 				3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */,
@@ -221,6 +244,7 @@
 		3A0C23C522AC1CAB00D6225F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3AFE90F822BEE71600355B50 /* IZColorPicker */,
 				3A5C1B8122AEAFB7005609BC /* Progress Animation */,
 				3A8F7AE922AC6EE5009178F2 /* Joystick */,
 				3A0C23D522AC1D3D00D6225F /* Menu Collection */,
@@ -322,6 +346,23 @@
 				3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */,
 			);
 			path = ModelServices;
+			sourceTree = "<group>";
+		};
+		3AFE90F822BEE71600355B50 /* IZColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				3AFE910B22BEE7A700355B50 /* UIView+CSS.swift */,
+				3AFE910C22BEE7A700355B50 /* UIView+Snapshot.swift */,
+				3AFE90F922BEE71600355B50 /* ColorPicker+Math.swift */,
+				3AFE90FA22BEE71600355B50 /* ColorPickerView.swift */,
+				3AFE90FB22BEE71600355B50 /* AngleGradientLayer.swift */,
+				3AFE90FC22BEE71600355B50 /* ColorApplyButton.swift */,
+				3AFE90FD22BEE71600355B50 /* ThumbView.swift */,
+				3AFE90FE22BEE71600355B50 /* CGRect+Core.swift */,
+				3AFE90FF22BEE71600355B50 /* ColorLightingPicker.swift */,
+				3AFE910022BEE71600355B50 /* HSB.swift */,
+			);
+			path = IZColorPicker;
 			sourceTree = "<group>";
 		};
 		69325528F67B9E3D31A27488 /* Pods */ = {
@@ -582,19 +623,30 @@
 				3A0C23E022AC1D3D00D6225F /* SafariAnimator.swift in Sources */,
 				3A0C23E122AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift in Sources */,
 				3A0C23E222AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
+				3AFE910522BEE71600355B50 /* ThumbView.swift in Sources */,
 				3ACE873F22B29F2600DB4CA6 /* MenuViewController.swift in Sources */,
+				3AFE910D22BEE7A700355B50 /* UIView+CSS.swift in Sources */,
+				3AFE910722BEE71600355B50 /* ColorLightingPicker.swift in Sources */,
 				3A0C23E322AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				3A94EA1A22BD4944008B5176 /* SettingTableViewCell.swift in Sources */,
 				3A0C23DF22AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift in Sources */,
 				3ACE873D22B29EED00DB4CA6 /* UINavigationController+Extension.swift in Sources */,
+				3AFE910322BEE71600355B50 /* AngleGradientLayer.swift in Sources */,
 				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,
 				3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */,
 				3A0C23DE22AC1D3D00D6225F /* LNZSafariTabLayout.swift in Sources */,
 				3AE94FDD22B6E5A7008FB085 /* ControllerServiceModel.swift in Sources */,
+				3AFE910A22BEE76400355B50 /* ColorPickerController.swift in Sources */,
 				3AE94FDB22B6D32C008FB085 /* BatteryServiceModel.swift in Sources */,
 				3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */,
+				3AFE910122BEE71600355B50 /* ColorPicker+Math.swift in Sources */,
+				3AFE910E22BEE7A700355B50 /* UIView+Snapshot.swift in Sources */,
 				3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */,
+				3AFE910422BEE71600355B50 /* ColorApplyButton.swift in Sources */,
+				3AFE910822BEE71600355B50 /* HSB.swift in Sources */,
+				3AFE910622BEE71600355B50 /* CGRect+Core.swift in Sources */,
 				3A0C23E522AC1DDA00D6225F /* MenuCollectionViewController.swift in Sources */,
+				3AFE910222BEE71600355B50 /* ColorPickerView.swift in Sources */,
 				3AB3F16322B7DC3700C7734D /* ConnectViewController.swift in Sources */,
 				3A5C1B8322AEB00B005609BC /* CircularProgressBar.swift in Sources */,
 				3ADB539522B0600C00EDC00B /* SceneDelegate.swift in Sources */,

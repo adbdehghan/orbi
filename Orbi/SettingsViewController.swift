@@ -31,7 +31,7 @@ class SettingsViewController: UIViewController,MaterialColorPickerDelegate,Mater
         pickerView.delegate = self
         pickerView.shuffleColors = false
         pickerView.selectionColor = #colorLiteral(red: 0.3607843137, green: 0.3411764706, blue: 0.6941176471, alpha: 1)
-        pickerView.selectedBorderWidth = 5
+        pickerView.selectedBorderWidth = 0
         pickerView.cellSpacing = 24
         pickerView.dataSource = self
         
@@ -59,7 +59,17 @@ class SettingsViewController: UIViewController,MaterialColorPickerDelegate,Mater
         self.SensivitySlider.gradientColors = [#colorLiteral(red: 0, green: 0.8823529412, blue: 1, alpha: 1),#colorLiteral(red: 0.9176470588, green: 0, blue: 1, alpha: 1)]
         
         
-        formView.frame = CGRect(x: 250, y: 0, width: formView.frame.width + 60, height: formView.frame.height)
+        let addColorContainerView = UIView(frame: CGRect(x: 315, y: 506, width: 48, height: 48))
+        addColorContainerView.layer.cornerRadius = addColorContainerView.frame.width/2
+        addColorContainerView.backgroundColor = #colorLiteral(red: 0.1450980392, green: 0.1215686275, blue: 0.3215686275, alpha: 0.2412039119)
+        
+        let addColorButton = UIButton(frame: CGRect(x: addColorContainerView.frame.size.width/2 - 12, y: addColorContainerView.frame.size.height/2 - 12, width: 24, height: 24))
+        addColorButton.setImage(UIImage(named: "add"), for: .normal)
+        addColorContainerView.addSubview(addColorButton)
+        
+        formView.addSubview(addColorContainerView)
+        
+        formView.frame = CGRect(x: 280, y: 0, width: self.view.frame.size.width - 310, height: formView.frame.height)
         
         self.scrollView.addSubview(formView)
         self.formView.translatesAutoresizingMaskIntoConstraints = true

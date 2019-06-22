@@ -17,7 +17,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZnN-Q5-wuP">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.34509803921568627" green="0.32941176470588235" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.33725490196078434" green="0.35686274509803922" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewLayout key="collectionViewLayout" id="yEf-vQ-Luo" customClass="LNZCarouselCollectionViewLayout" customModule="Orbi" customModuleProvider="target">
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isInfiniteScrollEnabled" value="YES"/>
@@ -44,13 +44,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="320"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view tag="22" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-oq-0Lb">
+                                        <view tag="22" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-oq-0Lb">
                                             <rect key="frame" x="0.0" y="42" width="50" height="56"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-ay-EYv">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-ay-EYv">
                                                     <rect key="frame" x="0.0" y="1" width="50" height="55"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="44" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شروع رانندگی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-7b-X3i">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="44" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="شروع رانندگی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-7b-X3i">
                                                             <rect key="frame" x="43" y="15.5" width="0.0" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" red="0.23137254900000001" green="0.22352941179999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -690,11 +690,11 @@
                                 <constraint firstAttribute="height" constant="1" id="kAB-dB-ppC"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pF9-M1-KFR">
-                            <rect key="frame" x="17" y="135" width="463" height="40"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pF9-M1-KFR">
+                            <rect key="frame" x="17" y="135" width="460" height="40"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2d-88-OsT" customClass="SummerSlider" customModule="SummerSlider">
-                                    <rect key="frame" x="10" y="5.5" width="445" height="29"/>
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2d-88-OsT" customClass="SummerSlider" customModule="SummerSlider">
+                                    <rect key="frame" x="3563" y="-1614.5" width="445" height="29"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="28" id="lgs-Vm-8XX"/>
                                     </constraints>
@@ -714,9 +714,9 @@
                             <color key="backgroundColor" red="0.3411764705882353" green="0.34509803921568627" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Ie6-Xh-zHC"/>
-                                <constraint firstAttribute="trailing" secondItem="G2d-88-OsT" secondAttribute="trailing" constant="10" id="LtO-aY-2mE"/>
-                                <constraint firstItem="G2d-88-OsT" firstAttribute="centerY" secondItem="pF9-M1-KFR" secondAttribute="centerY" constant="-0.5" id="gPW-cH-fX4"/>
-                                <constraint firstItem="G2d-88-OsT" firstAttribute="leading" secondItem="pF9-M1-KFR" secondAttribute="leading" constant="12" id="l9L-vd-EJk"/>
+                                <constraint firstAttribute="trailing" secondItem="G2d-88-OsT" secondAttribute="trailing" constant="-3544" id="LtO-aY-2mE"/>
+                                <constraint firstItem="G2d-88-OsT" firstAttribute="centerY" secondItem="pF9-M1-KFR" secondAttribute="centerY" constant="-1620.5" id="gPW-cH-fX4"/>
+                                <constraint firstItem="G2d-88-OsT" firstAttribute="leading" secondItem="pF9-M1-KFR" secondAttribute="leading" constant="3566" id="l9L-vd-EJk"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2G-DS-okB">
