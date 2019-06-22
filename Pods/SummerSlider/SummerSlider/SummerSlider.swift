@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @IBDesignable public class SummerSlider: UISlider {
     
     
@@ -35,7 +36,18 @@ import UIKit
         self.setNeedsDisplay()
     }
     
-
+//    var thumbRect:CGRect {
+//        let trackRect = self.trackRect(forBounds: bounds)
+//        return thumbRect(forBounds: bounds, trackRect: trackRect, value: value)
+//    }
+//    
+//    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+//        if thumbRect.contains(point) {
+//            return super.hitTest(point, with: event)
+//        } else {
+//            return superview?.hitTest(point, with: event)
+//        }
+//    }
     
     override public func draw(_ rect: CGRect) {
         super.draw(rect)

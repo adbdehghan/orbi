@@ -34,6 +34,7 @@
 		3A5C1B8322AEB00B005609BC /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C1B8222AEB00B005609BC /* CircularProgressBar.swift */; };
 		3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */; };
 		3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */; };
+		3A94EA1A22BD4944008B5176 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */; };
 		3AA933D922B913FC0016C8FA /* BleSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA933D822B913FC0016C8FA /* BleSingleton.swift */; };
 		3AB3F16322B7DC3700C7734D /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */; };
 		3ACE873D22B29EED00DB4CA6 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */; };
@@ -100,6 +101,7 @@
 		3A8F7AE822AC6112009178F2 /* Orbi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orbi.entitlements; sourceTree = "<group>"; };
 		3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLAnalogJoystick.swift; sourceTree = "<group>"; };
+		3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		3AA933D822B913FC0016C8FA /* BleSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleSingleton.swift; sourceTree = "<group>"; };
 		3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
@@ -296,9 +298,18 @@
 			path = Joystick;
 			sourceTree = "<group>";
 		};
+		3A94EA1822BD48EE008B5176 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
 		3AA933D722B913E10016C8FA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3A94EA1822BD48EE008B5176 /* TableCells */,
 				3AA933D822B913FC0016C8FA /* BleSingleton.swift */,
 			);
 			path = Classes;
@@ -573,6 +584,7 @@
 				3A0C23E222AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
 				3ACE873F22B29F2600DB4CA6 /* MenuViewController.swift in Sources */,
 				3A0C23E322AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift in Sources */,
+				3A94EA1A22BD4944008B5176 /* SettingTableViewCell.swift in Sources */,
 				3A0C23DF22AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift in Sources */,
 				3ACE873D22B29EED00DB4CA6 /* UINavigationController+Extension.swift in Sources */,
 				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,

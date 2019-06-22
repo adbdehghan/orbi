@@ -5,6 +5,7 @@ PODS:
   - GradientProgress (1.0)
   - Haptico (1.0.2)
   - JoystickView (1.0.0)
+  - MaterialColorPicker (0.2.0)
   - Pulsator (0.5.3)
   - SideMenuSwift (2.0.1)
   - SummerSlider (0.3.0)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - GradientProgress
   - Haptico
   - JoystickView
+  - MaterialColorPicker
   - Pulsator
   - SideMenuSwift
   - SummerSlider (~> 0.3.0)
@@ -28,6 +30,7 @@ SPEC REPOS:
     - GradientProgress
     - Haptico
     - JoystickView
+    - MaterialColorPicker
     - Pulsator
     - SideMenuSwift
     - SummerSlider
@@ -39,10 +42,11 @@ SPEC CHECKSUMS:
   GradientProgress: ee9c47443c80059b0367467d267b2dd9572de5e2
   Haptico: ce38d1f993f3a0df9a6d7795a9dd2849648aa9d1
   JoystickView: b8f1b5b20f1279aa417bdb3f95aeb42e2d8bb15d
+  MaterialColorPicker: 855f8bb4fbde3a7127a436177ddf24cfa4b2de64
   Pulsator: d58707c6827ec862cd89fd727424866795dabd24
   SideMenuSwift: 588374781f2508f551a41796482290aeff1afd78
   SummerSlider: a867d766a34fa21a85139a87f8ff83473065004f
 
-PODFILE CHECKSUM: d4251826d4f19553735b02ce8826110ecc54b204
+PODFILE CHECKSUM: 7693948dd4d7b3b6cfea0c8680cefe50f9870091
 
 COCOAPODS: 1.7.1

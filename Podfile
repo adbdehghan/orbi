@@ -14,6 +14,7 @@ target 'Orbi' do
   pod 'Bluetonium'
   pod 'SideMenuSwift'
   pod "Pulsator"
+  pod "MaterialColorPicker"
   
   target 'OrbiTests' do
     inherit! :search_paths
