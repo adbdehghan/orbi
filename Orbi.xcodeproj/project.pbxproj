@@ -34,6 +34,8 @@
 		3A5C1B8322AEB00B005609BC /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C1B8222AEB00B005609BC /* CircularProgressBar.swift */; };
 		3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */; };
 		3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */; };
+		3A938E9D22C2196E009DD650 /* ChargeIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938E9C22C2196E009DD650 /* ChargeIndicatorViewController.swift */; };
+		3A938E9F22C2197E009DD650 /* CalibrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938E9E22C2197E009DD650 /* CalibrateViewController.swift */; };
 		3A94EA1A22BD4944008B5176 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */; };
 		3AA933D922B913FC0016C8FA /* BleSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA933D822B913FC0016C8FA /* BleSingleton.swift */; };
 		3AB3F16322B7DC3700C7734D /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */; };
@@ -41,6 +43,11 @@
 		3ACE873F22B29F2600DB4CA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */; };
 		3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */; };
 		3ADB539522B0600C00EDC00B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB539422B0600C00EDC00B /* SceneDelegate.swift */; };
+		3AE5C0B822BFB1AD00AB09E8 /* CalibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5C0B722BFB1AD00AB09E8 /* CalibrationManager.swift */; };
+		3AE5C0BA22C01F6900AB09E8 /* SettingsServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5C0B922C01F6900AB09E8 /* SettingsServiceModel.swift */; };
+		3AE5C0BC22C0496D00AB09E8 /* LEDServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5C0BB22C0496D00AB09E8 /* LEDServiceModel.swift */; };
+		3AE5C0BE22C1730000AB09E8 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5C0BD22C1730000AB09E8 /* SupportViewController.swift */; };
+		3AE5C0C022C1785000AB09E8 /* HelpMenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5C0BF22C1784F00AB09E8 /* HelpMenuCollectionViewController.swift */; };
 		3AE94FDB22B6D32C008FB085 /* BatteryServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */; };
 		3AE94FDD22B6E5A7008FB085 /* ControllerServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */; };
 		3AFE910122BEE71600355B50 /* ColorPicker+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE90F922BEE71600355B50 /* ColorPicker+Math.swift */; };
@@ -54,6 +61,7 @@
 		3AFE910A22BEE76400355B50 /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910922BEE76400355B50 /* ColorPickerController.swift */; };
 		3AFE910D22BEE7A700355B50 /* UIView+CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910B22BEE7A700355B50 /* UIView+CSS.swift */; };
 		3AFE910E22BEE7A700355B50 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910C22BEE7A700355B50 /* UIView+Snapshot.swift */; };
+		3AFE911022BF7B1000355B50 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE910F22BF7B1000355B50 /* AboutViewController.swift */; };
 		8BE5691278222C7476466227 /* Pods_Orbi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6124DF0AD1BA709A414D7C6 /* Pods_Orbi.framework */; };
 		A670161F5B7E89D8CAC82152 /* Pods_OrbiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB62830EB68A23F130BAED /* Pods_OrbiTests.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +120,8 @@
 		3A8F7AE822AC6112009178F2 /* Orbi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orbi.entitlements; sourceTree = "<group>"; };
 		3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		3A8F7AEC22AC6F7F009178F2 /* TLAnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLAnalogJoystick.swift; sourceTree = "<group>"; };
+		3A938E9C22C2196E009DD650 /* ChargeIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeIndicatorViewController.swift; sourceTree = "<group>"; };
+		3A938E9E22C2197E009DD650 /* CalibrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrateViewController.swift; sourceTree = "<group>"; };
 		3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		3AA933D822B913FC0016C8FA /* BleSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleSingleton.swift; sourceTree = "<group>"; };
 		3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +129,11 @@
 		3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3ADB539422B0600C00EDC00B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3AE5C0B722BFB1AD00AB09E8 /* CalibrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibrationManager.swift; sourceTree = "<group>"; };
+		3AE5C0B922C01F6900AB09E8 /* SettingsServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsServiceModel.swift; sourceTree = "<group>"; };
+		3AE5C0BB22C0496D00AB09E8 /* LEDServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDServiceModel.swift; sourceTree = "<group>"; };
+		3AE5C0BD22C1730000AB09E8 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		3AE5C0BF22C1784F00AB09E8 /* HelpMenuCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpMenuCollectionViewController.swift; sourceTree = "<group>"; };
 		3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryServiceModel.swift; sourceTree = "<group>"; };
 		3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerServiceModel.swift; sourceTree = "<group>"; };
 		3AFE90F922BEE71600355B50 /* ColorPicker+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorPicker+Math.swift"; sourceTree = "<group>"; };
@@ -132,6 +147,7 @@
 		3AFE910922BEE76400355B50 /* ColorPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerController.swift; sourceTree = "<group>"; };
 		3AFE910B22BEE7A700355B50 /* UIView+CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CSS.swift"; sourceTree = "<group>"; };
 		3AFE910C22BEE7A700355B50 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
+		3AFE910F22BF7B1000355B50 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3BBBE61025F88899719028A2 /* Pods-Orbi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.debug.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.debug.xcconfig"; sourceTree = "<group>"; };
 		6B46A3172917ACEEDFA46CAC /* Pods-Orbi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbi.release.xcconfig"; path = "Target Support Files/Pods-Orbi/Pods-Orbi.release.xcconfig"; sourceTree = "<group>"; };
 		8AA47A8BB9E91FA37A16A3F6 /* Pods-OrbiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbiUITests.release.xcconfig"; path = "Target Support Files/Pods-OrbiUITests/Pods-OrbiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,15 +211,10 @@
 			children = (
 				3A8F7AE822AC6112009178F2 /* Orbi.entitlements */,
 				3A0C23C422AC1C9B00D6225F /* Extension */,
-				3A0C239422AC187E00D6225F /* AppDelegate.swift */,
-				3A0C23E422AC1DDA00D6225F /* MenuCollectionViewController.swift */,
-				3ADB539422B0600C00EDC00B /* SceneDelegate.swift */,
-				3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */,
-				3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */,
-				3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */,
-				3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */,
-				3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */,
-				3AFE910922BEE76400355B50 /* ColorPickerController.swift */,
+				3A938EA322C219E8009DD650 /* AppDelegate */,
+				3A938EA122C219AE009DD650 /* Menu */,
+				3A938EA022C2198E009DD650 /* Drive */,
+				3A938EA222C219C9009DD650 /* Settings */,
 				3A0C239A22AC187E00D6225F /* Main.storyboard */,
 				3A0C239D22AC188200D6225F /* Assets.xcassets */,
 				3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */,
@@ -233,6 +244,7 @@
 		3A0C23C422AC1C9B00D6225F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3AE5C0B622BFB19700AB09E8 /* Helpers */,
 				3AA933D722B913E10016C8FA /* Classes */,
 				3AE94FD922B6D32C008FB085 /* ModelServices */,
 				3A55D80022AC5DD3005B463D /* Font */,
@@ -322,6 +334,48 @@
 			path = Joystick;
 			sourceTree = "<group>";
 		};
+		3A938EA022C2198E009DD650 /* Drive */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */,
+				3A8F7AEA22AC6F65009178F2 /* DriveViewController.swift */,
+				3A938E9C22C2196E009DD650 /* ChargeIndicatorViewController.swift */,
+				3A938E9E22C2197E009DD650 /* CalibrateViewController.swift */,
+			);
+			path = Drive;
+			sourceTree = "<group>";
+		};
+		3A938EA122C219AE009DD650 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C23E422AC1DDA00D6225F /* MenuCollectionViewController.swift */,
+				3ACE873E22B29F2600DB4CA6 /* MenuViewController.swift */,
+				3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */,
+				3AE5C0BF22C1784F00AB09E8 /* HelpMenuCollectionViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		3A938EA222C219C9009DD650 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE874022B2A69C00DB4CA6 /* SettingsViewController.swift */,
+				3AFE910922BEE76400355B50 /* ColorPickerController.swift */,
+				3AFE910F22BF7B1000355B50 /* AboutViewController.swift */,
+				3AE5C0BD22C1730000AB09E8 /* SupportViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3A938EA322C219E8009DD650 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C239422AC187E00D6225F /* AppDelegate.swift */,
+				3ADB539422B0600C00EDC00B /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		3A94EA1822BD48EE008B5176 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,9 +393,19 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		3AE5C0B622BFB19700AB09E8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3AE5C0B722BFB1AD00AB09E8 /* CalibrationManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		3AE94FD922B6D32C008FB085 /* ModelServices */ = {
 			isa = PBXGroup;
 			children = (
+				3AE5C0BB22C0496D00AB09E8 /* LEDServiceModel.swift */,
+				3AE5C0B922C01F6900AB09E8 /* SettingsServiceModel.swift */,
 				3AE94FDC22B6E5A7008FB085 /* ControllerServiceModel.swift */,
 				3AE94FDA22B6D32C008FB085 /* BatteryServiceModel.swift */,
 			);
@@ -623,28 +687,36 @@
 				3A0C23E022AC1D3D00D6225F /* SafariAnimator.swift in Sources */,
 				3A0C23E122AC1D3D00D6225F /* LNZCarouselCollectionViewLayout.swift in Sources */,
 				3A0C23E222AC1D3D00D6225F /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
+				3AE5C0B822BFB1AD00AB09E8 /* CalibrationManager.swift in Sources */,
 				3AFE910522BEE71600355B50 /* ThumbView.swift in Sources */,
 				3ACE873F22B29F2600DB4CA6 /* MenuViewController.swift in Sources */,
 				3AFE910D22BEE7A700355B50 /* UIView+CSS.swift in Sources */,
+				3A938E9F22C2197E009DD650 /* CalibrateViewController.swift in Sources */,
 				3AFE910722BEE71600355B50 /* ColorLightingPicker.swift in Sources */,
+				3AE5C0C022C1785000AB09E8 /* HelpMenuCollectionViewController.swift in Sources */,
 				3A0C23E322AC1D3D00D6225F /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				3A94EA1A22BD4944008B5176 /* SettingTableViewCell.swift in Sources */,
 				3A0C23DF22AC1D3D00D6225F /* UICollectionViewDelegateSafariLayout.swift in Sources */,
 				3ACE873D22B29EED00DB4CA6 /* UINavigationController+Extension.swift in Sources */,
 				3AFE910322BEE71600355B50 /* AngleGradientLayer.swift in Sources */,
+				3AE5C0BE22C1730000AB09E8 /* SupportViewController.swift in Sources */,
 				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,
+				3AFE911022BF7B1000355B50 /* AboutViewController.swift in Sources */,
 				3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */,
 				3A0C23DE22AC1D3D00D6225F /* LNZSafariTabLayout.swift in Sources */,
 				3AE94FDD22B6E5A7008FB085 /* ControllerServiceModel.swift in Sources */,
 				3AFE910A22BEE76400355B50 /* ColorPickerController.swift in Sources */,
 				3AE94FDB22B6D32C008FB085 /* BatteryServiceModel.swift in Sources */,
 				3A8F7AED22AC6F7F009178F2 /* TLAnalogJoystick.swift in Sources */,
+				3AE5C0BC22C0496D00AB09E8 /* LEDServiceModel.swift in Sources */,
 				3AFE910122BEE71600355B50 /* ColorPicker+Math.swift in Sources */,
 				3AFE910E22BEE7A700355B50 /* UIView+Snapshot.swift in Sources */,
 				3A8F7AEB22AC6F65009178F2 /* DriveViewController.swift in Sources */,
+				3A938E9D22C2196E009DD650 /* ChargeIndicatorViewController.swift in Sources */,
 				3AFE910422BEE71600355B50 /* ColorApplyButton.swift in Sources */,
 				3AFE910822BEE71600355B50 /* HSB.swift in Sources */,
 				3AFE910622BEE71600355B50 /* CGRect+Core.swift in Sources */,
+				3AE5C0BA22C01F6900AB09E8 /* SettingsServiceModel.swift in Sources */,
 				3A0C23E522AC1DDA00D6225F /* MenuCollectionViewController.swift in Sources */,
 				3AFE910222BEE71600355B50 /* ColorPickerView.swift in Sources */,
 				3AB3F16322B7DC3700C7734D /* ConnectViewController.swift in Sources */,

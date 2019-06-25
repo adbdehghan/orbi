@@ -1,11 +1,15 @@
 ${PODS_ROOT}/Target Support Files/Pods-Orbi/Pods-Orbi-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AGCircularPicker/AGCircularPicker.framework
 ${BUILT_PRODUCTS_DIR}/BatteryView/BatteryView.framework
 ${BUILT_PRODUCTS_DIR}/Bluetonium/Bluetonium.framework
+${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework
 ${BUILT_PRODUCTS_DIR}/CDJoystick/CDJoystick.framework
 ${BUILT_PRODUCTS_DIR}/GradientProgress/GradientProgress.framework
 ${BUILT_PRODUCTS_DIR}/Haptico/Haptico.framework
 ${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework
+${BUILT_PRODUCTS_DIR}/MKMagneticProgress/MKMagneticProgress.framework
 ${BUILT_PRODUCTS_DIR}/MaterialColorPicker/MaterialColorPicker.framework
 ${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework
+${BUILT_PRODUCTS_DIR}/SRCountdownTimer/SRCountdownTimer.framework
 ${BUILT_PRODUCTS_DIR}/SideMenuSwift/SideMenuSwift.framework
 ${BUILT_PRODUCTS_DIR}/SummerSlider/SummerSlider.framework

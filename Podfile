@@ -15,7 +15,10 @@ target 'Orbi' do
   pod 'SideMenuSwift'
   pod "Pulsator"
   pod "MaterialColorPicker"
-  
+  pod 'BottomPopup'
+  pod 'SRCountdownTimer'
+  pod 'MKMagneticProgress'
+  pod "AGCircularPicker"
   
   target 'OrbiTests' do
     inherit! :search_paths

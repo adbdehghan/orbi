@@ -9,19 +9,44 @@
 import UIKit
 import Pulsator
 import Bluetonium
+import SideMenuSwift
+import BottomPopup
 
-class ConnectViewController: UIViewController,ManagerDelegate {
+
+class ConnectViewController: BottomPopupViewController,ManagerDelegate {
 
     @IBOutlet weak var labelContainerView: UIView!
     @IBOutlet weak var backContainerView: UIView!
-    
+    var height: CGFloat?
+    var topCornerRadius: CGFloat?
+    var presentDuration: Double?
+    var dismissDuration: Double?
+    var shouldDismissInteractivelty: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         BLESetup()
-        
         UiSetup()
+    }
+     
+    override func getPopupHeight() -> CGFloat {
+        return height ?? CGFloat(300)
+    }
+    
+    override func getPopupTopCornerRadius() -> CGFloat {
+        return topCornerRadius ?? CGFloat(10)
+    }
+    
+    override func getPopupPresentDuration() -> Double {
+        return presentDuration ?? 1.0
+    }
+    
+    override func getPopupDismissDuration() -> Double {
+        return dismissDuration ?? 1.0
+    }
+    
+    override func shouldPopupDismissInteractivelty() -> Bool {
+        return shouldDismissInteractivelty ?? true
     }
     
     fileprivate func BLESetup() {
@@ -57,14 +82,17 @@ class ConnectViewController: UIViewController,ManagerDelegate {
     func manager(_ manager: Manager, willConnectToDevice device: Device) {
         device.register(serviceModel: BleSingleton.shared.batteryServiceModel)
         device.register(serviceModel: BleSingleton.shared.controllerServiceModel)
+        device.register(serviceModel: BleSingleton.shared.settingsServiceModel)
     }
     
     func manager(_ manager: Manager, connectedToDevice device: Device) {
+        
+        BleSingleton.shared.bleManager.stopScanForDevices()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let connectController = storyBoard.instantiateViewController(withIdentifier: "driveViewController") as! DriveViewController
-            self.present(connectController, animated: true, completion: nil)
-        })        
+            self.performSegue(withIdentifier: "main", sender: self)
+        })
+        
     }
     
     func manager(_ manager: Manager, disconnectedFromDevice device: Device, willRetry retry: Bool) {
@@ -81,18 +109,6 @@ class ConnectViewController: UIViewController,ManagerDelegate {
     
     @IBAction func BackAction(_ sender: Any) {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let connectController = storyBoard.instantiateViewController(withIdentifier: "menuCollectionView") as! MenuCollectionViewController
-        self.present(connectController, animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
- 
-
 }

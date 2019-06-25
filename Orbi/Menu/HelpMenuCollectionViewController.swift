@@ -10,10 +10,11 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class MenuCollectionViewController: UICollectionViewController {
+class HelpMenuCollectionViewController: UICollectionViewController {
     
     var menuImages = ["asset_drive","help","setting"]
-    var menuNames = ["Drive","Help","Settings"]
+    var menuNames = ["Charging","Help","Settings"]
+    private var popGesture: UIGestureRecognizer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,25 @@ class MenuCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = true
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if navigationController!.responds(to: #selector(getter: UINavigationController.interactivePopGestureRecognizer)) {
+            self.popGesture = navigationController!.interactivePopGestureRecognizer
+            self.navigationController!.view.removeGestureRecognizer(navigationController!.interactivePopGestureRecognizer!)
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let gesture = self.popGesture {
+            self.navigationController!.view.addGestureRecognizer(gesture)
+        }
+        
     }
 
     // MARK: UICollectionViewDataSource
@@ -53,21 +73,15 @@ class MenuCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        BleSingleton.shared.menuIndex = indexPath.row
         switch indexPath.row {
         case 0:
-            if BleSingleton.shared.bleManager.connectedDevice != nil
-            {
                 self.performSegue(withIdentifier: "drive", sender: self)
-            }
-            else{
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let connectController = storyBoard.instantiateViewController(withIdentifier: "connectViewController") as! ConnectViewController
-                self.present(connectController, animated: true, completion: nil)
-            }
         case 1:
             self.performSegue(withIdentifier: "help", sender: self)
         case 2:
-            self.performSegue(withIdentifier: "setting", sender: self)
+            self.performSegue(withIdentifier: "setting", sender: self)         
+       
         default:
             self.performSegue(withIdentifier: "connection", sender: self)
         }

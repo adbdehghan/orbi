@@ -161,26 +161,34 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AGCircularPicker/AGCircularPicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BatteryView/BatteryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Bluetonium/Bluetonium.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CDJoystick/CDJoystick.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GradientProgress/GradientProgress.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Haptico/Haptico.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MKMagneticProgress/MKMagneticProgress.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MaterialColorPicker/MaterialColorPicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SRCountdownTimer/SRCountdownTimer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SideMenuSwift/SideMenuSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SummerSlider/SummerSlider.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AGCircularPicker/AGCircularPicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BatteryView/BatteryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Bluetonium/Bluetonium.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CDJoystick/CDJoystick.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GradientProgress/GradientProgress.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Haptico/Haptico.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MKMagneticProgress/MKMagneticProgress.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MaterialColorPicker/MaterialColorPicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SRCountdownTimer/SRCountdownTimer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SideMenuSwift/SideMenuSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SummerSlider/SummerSlider.framework"
 fi

@@ -13,9 +13,11 @@ import Haptico
 import GradientProgress
 import Bluetonium
 import CoreBluetooth
+import BottomPopup
+import SRCountdownTimer
 
-class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelDelegate  {
-    
+class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelDelegate,SRCountdownTimerDelegate  {
+    var countdownTimer: SRCountdownTimer!
     @IBOutlet weak var backContainerView: UIView!
     @IBOutlet weak var BatteryContainerView: UIView!
     @IBOutlet weak var SettingContainerView: UIView!
@@ -44,8 +46,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     let BLE_PACKET_CONFIG_NITRO_POS = 2
     let BLE_PACKET_CONFIG_DRIFT_POS = 3
     var data:[UInt8] = [UInt8](repeating: 0, count:5)
-    
-    
+
     var nitroCount: CGFloat = 100
     var driftCount: CGFloat = 100
     var progresBarNitro: CircularProgressBar!
@@ -67,7 +68,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     fileprivate func MainProcessSetup() {
-        mainProccess = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
+        mainProccess = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
         mainProccess.fire()
     }
     
@@ -82,6 +83,8 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
             
             // print("Speed: \(speed)  Angle: \(angle)")
             // self.SendControlParams()
+            
+            self.SendControlParams()
             
             let strength = Float(joystickData.strength)/100
             self.SpeedProgressView.setProgress(strength,animated: false)
@@ -101,7 +104,26 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     fileprivate func UiConfigurations()
-    {
+    {        
+        let overlay = UIView(frame: self.view.frame)
+        overlay.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        overlay.alpha = 0.85
+        overlay.tag = 32
+        self.view.addSubview(overlay)
+        
+        self.countdownTimer = SRCountdownTimer()
+        self.countdownTimer.frame = CGRect(x: overlay.frame.width/2-100, y: overlay.frame.height/2-100, width: 200, height: 200)
+        self.countdownTimer.labelFont = UIFont(name: "HelveticaNeue-Light", size: 50.0)
+        self.countdownTimer.labelTextColor = CalibrationManager().ledColor
+        self.countdownTimer.timerFinishingText = "Let's Go"
+        self.countdownTimer.lineWidth = 5
+        self.countdownTimer.lineColor = CalibrationManager().ledColor
+        self.countdownTimer.start(beginingValue: 5, interval: 1)
+        self.countdownTimer.delegate = self
+        self.countdownTimer.tag = 13
+        overlay.addSubview(self.countdownTimer)
+        
+        
         backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
         BatteryContainerView.layer.cornerRadius = BatteryContainerView.frame.width / 2
         SettingContainerView.layer.cornerRadius = SettingContainerView.frame.width / 2
@@ -139,6 +161,22 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         
         NitroContainerView.layer.cornerRadius = NitroContainerView.frame.width/2
         DriftContainerView.layer.cornerRadius = DriftContainerView.frame.width/2
+        
+        self.BatteryIndicator.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.ShowBatteryStatus)))
+        
+    }
+    
+    @objc func ShowBatteryStatus()
+    {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let connectController = storyBoard.instantiateViewController(withIdentifier: "chargeIndicatorVC") as! ChargeIndicatorViewController
+        self.present(connectController, animated: true, completion: nil)
+    }
+    
+    @objc func timerDidEnd()
+    {
+        let overlay = self.view.viewWithTag(32)
+        overlay!.removeFromSuperview()
     }
     
     func manager(_ manager: Manager, didFindDevice device: Device) {
@@ -166,7 +204,8 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     func batteryLevelChanged(_ batteryLevel: UInt8) {
-            BatteryIndicator.level = Int(batteryLevel)
+        BatteryIndicator.level = Int(batteryLevel)
+        BleSingleton.shared.batteryPercentage = CGFloat(batteryLevel)
     }
     
     @objc func SendControlParams(){
@@ -201,7 +240,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     @objc func nitroProccess() {
-        nitroCount -= 20
+        nitroCount -= 10
         Nitro = 1
         progresBarNitro.progress = nitroCount
         if nitroCount <= 0 {
@@ -214,7 +253,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     @objc func driftProccess() {
-        driftCount -= 10
+        driftCount -= 5
         Drift = 1
         progresBarDrift.progress = driftCount
         if driftCount <= 0 {
@@ -228,7 +267,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     
     @IBAction func NitroButtonAction(_ sender: Any) {
         NitroButton.isUserInteractionEnabled = false
-        timerNitro = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(nitroProccess), userInfo: nil, repeats: true)
+        timerNitro = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(nitroProccess), userInfo: nil, repeats: true)
         timerNitro.fire()
     }
     
@@ -250,10 +289,8 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     @IBAction func BackButtonAction(_ sender: Any) {
-//        self.navigationController?.popViewController(animated: true)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let connectController = storyBoard.instantiateViewController(withIdentifier: "menuCollectionView") as! MenuCollectionViewController
-        self.present(connectController, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     @IBAction func BrakeButtonAction(_ sender: Any) {
@@ -291,7 +328,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
             sum += Int(data[i])
         }
         return sum
-    }
+    }    
     
     /*
     // MARK: - Navigation
@@ -303,3 +340,4 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     */
 }
+

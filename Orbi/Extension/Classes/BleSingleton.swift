@@ -23,5 +23,10 @@ final class BleSingleton {
     let bleManager = Manager()
     let batteryServiceModel = BatteryServiceModel()
     let controllerServiceModel = ControllerServiceModel()
+    let settingsServiceModel = SettingsServiceModel()
+    let ledServiceModel = LEDServiceModel()
+    var menuIndex = 0
+    var batteryPercentage:CGFloat = 0
     
 }
+
