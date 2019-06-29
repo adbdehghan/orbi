@@ -31,4 +31,6 @@ public protocol ManagerDelegate: class {
      */
     func manager(_ manager: Manager, disconnectedFromDevice device: Device, willRetry retry: Bool)
     
+    func manager(_ manager: Manager, IsBLEOn status: Bool)     
+    
 }

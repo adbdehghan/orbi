@@ -152,7 +152,7 @@ open class Manager: NSObject, CBCentralManagerDelegate {
         
         switch (central.state) {
         case .poweredOn:
-            
+            self.delegate?.manager(self, IsBLEOn: true)
             if connectedDevice != nil {
                 connectToDevice()
                 

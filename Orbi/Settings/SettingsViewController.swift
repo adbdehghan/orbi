@@ -40,6 +40,9 @@ class SettingsViewController: UIViewController,MaterialColorPickerDelegate,Mater
 
          let settingManager = CalibrationManager()
         
+        maxSpeed = Int(settingManager.maxSpeedValue)
+        handle = Int(settingManager.controlSensivityValue)
+        
         pickerView = MaterialColorPicker(frame: CGRect(x: 17, y: 500, width: self.view.frame.width, height: 60))
         self.formView.addSubview(pickerView)
         pickerView.delegate = self
@@ -107,9 +110,10 @@ class SettingsViewController: UIViewController,MaterialColorPickerDelegate,Mater
     @objc func SensivityValueChanged(sender: UISlider)
     {
         let settingManager = CalibrationManager()
-        settingManager.SaveCalibValues(MaxSpeed: settingManager.maxSpeedValue, Sensivity: Double(sender.value), LEDColor: settingManager.ledColor)
-        
         handle = Int(sender.value * 100)
+        settingManager.SaveCalibValues(MaxSpeed: settingManager.maxSpeedValue, Sensivity: Double(handle), LEDColor: settingManager.ledColor)
+        
+
         SendParams()
         
     }
@@ -117,8 +121,9 @@ class SettingsViewController: UIViewController,MaterialColorPickerDelegate,Mater
     @objc func SpeedValueChanged(sender: UISlider)
     {
         let settingManager = CalibrationManager()
-        settingManager.SaveCalibValues(MaxSpeed: Double(sender.value), Sensivity: settingManager.controlSensivityValue, LEDColor: settingManager.ledColor)
         maxSpeed = Int(sender.value * 100)
+        settingManager.SaveCalibValues(MaxSpeed: Double(maxSpeed), Sensivity: settingManager.controlSensivityValue, LEDColor: settingManager.ledColor)
+      
         SendParams()
     }
     
@@ -148,6 +153,12 @@ class SettingsViewController: UIViewController,MaterialColorPickerDelegate,Mater
         SendLEDColor()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        SendParams()
+        BleSingleton.shared.bleManager.delegate = nil      
+    }
+    
     func didSelectColorAtIndex(_ MaterialColorPickerView: MaterialColorPicker, index: Int, color: UIColor) {
         print("Index is ", index)
         
@@ -169,6 +180,7 @@ class SettingsViewController: UIViewController,MaterialColorPickerDelegate,Mater
         
         BleSingleton.shared.settingsServiceModel.RGBData = Data(rgb)
         BleSingleton.shared.settingsServiceModel.writeValue(withUUID: "00001535-1212-EFDE-1523-785FEF13D123")
+  
     }
     
     

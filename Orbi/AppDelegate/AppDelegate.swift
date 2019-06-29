@@ -51,4 +51,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIApplication {
+    var screenShot: UIImage?  { return keyWindow?.layer.screenShot }
+}
+
+extension CALayer {
+    
+    var screenShot: UIImage?  {
+        UIGraphicsBeginImageContextWithOptions(frame.size, false, UIScreen.main.scale)
+        if let context = UIGraphicsGetCurrentContext() {
+            render(in: context)
+            let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return screenshot
+        }
+        return nil
+    }
+}
+
 

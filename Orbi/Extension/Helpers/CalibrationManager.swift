@@ -9,8 +9,8 @@
 import UIKit
 
 class CalibrationManager: NSObject {
-    var maxSpeedValue :Double = 0.85
-    var controlSensivityValue :Double = 0.5
+    var maxSpeedValue :Double = 100
+    var controlSensivityValue :Double = 80
     var ledColor :UIColor = #colorLiteral(red: 0, green: 0.8764715791, blue: 1, alpha: 1)
     
     func SaveCalibValues(MaxSpeed:Double , Sensivity:Double,LEDColor:UIColor) -> Void {

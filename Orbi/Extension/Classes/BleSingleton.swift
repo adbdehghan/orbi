@@ -27,6 +27,8 @@ final class BleSingleton {
     let ledServiceModel = LEDServiceModel()
     var menuIndex = 0
     var batteryPercentage:CGFloat = 0
+    var screenshot:UIImage?
+    var isFirst = true
     
 }
 

@@ -124,7 +124,7 @@ open class MKMagneticProgress: UIView {
     
     
     // progress text (progress bottom label)
-    @IBInspectable  open var font: UIFont = .systemFont(ofSize: 13) {
+    @IBInspectable  open var font: UIFont = .boldSystemFont(ofSize: 85) {
         didSet {
             titleLabel.font = font
             percentLabel.font = font
@@ -161,9 +161,10 @@ open class MKMagneticProgress: UIView {
     
     private var backgroundShape: CAShapeLayer!
     private var progressShape: CAShapeLayer!
-    
+    private var backgroundGradient = CAGradientLayer()
+    private var progressGradient = CAGradientLayer()
     private var progressAnimation: CABasicAnimation!
-    
+    private var circleLayer: CAShapeLayer!
     // MARK: - Init
     
     public required init?(coder aDecoder: NSCoder) {
@@ -183,33 +184,57 @@ open class MKMagneticProgress: UIView {
         backgroundShape.strokeColor = backgroundShapeColor.cgColor
         layer.addSublayer(backgroundShape)
         
+        backgroundGradient.colors = [UIColor.init(red: 255/255, green: 100/255, blue: 0, alpha: 0.5).cgColor,
+//            UIColor.init(red: 255/255, green: 203/255, blue: 0, alpha: 0.5).cgColor,
+//            UIColor.init(red: 255/255, green: 159/255, blue: 0, alpha: 0.5).cgColor,
+                           UIColor.init(red: 0/255, green: 255/255, blue: 47/255, alpha: 0.5).cgColor]
+        backgroundGradient.startPoint = CGPoint(x: 0, y: 1)
+        backgroundGradient.endPoint = CGPoint(x: 1, y: 0)
+        backgroundGradient.mask = backgroundShape
+        
+        layer.addSublayer(backgroundGradient)
+        
         progressShape = CAShapeLayer()
         progressShape.fillColor   = nil
         progressShape.strokeStart = 0.0
         progressShape.strokeEnd   = 0.1
         layer.addSublayer(progressShape)
         
+        progressGradient.frame = progressShape.frame
+        progressGradient.colors = [UIColor.init(red: 255/255, green: 100/255, blue: 0, alpha: 1).cgColor,
+//                                   UIColor.init(red: 255/255, green: 203/255, blue: 0, alpha: 1).cgColor,
+//            UIColor.init(red: 255.0/255.0, green: 159.0/255.0, blue: 0.0, alpha: 1).cgColor,
+                           UIColor.init(red: 0/255, green: 255/255, blue: 47/255, alpha: 1).cgColor]
+        progressGradient.startPoint = CGPoint(x: 0, y: 1)
+        progressGradient.endPoint = CGPoint(x: 1, y: 0)
+        progressGradient.mask = progressShape
+
+        layer.addSublayer(progressGradient)
+        
+    
+        
         progressAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
         percentLabel.frame = self.bounds
         percentLabel.textAlignment = .center
+//        titleLabel.font = UIFont.boldSystemFont(ofSize: 70)
 //        percentLabel.textColor = self.progressShapeColor
         self.addSubview(percentLabel)
-        percentLabel.text = String(format: "%.1f%%", progress * 100)
+        percentLabel.text = String(format: "%%.0f%", progress * 100)
         
         
-        titleLabel.frame = CGRect(x: (self.bounds.size.width-titleLabelWidth)/2, y: self.bounds.size.height-21, width: titleLabelWidth, height: 21)
+        titleLabel.frame = CGRect(x: (self.bounds.size.width-titleLabelWidth)/2, y: self.bounds.size.height-50, width: titleLabelWidth, height: 70)
         
         titleLabel.textAlignment = .center
 //        titleLabel.textColor = self.progressShapeColor
         titleLabel.text = title
-        titleLabel.contentScaleFactor = 0.3
+//        titleLabel.contentScaleFactor =1
         //        textLabel.adjustFontSizeToFit()
         titleLabel.numberOfLines = 2
-        titleLabel.font = UIFont(name: "Vazir-Bold", size: 18)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 45)
         //textLabel.adjustFontSizeToFit()
-        titleLabel.adjustsFontSizeToFitWidth = true
-        self.addSubview(titleLabel)
+//        titleLabel.adjustsFontSizeToFitWidth = true
+//        self.addSubview(titleLabel)
     }
     
     // MARK: - Progress Animation
@@ -230,6 +255,7 @@ open class MKMagneticProgress: UIView {
         let duration = abs(Double(progress - start)) * completeDuration
         percentLabel.text = String(format: percentLabelFormat, progress * 100)
         progressShape.strokeEnd = progress
+        progressGradient.frame = progressShape.frame
         
         if animated {
             progressAnimation.fromValue = start
@@ -263,10 +289,14 @@ open class MKMagneticProgress: UIView {
         backgroundShape?.lineWidth  = lineWidth
         backgroundShape?.strokeColor = backgroundShapeColor.cgColor
         backgroundShape?.lineCap     = CAShapeLayerLineCap(rawValue: lineCap.style())
+        backgroundGradient.frame = backgroundShape.frame
         
         progressShape?.strokeColor = progressShapeColor.cgColor
         progressShape?.lineWidth   = lineWidth - inset
         progressShape?.lineCap     = CAShapeLayerLineCap(rawValue: lineCap.style())
+        
+        
+    
         
         switch orientation {
         case .left:
@@ -297,6 +327,17 @@ open class MKMagneticProgress: UIView {
                 }, completion: nil)
             self.progressShape.transform = CATransform3DMakeRotation( CGFloat.pi, 0, 0, 1.0)
             self.backgroundShape.transform = CATransform3DMakeRotation(CGFloat.pi, 0, 0, 1.0)
+        }
+        progressGradient.frame = progressShape.frame
+        
+        
+        if circleLayer == nil {
+            circleLayer = CAShapeLayer()
+            let radius: CGFloat = self.bounds.size.width/2-50
+            circleLayer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 2.0 * radius, height: 2.0 * radius), cornerRadius: radius).cgPath
+            circleLayer.position = CGPoint(x: (self.bounds.size.width)/2-radius , y: self.bounds.size.height/2 - radius)
+            circleLayer.fillColor = #colorLiteral(red: 0.0862745098, green: 0.0862745098, blue: 0.231372549, alpha: 1)
+            self.layer.insertSublayer(circleLayer, at: 0)
         }
     }
     

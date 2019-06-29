@@ -54,7 +54,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     var mainProccess: Timer!
     var timerNitro: Timer!
     var timerDrift: Timer!
-
+    var isFirst = true
     var Speed = 0
     var Angle:Int=0,Brake:UInt8=0,Calibrate:UInt8=0,Nitro:UInt8=0,Drift:UInt8=0
    
@@ -68,7 +68,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     }
     
     fileprivate func MainProcessSetup() {
-        mainProccess = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
+        mainProccess = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.SendControlParams), userInfo: nil, repeats: true)
         mainProccess.fire()
     }
     
@@ -98,13 +98,13 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
             for model in BleSingleton.shared.bleManager.connectedDevice!.registedServiceModels {
                 if let batteryServiceModel = model as? BatteryServiceModel {
                     batteryServiceModel.delegate = self
+                    batteryServiceModel.readValue(withUUID: "2A19")
                 }
             }
         }
     }
     
-    fileprivate func UiConfigurations()
-    {        
+    fileprivate func AddTimer() {
         let overlay = UIView(frame: self.view.frame)
         overlay.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         overlay.alpha = 0.85
@@ -118,12 +118,14 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         self.countdownTimer.timerFinishingText = "Let's Go"
         self.countdownTimer.lineWidth = 5
         self.countdownTimer.lineColor = CalibrationManager().ledColor
-        self.countdownTimer.start(beginingValue: 5, interval: 1)
+        self.countdownTimer.start(beginingValue: 8, interval: 1)
         self.countdownTimer.delegate = self
         self.countdownTimer.tag = 13
         overlay.addSubview(self.countdownTimer)
-        
-        
+    }
+    
+    fileprivate func UiConfigurations()
+    {
         backContainerView.layer.cornerRadius = backContainerView.frame.width / 2
         BatteryContainerView.layer.cornerRadius = BatteryContainerView.frame.width / 2
         SettingContainerView.layer.cornerRadius = SettingContainerView.frame.width / 2
@@ -168,9 +170,8 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     
     @objc func ShowBatteryStatus()
     {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let connectController = storyBoard.instantiateViewController(withIdentifier: "chargeIndicatorVC") as! ChargeIndicatorViewController
-        self.present(connectController, animated: true, completion: nil)
+        BleSingleton.shared.screenshot = UIApplication.shared.screenShot
+        self.performSegue(withIdentifier: "batteryStatus", sender: self)
     }
     
     @objc func timerDidEnd()
@@ -228,6 +229,12 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         BleSingleton.shared.controllerServiceModel.controlPoint = Data(data)
         BleSingleton.shared.controllerServiceModel.writeValue(withUUID: "00001525-1212-EFDE-1523-785FEF13D123")
         
+        if BleSingleton.shared.isFirst {
+            
+            AddTimer()
+            BleSingleton.shared.isFirst = false
+        }
+        
     }
     
     func toUint(signed: Int) -> UInt8 {
@@ -284,7 +291,7 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        mainProccess.invalidate()
+//        mainProccess.invalidate()
         BleSingleton.shared.bleManager.delegate = nil
     }
     
@@ -292,6 +299,13 @@ class DriveViewController: UIViewController,ManagerDelegate,BatteryServiceModelD
         self.navigationController?.popViewController(animated: true)
 
     }
+    
+    @IBAction func CalibrateAction(_ sender: Any)
+    {
+         BleSingleton.shared.screenshot = UIApplication.shared.screenShot
+        self.performSegue(withIdentifier: "calibrate", sender: self)
+    }
+    
     
     @IBAction func BrakeButtonAction(_ sender: Any) {
         Haptico.shared().generateFeedbackFromPattern("OOO", delay: 0.1)
