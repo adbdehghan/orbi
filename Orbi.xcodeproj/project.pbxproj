@@ -37,6 +37,7 @@
 		3A938E9D22C2196E009DD650 /* ChargeIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938E9C22C2196E009DD650 /* ChargeIndicatorViewController.swift */; };
 		3A938E9F22C2197E009DD650 /* CalibrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938E9E22C2197E009DD650 /* CalibrateViewController.swift */; };
 		3A94EA1A22BD4944008B5176 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */; };
+		3AA7D3CA22C81B56004F86D4 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7D3C922C81B56004F86D4 /* HelpViewController.swift */; };
 		3AA933D922B913FC0016C8FA /* BleSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA933D822B913FC0016C8FA /* BleSingleton.swift */; };
 		3AB3F16322B7DC3700C7734D /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */; };
 		3ACE873D22B29EED00DB4CA6 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */; };
@@ -123,6 +124,7 @@
 		3A938E9C22C2196E009DD650 /* ChargeIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeIndicatorViewController.swift; sourceTree = "<group>"; };
 		3A938E9E22C2197E009DD650 /* CalibrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrateViewController.swift; sourceTree = "<group>"; };
 		3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		3AA7D3C922C81B56004F86D4 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		3AA933D822B913FC0016C8FA /* BleSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleSingleton.swift; sourceTree = "<group>"; };
 		3AB3F16222B7DC3700C7734D /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		3ACE873C22B29EED00DB4CA6 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				3A938EA122C219AE009DD650 /* Menu */,
 				3A938EA022C2198E009DD650 /* Drive */,
 				3A938EA222C219C9009DD650 /* Settings */,
+				3AA7D3C822C81B3A004F86D4 /* Help */,
 				3A0C239A22AC187E00D6225F /* Main.storyboard */,
 				3A0C239D22AC188200D6225F /* Assets.xcassets */,
 				3A0C239F22AC188200D6225F /* LaunchScreen.storyboard */,
@@ -382,6 +385,14 @@
 				3A94EA1922BD4944008B5176 /* SettingTableViewCell.swift */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		3AA7D3C822C81B3A004F86D4 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				3AA7D3C922C81B56004F86D4 /* HelpViewController.swift */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		3AA933D722B913E10016C8FA /* Classes */ = {
@@ -702,6 +713,7 @@
 				3AE5C0BE22C1730000AB09E8 /* SupportViewController.swift in Sources */,
 				3A0C239522AC187E00D6225F /* AppDelegate.swift in Sources */,
 				3AFE911022BF7B1000355B50 /* AboutViewController.swift in Sources */,
+				3AA7D3CA22C81B56004F86D4 /* HelpViewController.swift in Sources */,
 				3ACE874122B2A69C00DB4CA6 /* SettingsViewController.swift in Sources */,
 				3A0C23DE22AC1D3D00D6225F /* LNZSafariTabLayout.swift in Sources */,
 				3AE94FDD22B6E5A7008FB085 /* ControllerServiceModel.swift in Sources */,

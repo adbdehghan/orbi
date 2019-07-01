@@ -120,5 +120,4 @@ extension CalibrateViewController: AGCircularPickerViewDelegate {
         Calibrate = 0
         SendControlParams()
     }
-    
 }
